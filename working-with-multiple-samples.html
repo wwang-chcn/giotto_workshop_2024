@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>12 Working with multiple samples | Workshop: Spatial multi-omics data analysis with Giotto Suite</title>
+  <meta name="description" content="12 Working with multiple samples | Workshop: Spatial multi-omics data analysis with Giotto Suite" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="12 Working with multiple samples | Workshop: Spatial multi-omics data analysis with Giotto Suite" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="drieslab/giotto_workshop_2024" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="12 Working with multiple samples | Workshop: Spatial multi-omics data analysis with Giotto Suite" />
+  
+  
+  
+
+<meta name="author" content="Ruben Dries, Jiaji George Chen, Joselyn Cristina Chávez-Fuentes, Junxiang Xu ,Edward Ruiz, Jeff Sheridan, Iqra Amin, Wen Wang" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="spatial-proteomics-multiplexed-immunofluorescence.html"/>
+<link rel="next" href="spatial-multi-modal-analysis.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Giotto Suite Workshop 2024</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#instructors"><i class="fa fa-check"></i><b>1.1</b> Instructors</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#topics-and-schedule"><i class="fa fa-check"></i><b>1.2</b> Topics and Schedule:</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i><b>1.3</b> License</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="datasets-packages.html"><a href="datasets-packages.html"><i class="fa fa-check"></i><b>2</b> Datasets &amp; Packages</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="datasets-packages.html"><a href="datasets-packages.html#datasets-to-download"><i class="fa fa-check"></i><b>2.1</b> Datasets to download</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="datasets-packages.html"><a href="datasets-packages.html#zenodo-repository"><i class="fa fa-check"></i><b>2.1.1</b> Zenodo repository</a></li>
+<li class="chapter" data-level="2.1.2" data-path="datasets-packages.html"><a href="datasets-packages.html#x-genomics-visium-mouse-brain-section-coronal-dataset"><i class="fa fa-check"></i><b>2.1.2</b> 10X Genomics Visium Mouse Brain Section (Coronal) dataset</a></li>
+<li class="chapter" data-level="2.1.3" data-path="datasets-packages.html"><a href="datasets-packages.html#x-genomics-visium-hd-ffpe-human-colon-cancer"><i class="fa fa-check"></i><b>2.1.3</b> 10X Genomics Visium HD: FFPE Human Colon Cancer</a></li>
+<li class="chapter" data-level="2.1.4" data-path="datasets-packages.html"><a href="datasets-packages.html#x-genomics-multi-modal-dataset"><i class="fa fa-check"></i><b>2.1.4</b> 10X Genomics multi-modal dataset</a></li>
+<li class="chapter" data-level="2.1.5" data-path="datasets-packages.html"><a href="datasets-packages.html#x-genomics-multi-omics-visium-cytassist-human-tonsil-dataset"><i class="fa fa-check"></i><b>2.1.5</b> 10X Genomics multi-omics Visium CytAssist Human Tonsil dataset</a></li>
+<li class="chapter" data-level="2.1.6" data-path="datasets-packages.html"><a href="datasets-packages.html#x-genomics-human-prostate-cancer-adenocarcinoma-with-invasive-carcinoma-ffpe"><i class="fa fa-check"></i><b>2.1.6</b> 10X Genomics Human Prostate Cancer Adenocarcinoma with Invasive Carcinoma (FFPE)</a></li>
+<li class="chapter" data-level="2.1.7" data-path="datasets-packages.html"><a href="datasets-packages.html#x-genomics-normal-human-prostate-ffpe"><i class="fa fa-check"></i><b>2.1.7</b> 10X Genomics Normal Human Prostate (FFPE)</a></li>
+<li class="chapter" data-level="2.1.8" data-path="datasets-packages.html"><a href="datasets-packages.html#xenium"><i class="fa fa-check"></i><b>2.1.8</b> Xenium</a></li>
+<li class="chapter" data-level="2.1.9" data-path="datasets-packages.html"><a href="datasets-packages.html#merfish-cortex-dataset"><i class="fa fa-check"></i><b>2.1.9</b> MERFISH cortex dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="datasets-packages.html"><a href="datasets-packages.html#needed-packages"><i class="fa fa-check"></i><b>2.2</b> Needed packages</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="datasets-packages.html"><a href="datasets-packages.html#cran-dependencies"><i class="fa fa-check"></i><b>2.2.1</b> CRAN dependencies:</a></li>
+<li class="chapter" data-level="2.2.2" data-path="datasets-packages.html"><a href="datasets-packages.html#terra-installation"><i class="fa fa-check"></i><b>2.2.2</b> <em>terra</em> installation</a></li>
+<li class="chapter" data-level="2.2.3" data-path="datasets-packages.html"><a href="datasets-packages.html#matrix-installation"><i class="fa fa-check"></i><b>2.2.3</b> <em>Matrix</em> installation</a></li>
+<li class="chapter" data-level="2.2.4" data-path="datasets-packages.html"><a href="datasets-packages.html#rtools-installation"><i class="fa fa-check"></i><b>2.2.4</b> <em>Rtools</em> installation</a></li>
+<li class="chapter" data-level="2.2.5" data-path="datasets-packages.html"><a href="datasets-packages.html#giotto-installation"><i class="fa fa-check"></i><b>2.2.5</b> <em>Giotto</em> installation</a></li>
+<li class="chapter" data-level="2.2.6" data-path="datasets-packages.html"><a href="datasets-packages.html#irlba-install"><i class="fa fa-check"></i><b>2.2.6</b> <em>irlba</em> install</a></li>
+<li class="chapter" data-level="2.2.7" data-path="datasets-packages.html"><a href="datasets-packages.html#arrow-install"><i class="fa fa-check"></i><b>2.2.7</b> <em>arrow</em> install</a></li>
+<li class="chapter" data-level="2.2.8" data-path="datasets-packages.html"><a href="datasets-packages.html#bioconductor-dependencies"><i class="fa fa-check"></i><b>2.2.8</b> Bioconductor dependencies:</a></li>
+<li class="chapter" data-level="2.2.9" data-path="datasets-packages.html"><a href="datasets-packages.html#cran-packages"><i class="fa fa-check"></i><b>2.2.9</b> CRAN packages:</a></li>
+<li class="chapter" data-level="2.2.10" data-path="datasets-packages.html"><a href="datasets-packages.html#packages-from-github"><i class="fa fa-check"></i><b>2.2.10</b> Packages from GitHub</a></li>
+<li class="chapter" data-level="2.2.11" data-path="datasets-packages.html"><a href="datasets-packages.html#python-environments"><i class="fa fa-check"></i><b>2.2.11</b> Python environments</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="spatial-omics-technologies.html"><a href="spatial-omics-technologies.html"><i class="fa fa-check"></i><b>3</b> Spatial omics technologies</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="spatial-omics-technologies.html"><a href="spatial-omics-technologies.html#presentation"><i class="fa fa-check"></i><b>3.1</b> Presentation</a></li>
+<li class="chapter" data-level="3.2" data-path="spatial-omics-technologies.html"><a href="spatial-omics-technologies.html#short-summary"><i class="fa fa-check"></i><b>3.2</b> Short summary</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="spatial-omics-technologies.html"><a href="spatial-omics-technologies.html#why-do-we-need-spatial-omics-technologies"><i class="fa fa-check"></i><b>3.2.1</b> Why do we need spatial omics technologies?</a></li>
+<li class="chapter" data-level="3.2.2" data-path="spatial-omics-technologies.html"><a href="spatial-omics-technologies.html#what-is-spatial-omics"><i class="fa fa-check"></i><b>3.2.2</b> What is spatial omics?</a></li>
+<li class="chapter" data-level="3.2.3" data-path="spatial-omics-technologies.html"><a href="spatial-omics-technologies.html#what-are-the-main-spatial-omics-technologies"><i class="fa fa-check"></i><b>3.2.3</b> What are the main spatial omics technologies?</a></li>
+<li class="chapter" data-level="3.2.4" data-path="spatial-omics-technologies.html"><a href="spatial-omics-technologies.html#other-spatial-omics-atac-seq-cuttag-lipidomics-etc"><i class="fa fa-check"></i><b>3.2.4</b> Other Spatial omics: ATAC-seq, CUT&amp;Tag, lipidomics, etc</a></li>
+<li class="chapter" data-level="3.2.5" data-path="spatial-omics-technologies.html"><a href="spatial-omics-technologies.html#what-are-the-different-types-of-spatial-downstream-analyses"><i class="fa fa-check"></i><b>3.2.5</b> What are the different types of spatial downstream analyses?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="introduction-to-the-giotto-package.html"><a href="introduction-to-the-giotto-package.html"><i class="fa fa-check"></i><b>4</b> Introduction to the Giotto package</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="introduction-to-the-giotto-package.html"><a href="introduction-to-the-giotto-package.html#presentation-1"><i class="fa fa-check"></i><b>4.1</b> Presentation</a></li>
+<li class="chapter" data-level="4.2" data-path="introduction-to-the-giotto-package.html"><a href="introduction-to-the-giotto-package.html#ecosystem"><i class="fa fa-check"></i><b>4.2</b> Ecosystem</a></li>
+<li class="chapter" data-level="4.3" data-path="introduction-to-the-giotto-package.html"><a href="introduction-to-the-giotto-package.html#installation-python-environment"><i class="fa fa-check"></i><b>4.3</b> Installation + python environment</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="introduction-to-the-giotto-package.html"><a href="introduction-to-the-giotto-package.html#giotto-installation-1"><i class="fa fa-check"></i><b>4.3.1</b> Giotto installation</a></li>
+<li class="chapter" data-level="4.3.2" data-path="introduction-to-the-giotto-package.html"><a href="introduction-to-the-giotto-package.html#python-environment"><i class="fa fa-check"></i><b>4.3.2</b> Python environment</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="introduction-to-the-giotto-package.html"><a href="introduction-to-the-giotto-package.html#giotto-instructions"><i class="fa fa-check"></i><b>4.4</b> Giotto instructions</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html"><i class="fa fa-check"></i><b>5</b> Data formatting and Pre-processing</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#data-formats"><i class="fa fa-check"></i><b>5.1</b> Data formats</a></li>
+<li class="chapter" data-level="5.2" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#pre-processing"><i class="fa fa-check"></i><b>5.2</b> Pre-processing</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html"><i class="fa fa-check"></i><b>6</b> Creating a Giotto object</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#used-packages"><i class="fa fa-check"></i><b>6.0.1</b> Used packages</a></li>
+<li class="chapter" data-level="6.1" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#overview"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
+<li class="chapter" data-level="6.2" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#from-matrix-locations"><i class="fa fa-check"></i><b>6.2</b> From matrix + locations</a></li>
+<li class="chapter" data-level="6.3" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#from-subcellular-raw-data-transcripts-or-images-polygons"><i class="fa fa-check"></i><b>6.3</b> From subcellular raw data (transcripts or images) + polygons</a></li>
+<li class="chapter" data-level="6.4" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#from-piece-wise"><i class="fa fa-check"></i><b>6.4</b> From piece-wise</a></li>
+<li class="chapter" data-level="6.5" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#using-convenience-functions-for-popular-technologies-vizgen-xenium-cosmx"><i class="fa fa-check"></i><b>6.5</b> Using convenience functions for popular technologies (Vizgen, Xenium, CosMx, …)</a></li>
+<li class="chapter" data-level="6.6" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#spatial-plots"><i class="fa fa-check"></i><b>6.6</b> Spatial plots</a></li>
+<li class="chapter" data-level="6.7" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#subsetting"><i class="fa fa-check"></i><b>6.7</b> Subsetting</a></li>
+<li class="chapter" data-level="6.8" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#mini-objects-giottodata"><i class="fa fa-check"></i><b>6.8</b> Mini objects &amp; GiottoData</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="visium-part-i.html"><a href="visium-part-i.html"><i class="fa fa-check"></i><b>7</b> Visium Part I</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="visium-part-i.html"><a href="visium-part-i.html#the-visium-technology"><i class="fa fa-check"></i><b>7.1</b> The Visium technology</a></li>
+<li class="chapter" data-level="7.2" data-path="visium-part-i.html"><a href="visium-part-i.html#introduction-to-the-spatial-dataset"><i class="fa fa-check"></i><b>7.2</b> Introduction to the spatial dataset</a></li>
+<li class="chapter" data-level="7.3" data-path="visium-part-i.html"><a href="visium-part-i.html#download-dataset"><i class="fa fa-check"></i><b>7.3</b> Download dataset</a></li>
+<li class="chapter" data-level="7.4" data-path="visium-part-i.html"><a href="visium-part-i.html#create-the-giotto-object"><i class="fa fa-check"></i><b>7.4</b> Create the Giotto object</a></li>
+<li class="chapter" data-level="7.5" data-path="visium-part-i.html"><a href="visium-part-i.html#subset-on-spots-that-were-covered-by-tissue"><i class="fa fa-check"></i><b>7.5</b> Subset on spots that were covered by tissue</a></li>
+<li class="chapter" data-level="7.6" data-path="visium-part-i.html"><a href="visium-part-i.html#quality-control"><i class="fa fa-check"></i><b>7.6</b> Quality control</a></li>
+<li class="chapter" data-level="7.7" data-path="visium-part-i.html"><a href="visium-part-i.html#filtering"><i class="fa fa-check"></i><b>7.7</b> Filtering</a></li>
+<li class="chapter" data-level="7.8" data-path="visium-part-i.html"><a href="visium-part-i.html#normalization"><i class="fa fa-check"></i><b>7.8</b> Normalization</a></li>
+<li class="chapter" data-level="7.9" data-path="visium-part-i.html"><a href="visium-part-i.html#feature-selection"><i class="fa fa-check"></i><b>7.9</b> Feature selection</a>
+<ul>
+<li class="chapter" data-level="7.9.1" data-path="visium-part-i.html"><a href="visium-part-i.html#highly-variable-features"><i class="fa fa-check"></i><b>7.9.1</b> Highly Variable Features:</a></li>
+</ul></li>
+<li class="chapter" data-level="7.10" data-path="visium-part-i.html"><a href="visium-part-i.html#dimension-reduction"><i class="fa fa-check"></i><b>7.10</b> Dimension Reduction</a>
+<ul>
+<li class="chapter" data-level="7.10.1" data-path="visium-part-i.html"><a href="visium-part-i.html#pca"><i class="fa fa-check"></i><b>7.10.1</b> PCA</a></li>
+<li class="chapter" data-level="7.10.2" data-path="visium-part-i.html"><a href="visium-part-i.html#umap"><i class="fa fa-check"></i><b>7.10.2</b> UMAP</a></li>
+<li class="chapter" data-level="7.10.3" data-path="visium-part-i.html"><a href="visium-part-i.html#t-sne"><i class="fa fa-check"></i><b>7.10.3</b> t-SNE</a></li>
+</ul></li>
+<li class="chapter" data-level="7.11" data-path="visium-part-i.html"><a href="visium-part-i.html#clustering"><i class="fa fa-check"></i><b>7.11</b> Clustering</a>
+<ul>
+<li class="chapter" data-level="7.11.1" data-path="visium-part-i.html"><a href="visium-part-i.html#calculate-leiden-clustering"><i class="fa fa-check"></i><b>7.11.1</b> Calculate Leiden clustering</a></li>
+<li class="chapter" data-level="7.11.2" data-path="visium-part-i.html"><a href="visium-part-i.html#calculate-louvain-clustering"><i class="fa fa-check"></i><b>7.11.2</b> Calculate Louvain clustering</a></li>
+</ul></li>
+<li class="chapter" data-level="7.12" data-path="visium-part-i.html"><a href="visium-part-i.html#save-the-object"><i class="fa fa-check"></i><b>7.12</b> Save the object</a></li>
+<li class="chapter" data-level="7.13" data-path="visium-part-i.html"><a href="visium-part-i.html#session-info"><i class="fa fa-check"></i><b>7.13</b> Session info</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="visium-part-ii.html"><a href="visium-part-ii.html"><i class="fa fa-check"></i><b>8</b> Visium Part II</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="visium-part-ii.html"><a href="visium-part-ii.html#load-the-object"><i class="fa fa-check"></i><b>8.1</b> Load the object</a></li>
+<li class="chapter" data-level="8.2" data-path="visium-part-ii.html"><a href="visium-part-ii.html#differential-expression"><i class="fa fa-check"></i><b>8.2</b> Differential expression</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="visium-part-ii.html"><a href="visium-part-ii.html#gini-markers"><i class="fa fa-check"></i><b>8.2.1</b> Gini markers</a></li>
+<li class="chapter" data-level="8.2.2" data-path="visium-part-ii.html"><a href="visium-part-ii.html#scran-markers"><i class="fa fa-check"></i><b>8.2.2</b> Scran markers</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="visium-part-ii.html"><a href="visium-part-ii.html#enrichment-deconvolution"><i class="fa fa-check"></i><b>8.3</b> Enrichment &amp; Deconvolution</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="visium-part-ii.html"><a href="visium-part-ii.html#pagerank"><i class="fa fa-check"></i><b>8.3.1</b> PAGE/Rank</a></li>
+<li class="chapter" data-level="8.3.2" data-path="visium-part-ii.html"><a href="visium-part-ii.html#spatialdwls"><i class="fa fa-check"></i><b>8.3.2</b> SpatialDWLS</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="visium-part-ii.html"><a href="visium-part-ii.html#spatial-expression-patterns"><i class="fa fa-check"></i><b>8.4</b> Spatial expression patterns</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="visium-part-ii.html"><a href="visium-part-ii.html#spatial-variable-genes"><i class="fa fa-check"></i><b>8.4.1</b> Spatial variable genes</a></li>
+<li class="chapter" data-level="8.4.2" data-path="visium-part-ii.html"><a href="visium-part-ii.html#spatial-co-expression-modules"><i class="fa fa-check"></i><b>8.4.2</b> Spatial co-expression modules</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="visium-part-ii.html"><a href="visium-part-ii.html#spatially-informed-clusters"><i class="fa fa-check"></i><b>8.5</b> Spatially informed clusters</a></li>
+<li class="chapter" data-level="8.6" data-path="visium-part-ii.html"><a href="visium-part-ii.html#spatial-domains-hmrf"><i class="fa fa-check"></i><b>8.6</b> Spatial domains HMRF</a></li>
+<li class="chapter" data-level="8.7" data-path="visium-part-ii.html"><a href="visium-part-ii.html#interactive-tools"><i class="fa fa-check"></i><b>8.7</b> Interactive tools</a></li>
+<li class="chapter" data-level="8.8" data-path="visium-part-ii.html"><a href="visium-part-ii.html#session-info-1"><i class="fa fa-check"></i><b>8.8</b> Session info</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="visium-hd.html"><a href="visium-hd.html"><i class="fa fa-check"></i><b>9</b> Visium HD</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="visium-hd.html"><a href="visium-hd.html#objective"><i class="fa fa-check"></i><b>9.1</b> Objective</a></li>
+<li class="chapter" data-level="9.2" data-path="visium-hd.html"><a href="visium-hd.html#background"><i class="fa fa-check"></i><b>9.2</b> Background</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="visium-hd.html"><a href="visium-hd.html#visium-hd-technology"><i class="fa fa-check"></i><b>9.2.1</b> Visium HD Technology</a></li>
+<li class="chapter" data-level="9.2.2" data-path="visium-hd.html"><a href="visium-hd.html#colorectal-cancer-sample"><i class="fa fa-check"></i><b>9.2.2</b> Colorectal Cancer Sample</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="visium-hd.html"><a href="visium-hd.html#data-ingestion"><i class="fa fa-check"></i><b>9.3</b> Data Ingestion</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="visium-hd.html"><a href="visium-hd.html#visium-hd-output-data-format"><i class="fa fa-check"></i><b>9.3.1</b> Visium HD output data format</a></li>
+<li class="chapter" data-level="9.3.2" data-path="visium-hd.html"><a href="visium-hd.html#read-in-raw-data"><i class="fa fa-check"></i><b>9.3.2</b> Read in raw data</a></li>
+<li class="chapter" data-level="9.3.3" data-path="visium-hd.html"><a href="visium-hd.html#giotto-visium-hd-convenience-function"><i class="fa fa-check"></i><b>9.3.3</b> Giotto Visium HD convenience function</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="visium-hd.html"><a href="visium-hd.html#tiling-and-aggregation"><i class="fa fa-check"></i><b>9.4</b> Tiling and aggregation</a></li>
+<li class="chapter" data-level="9.5" data-path="visium-hd.html"><a href="visium-hd.html#scalability-and-projection-functions"><i class="fa fa-check"></i><b>9.5</b> Scalability and projection functions</a></li>
+<li class="chapter" data-level="9.6" data-path="visium-hd.html"><a href="visium-hd.html#spatial-expression-patterns-1"><i class="fa fa-check"></i><b>9.6</b> Spatial expression patterns</a></li>
+<li class="chapter" data-level="9.7" data-path="visium-hd.html"><a href="visium-hd.html#spatial-co-expression-modules-1"><i class="fa fa-check"></i><b>9.7</b> Spatial co-expression modules</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="xenium-1.html"><a href="xenium-1.html"><i class="fa fa-check"></i><b>10</b> Xenium</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="xenium-1.html"><a href="xenium-1.html#introduction-to-spatial-dataset"><i class="fa fa-check"></i><b>10.1</b> Introduction to spatial dataset</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="xenium-1.html"><a href="xenium-1.html#output-directory-structure"><i class="fa fa-check"></i><b>10.1.1</b> Output directory structure</a></li>
+<li class="chapter" data-level="10.1.2" data-path="xenium-1.html"><a href="xenium-1.html#mini-xenium-dataset"><i class="fa fa-check"></i><b>10.1.2</b> Mini Xenium Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="xenium-1.html"><a href="xenium-1.html#data-prep"><i class="fa fa-check"></i><b>10.2</b> Data prep</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="xenium-1.html"><a href="xenium-1.html#image-conversion-may-change"><i class="fa fa-check"></i><b>10.2.1</b> Image conversion (may change)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="xenium-1.html"><a href="xenium-1.html#convenience-function"><i class="fa fa-check"></i><b>10.3</b> Convenience function</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="xenium-1.html"><a href="xenium-1.html#specific-filepaths"><i class="fa fa-check"></i><b>10.3.1</b> Specific filepaths</a></li>
+<li class="chapter" data-level="10.3.2" data-path="xenium-1.html"><a href="xenium-1.html#quality-value"><i class="fa fa-check"></i><b>10.3.2</b> Quality value</a></li>
+<li class="chapter" data-level="10.3.3" data-path="xenium-1.html"><a href="xenium-1.html#transcript-type-splitting"><i class="fa fa-check"></i><b>10.3.3</b> Transcript type splitting</a></li>
+<li class="chapter" data-level="10.3.4" data-path="xenium-1.html"><a href="xenium-1.html#centroids-calculation"><i class="fa fa-check"></i><b>10.3.4</b> Centroids calculation</a></li>
+<li class="chapter" data-level="10.3.5" data-path="xenium-1.html"><a href="xenium-1.html#simple-visualization"><i class="fa fa-check"></i><b>10.3.5</b> Simple visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="xenium-1.html"><a href="xenium-1.html#piecewise-loading"><i class="fa fa-check"></i><b>10.4</b> Piecewise loading</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="xenium-1.html"><a href="xenium-1.html#load-giottopoints-transcripts"><i class="fa fa-check"></i><b>10.4.1</b> load giottoPoints transcripts</a></li>
+<li class="chapter" data-level="10.4.2" data-path="xenium-1.html"><a href="xenium-1.html#optional-loading-pre-aggregated-data"><i class="fa fa-check"></i><b>10.4.2</b> (optional) Loading pre-aggregated data</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="xenium-1.html"><a href="xenium-1.html#xenium-images"><i class="fa fa-check"></i><b>10.5</b> Xenium Images</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="xenium-1.html"><a href="xenium-1.html#image-metadata"><i class="fa fa-check"></i><b>10.5.1</b> Image metadata</a></li>
+<li class="chapter" data-level="10.5.2" data-path="xenium-1.html"><a href="xenium-1.html#image-loading"><i class="fa fa-check"></i><b>10.5.2</b> Image loading</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="xenium-1.html"><a href="xenium-1.html#spatial-aggregation"><i class="fa fa-check"></i><b>10.6</b> Spatial aggregation</a></li>
+<li class="chapter" data-level="10.7" data-path="xenium-1.html"><a href="xenium-1.html#aggregate-analyses-workflow"><i class="fa fa-check"></i><b>10.7</b> Aggregate analyses workflow</a>
+<ul>
+<li class="chapter" data-level="10.7.1" data-path="xenium-1.html"><a href="xenium-1.html#filtering-1"><i class="fa fa-check"></i><b>10.7.1</b> Filtering</a></li>
+<li class="chapter" data-level="10.7.2" data-path="xenium-1.html"><a href="xenium-1.html#normalization-1"><i class="fa fa-check"></i><b>10.7.2</b> Normalization</a></li>
+<li class="chapter" data-level="10.7.3" data-path="xenium-1.html"><a href="xenium-1.html#dimension-reduction-1"><i class="fa fa-check"></i><b>10.7.3</b> Dimension Reduction</a></li>
+<li class="chapter" data-level="10.7.4" data-path="xenium-1.html"><a href="xenium-1.html#clustering-1"><i class="fa fa-check"></i><b>10.7.4</b> Clustering</a></li>
+</ul></li>
+<li class="chapter" data-level="10.8" data-path="xenium-1.html"><a href="xenium-1.html#niche-clustering"><i class="fa fa-check"></i><b>10.8</b> Niche clustering</a>
+<ul>
+<li class="chapter" data-level="10.8.1" data-path="xenium-1.html"><a href="xenium-1.html#spatial-network"><i class="fa fa-check"></i><b>10.8.1</b> Spatial network</a></li>
+<li class="chapter" data-level="10.8.2" data-path="xenium-1.html"><a href="xenium-1.html#niche-calculation"><i class="fa fa-check"></i><b>10.8.2</b> Niche calculation</a></li>
+<li class="chapter" data-level="10.8.3" data-path="xenium-1.html"><a href="xenium-1.html#kmeans-clustering-based-on-niche-signature"><i class="fa fa-check"></i><b>10.8.3</b> kmeans clustering based on niche signature</a></li>
+</ul></li>
+<li class="chapter" data-level="10.9" data-path="xenium-1.html"><a href="xenium-1.html#cell-proximity-enrichment"><i class="fa fa-check"></i><b>10.9</b> Cell proximity enrichment</a></li>
+<li class="chapter" data-level="10.10" data-path="xenium-1.html"><a href="xenium-1.html#pseudovisium"><i class="fa fa-check"></i><b>10.10</b> Pseudovisium</a>
+<ul>
+<li class="chapter" data-level="10.10.1" data-path="xenium-1.html"><a href="xenium-1.html#pseudovisium-aggregation-and-workflow"><i class="fa fa-check"></i><b>10.10.1</b> Pseudovisium aggregation and workflow</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html"><i class="fa fa-check"></i><b>11</b> Spatial proteomics: Multiplexed Immunofluorescence</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#spatial-proteomics-technologies"><i class="fa fa-check"></i><b>11.1</b> Spatial Proteomics Technologies</a></li>
+<li class="chapter" data-level="11.2" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#raw-data-type-coming-out-of-different-technologies"><i class="fa fa-check"></i><b>11.2</b> Raw data type coming out of different technologies</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#use-ome.tiff-as-an-example-output-data-to-begin-with"><i class="fa fa-check"></i><b>11.2.1</b> Use ome.tiff as an example output data to begin with</a></li>
+<li class="chapter" data-level="11.2.2" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#use-single-channel-images-as-an-example-output-data-to-begin-with"><i class="fa fa-check"></i><b>11.2.2</b> Use single channel images as an example output data to begin with</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#cell-segmentation-file-to-get-single-cell-level-protein-expression"><i class="fa fa-check"></i><b>11.3</b> Cell Segmentation file to get single cell level protein expression</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#using-segmentation-output-file-from-deepcellmesmer-as-an-example."><i class="fa fa-check"></i><b>11.3.1</b> Using segmentation output file from DeepCell(mesmer) as an example.</a></li>
+<li class="chapter" data-level="11.3.2" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#using-giotto-wrapper-of-cellpose-to-perform-segmentation"><i class="fa fa-check"></i><b>11.3.2</b> Using Giotto wrapper of Cellpose to perform segmentation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#create-a-giotto-object-using-list-of-gitto-large-images-and-polygons"><i class="fa fa-check"></i><b>11.4</b> Create a Giotto Object using list of gitto large images and polygons</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#overlap-to-matrix"><i class="fa fa-check"></i><b>11.4.1</b> Overlap to matrix</a></li>
+<li class="chapter" data-level="11.4.2" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#manipulate-expression-information"><i class="fa fa-check"></i><b>11.4.2</b> Manipulate Expression information</a></li>
+<li class="chapter" data-level="11.4.3" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#rescale-polygons"><i class="fa fa-check"></i><b>11.4.3</b> Rescale polygons</a></li>
+<li class="chapter" data-level="11.4.4" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#perform-clustering-and-differential-expression"><i class="fa fa-check"></i><b>11.4.4</b> Perform clustering and differential expression</a></li>
+<li class="chapter" data-level="11.4.5" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#give-the-cluster-an-annotation-based-on-expression-values"><i class="fa fa-check"></i><b>11.4.5</b> Give the cluster an annotation based on expression values</a></li>
+<li class="chapter" data-level="11.4.6" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#spatial-network-1"><i class="fa fa-check"></i><b>11.4.6</b> spatial network</a></li>
+<li class="chapter" data-level="11.4.7" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#cell-neighborhood-cell-typecell-type-interactions"><i class="fa fa-check"></i><b>11.4.7</b> Cell Neighborhood: Cell-Type/Cell-Type Interactions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html"><i class="fa fa-check"></i><b>12</b> Working with multiple samples</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#objective-1"><i class="fa fa-check"></i><b>12.1</b> Objective</a></li>
+<li class="chapter" data-level="12.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#background-1"><i class="fa fa-check"></i><b>12.2</b> Background</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#dataset"><i class="fa fa-check"></i><b>12.2.1</b> Dataset</a></li>
+<li class="chapter" data-level="12.2.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#visium-technology"><i class="fa fa-check"></i><b>12.2.2</b> Visium technology</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#create-individual-giotto-objects"><i class="fa fa-check"></i><b>12.3</b> Create individual giotto objects</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#download-the-data"><i class="fa fa-check"></i><b>12.3.1</b> Download the data</a></li>
+<li class="chapter" data-level="12.3.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#create-giotto-instructions"><i class="fa fa-check"></i><b>12.3.2</b> Create giotto instructions</a></li>
+<li class="chapter" data-level="12.3.3" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#load-visium-data-into-giotto"><i class="fa fa-check"></i><b>12.3.3</b> Load visium data into Giotto</a></li>
+<li class="chapter" data-level="12.3.4" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#healthy-prostate-tissue-coverage"><i class="fa fa-check"></i><b>12.3.4</b> Healthy prostate tissue coverage</a></li>
+<li class="chapter" data-level="12.3.5" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#adenocarcinoma-prostate-tissue-coverage"><i class="fa fa-check"></i><b>12.3.5</b> Adenocarcinoma prostate tissue coverage</a></li>
+<li class="chapter" data-level="12.3.6" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#showing-the-data-strucutre-for-the-inidividual-objects"><i class="fa fa-check"></i><b>12.3.6</b> Showing the data strucutre for the inidividual objects</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#join-giotto-objects"><i class="fa fa-check"></i><b>12.4</b> Join Giotto Objects</a></li>
+<li class="chapter" data-level="12.5" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#visualizing-combined-datasets"><i class="fa fa-check"></i><b>12.5</b> Visualizing combined datasets</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-in-the-same-plot"><i class="fa fa-check"></i><b>12.5.1</b> Vizualizing in the same plot</a></li>
+<li class="chapter" data-level="12.5.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-on-separate-plots"><i class="fa fa-check"></i><b>12.5.2</b> Vizualizing on separate plots</a></li>
+</ul></li>
+<li class="chapter" data-level="12.6" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#splitting-combined-dataset"><i class="fa fa-check"></i><b>12.6</b> Splitting combined dataset</a></li>
+<li class="chapter" data-level="12.7" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#analyzing-joined-objects"><i class="fa fa-check"></i><b>12.7</b> Analyzing joined objects</a>
+<ul>
+<li class="chapter" data-level="12.7.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#normalization-and-adding-statistics"><i class="fa fa-check"></i><b>12.7.1</b> Normalization and adding statistics</a></li>
+<li class="chapter" data-level="12.7.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#clustering-the-datasets"><i class="fa fa-check"></i><b>12.7.2</b> Clustering the datasets</a></li>
+<li class="chapter" data-level="12.7.3" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-spatial-location-of-clusters"><i class="fa fa-check"></i><b>12.7.3</b> Vizualizing spatial location of clusters</a></li>
+<li class="chapter" data-level="12.7.4" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-tissue-contribution-to-clusters"><i class="fa fa-check"></i><b>12.7.4</b> Vizualizing tissue contribution to clusters</a></li>
+</ul></li>
+<li class="chapter" data-level="12.8" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#perform-harmony-and-default-workflows"><i class="fa fa-check"></i><b>12.8</b> Perform Harmony and default workflows</a>
+<ul>
+<li class="chapter" data-level="12.8.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#clustering-harmonized-object"><i class="fa fa-check"></i><b>12.8.1</b> Clustering harmonized object</a></li>
+<li class="chapter" data-level="12.8.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-the-tissue-contribution"><i class="fa fa-check"></i><b>12.8.2</b> Vizualizing the tissue contribution</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html"><i class="fa fa-check"></i><b>13</b> Spatial multi-modal analysis</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#overview-1"><i class="fa fa-check"></i><b>13.1</b> Overview</a></li>
+<li class="chapter" data-level="13.2" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#spatial-manipulation"><i class="fa fa-check"></i><b>13.2</b> Spatial manipulation</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#spatial-transforms"><i class="fa fa-check"></i><b>13.2.1</b> Spatial transforms:</a></li>
+<li class="chapter" data-level="13.2.2" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#spatial-utilities"><i class="fa fa-check"></i><b>13.2.2</b> Spatial utilities:</a></li>
+<li class="chapter" data-level="13.2.3" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#spatial-classes"><i class="fa fa-check"></i><b>13.2.3</b> Spatial classes:</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#examples-of-the-simple-transforms-with-a-giottopolygon"><i class="fa fa-check"></i><b>13.3</b> Examples of the simple transforms with a giottoPolygon</a></li>
+<li class="chapter" data-level="13.4" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#affine-transforms"><i class="fa fa-check"></i><b>13.4</b> Affine transforms</a></li>
+<li class="chapter" data-level="13.5" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#image-transforms"><i class="fa fa-check"></i><b>13.5</b> Image transforms</a></li>
+<li class="chapter" data-level="13.6" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#the-practical-usage-of-multi-modality-co-registration"><i class="fa fa-check"></i><b>13.6</b> The practical usage of multi-modality co-registration</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#example-dataset-xenium-breast-cancer-pre-release-pack"><i class="fa fa-check"></i><b>13.6.1</b> Example dataset: Xenium Breast Cancer pre-release pack</a></li>
+<li class="chapter" data-level="13.6.2" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#target-coordinate-system"><i class="fa fa-check"></i><b>13.6.2</b> Target Coordinate system</a></li>
+<li class="chapter" data-level="13.6.3" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#visium-to-register"><i class="fa fa-check"></i><b>13.6.3</b> Visium to register</a></li>
+<li class="chapter" data-level="13.6.4" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#register-post-xenium-he-and-if-image"><i class="fa fa-check"></i><b>13.6.4</b> Register post-Xenium H&amp;E and IF image</a></li>
+<li class="chapter" data-level="13.6.5" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#automatic-alignment-via-sift-feature-descriptor-matching-and-affine-transformation"><i class="fa fa-check"></i><b>13.6.5</b> Automatic alignment via SIFT feature descriptor matching and affine transformation</a></li>
+<li class="chapter" data-level="13.6.6" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html#final-notes"><i class="fa fa-check"></i><b>13.6.6</b> Final Notes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html"><i class="fa fa-check"></i><b>14</b> Multi-omics integration</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#the-cytassist-technology"><i class="fa fa-check"></i><b>14.1</b> The CytAssist technology</a></li>
+<li class="chapter" data-level="14.2" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#introduction-to-the-spatial-dataset-1"><i class="fa fa-check"></i><b>14.2</b> Introduction to the spatial dataset</a></li>
+<li class="chapter" data-level="14.3" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#download-dataset-1"><i class="fa fa-check"></i><b>14.3</b> Download dataset</a></li>
+<li class="chapter" data-level="14.4" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#create-the-giotto-object-1"><i class="fa fa-check"></i><b>14.4</b> Create the Giotto object</a></li>
+<li class="chapter" data-level="14.5" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#subset-on-spots-that-were-covered-by-tissue-1"><i class="fa fa-check"></i><b>14.5</b> Subset on spots that were covered by tissue</a></li>
+<li class="chapter" data-level="14.6" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#rna-processing"><i class="fa fa-check"></i><b>14.6</b> RNA processing</a></li>
+<li class="chapter" data-level="14.7" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#protein-processing"><i class="fa fa-check"></i><b>14.7</b> Protein processing</a></li>
+<li class="chapter" data-level="14.8" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#multi-omics-integration-1"><i class="fa fa-check"></i><b>14.8</b> Multi-omics integration</a></li>
+<li class="chapter" data-level="14.9" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#session-info-2"><i class="fa fa-check"></i><b>14.9</b> Session info</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html"><i class="fa fa-check"></i><b>15</b> Interoperability with other frameworks</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#load-giotto-object"><i class="fa fa-check"></i><b>15.1</b> Load Giotto object</a></li>
+<li class="chapter" data-level="15.2" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#seurat"><i class="fa fa-check"></i><b>15.2</b> Seurat</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#conversion-of-giotto-object-to-seurat-object"><i class="fa fa-check"></i><b>15.2.1</b> Conversion of Giotto Object to Seurat Object</a></li>
+<li class="chapter" data-level="15.2.2" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#conversion-of-seurat-object-back-to-giotto-object"><i class="fa fa-check"></i><b>15.2.2</b> Conversion of Seurat object Back to Giotto Object</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#spatialexperiment"><i class="fa fa-check"></i><b>15.3</b> SpatialExperiment</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#convert-giotto-object-to-spatialexperiment-object"><i class="fa fa-check"></i><b>15.3.1</b> Convert Giotto Object to SpatialExperiment Object</a></li>
+<li class="chapter" data-level="15.3.2" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#conversion-of-spatialexperiment-object-back-to-giotto"><i class="fa fa-check"></i><b>15.3.2</b> Conversion of SpatialExperiment object back to Giotto</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#anndata"><i class="fa fa-check"></i><b>15.4</b> AnnData</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#load-required-libraries"><i class="fa fa-check"></i><b>15.4.1</b> Load Required Libraries</a></li>
+<li class="chapter" data-level="15.4.2" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#specify-path-for-results"><i class="fa fa-check"></i><b>15.4.2</b> Specify Path for Results</a></li>
+<li class="chapter" data-level="15.4.3" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#giotto-to-anndata"><i class="fa fa-check"></i><b>15.4.3</b> Giotto To AnnData</a></li>
+<li class="chapter" data-level="15.4.4" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#convert-anndata-to-giotto"><i class="fa fa-check"></i><b>15.4.4</b> Convert AnnData to Giotto</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html#create-mini-vizgen-object"><i class="fa fa-check"></i><b>15.5</b> Create mini Vizgen object</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html"><i class="fa fa-check"></i><b>16</b> Interoperability with isolated tools</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#spatial-niche-trajectory-analysis-ontrac"><i class="fa fa-check"></i><b>16.1</b> Spatial niche trajectory analysis (ONTraC)</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#introduction-to-ontrac"><i class="fa fa-check"></i><b>16.1.1</b> Introduction to ONTraC</a></li>
+<li class="chapter" data-level="16.1.2" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#introduction-to-merfish"><i class="fa fa-check"></i><b>16.1.2</b> Introduction to MERFISH</a></li>
+<li class="chapter" data-level="16.1.3" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#settings"><i class="fa fa-check"></i><b>16.1.3</b> settings</a></li>
+<li class="chapter" data-level="16.1.4" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#dataset-1"><i class="fa fa-check"></i><b>16.1.4</b> Dataset</a></li>
+<li class="chapter" data-level="16.1.5" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#create-the-giotto-object-2"><i class="fa fa-check"></i><b>16.1.5</b> Create the Giotto object</a></li>
+<li class="chapter" data-level="16.1.6" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#perform-spatial-niche-trajectory-analysis-using-ontrac"><i class="fa fa-check"></i><b>16.1.6</b> Perform spatial niche trajectory analysis using ONTraC</a></li>
+<li class="chapter" data-level="16.1.7" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#visualization"><i class="fa fa-check"></i><b>16.1.7</b> visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#session-info-3"><i class="fa fa-check"></i><b>16.2</b> Session info</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html"><i class="fa fa-check"></i><b>17</b> Interactivity with the R/Spatial ecosystem</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#kriging"><i class="fa fa-check"></i><b>17.1</b> Kriging</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#visium-technology-1"><i class="fa fa-check"></i><b>17.1.1</b> Visium technology</a></li>
+<li class="chapter" data-level="17.1.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#dataset-2"><i class="fa fa-check"></i><b>17.1.2</b> Dataset</a></li>
+<li class="chapter" data-level="17.1.3" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#generating-a-geojson-file-of-nuclei-location"><i class="fa fa-check"></i><b>17.1.3</b> Generating a geojson file of nuclei location</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#downloading-the-dataset"><i class="fa fa-check"></i><b>17.2</b> Downloading the dataset</a></li>
+<li class="chapter" data-level="17.3" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#importing-visium-data"><i class="fa fa-check"></i><b>17.3</b> Importing visium data</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#identifying-spatially-organized-features"><i class="fa fa-check"></i><b>17.3.1</b> Identifying spatially organized features</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#adding-cell-polygons-to-giotto-object"><i class="fa fa-check"></i><b>17.4</b> Adding cell polygons to Giotto object</a>
+<ul>
+<li class="chapter" data-level="17.4.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#read-in-the-poly-information"><i class="fa fa-check"></i><b>17.4.1</b> Read in the poly information</a></li>
+<li class="chapter" data-level="17.4.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#vizualizing-polygons"><i class="fa fa-check"></i><b>17.4.2</b> Vizualizing polygons</a></li>
+<li class="chapter" data-level="17.4.3" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#showing-giotto-object-prior-to-polygon-addition"><i class="fa fa-check"></i><b>17.4.3</b> Showing Giotto object prior to polygon addition</a></li>
+<li class="chapter" data-level="17.4.4" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#adding-polygons-to-giotto-object"><i class="fa fa-check"></i><b>17.4.4</b> Adding polygons to giotto object</a></li>
+<li class="chapter" data-level="17.4.5" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#check-polygon-information"><i class="fa fa-check"></i><b>17.4.5</b> Check polygon information</a></li>
+</ul></li>
+<li class="chapter" data-level="17.5" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#performing-kriging"><i class="fa fa-check"></i><b>17.5</b> Performing kriging</a>
+<ul>
+<li class="chapter" data-level="17.5.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#interpolating-features"><i class="fa fa-check"></i><b>17.5.1</b> Interpolating features</a></li>
+<li class="chapter" data-level="17.5.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#expression-overlap"><i class="fa fa-check"></i><b>17.5.2</b> Expression overlap</a></li>
+</ul></li>
+<li class="chapter" data-level="17.6" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#reading-in-larger-dataset"><i class="fa fa-check"></i><b>17.6</b> Reading in larger dataset</a></li>
+<li class="chapter" data-level="17.7" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#analyzing-interpolated-features"><i class="fa fa-check"></i><b>17.7</b> Analyzing interpolated features</a>
+<ul>
+<li class="chapter" data-level="17.7.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#filter-and-normalization"><i class="fa fa-check"></i><b>17.7.1</b> Filter and normalization</a></li>
+<li class="chapter" data-level="17.7.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#visualizing-gene-expression-from-interpolated-expression"><i class="fa fa-check"></i><b>17.7.2</b> Visualizing gene expression from interpolated expression</a></li>
+<li class="chapter" data-level="17.7.3" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#run-pca"><i class="fa fa-check"></i><b>17.7.3</b> Run PCA</a></li>
+<li class="chapter" data-level="17.7.4" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#clustering-2"><i class="fa fa-check"></i><b>17.7.4</b> Clustering</a></li>
+<li class="chapter" data-level="17.7.5" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#visualizing-clustering"><i class="fa fa-check"></i><b>17.7.5</b> Visualizing clustering</a></li>
+<li class="chapter" data-level="17.7.6" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#cropping-objects"><i class="fa fa-check"></i><b>17.7.6</b> Cropping objects</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html"><i class="fa fa-check"></i><b>18</b> Contributing to Giotto</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html#contribution-guideline"><i class="fa fa-check"></i><b>18.1</b> Contribution guideline</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Workshop: Spatial multi-omics data analysis with Giotto Suite</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="working-with-multiple-samples" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">12</span> Working with multiple samples<a href="working-with-multiple-samples.html#working-with-multiple-samples" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Jeff Sheridan</p>
+<p>August 7th 2024</p>
+<div id="objective-1" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Objective<a href="working-with-multiple-samples.html#objective-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Giotto enables the grouping of multiple objects into a single object for combined analysis. Datasets can be spatially distributed across the x, y, or z axes, allowing for the creation of 3D datasets using the z-plane or the analysis of grouped datasets, such as multiple replicates or similar samples. While it’s possible to integrate multiple datasets, batch effects from samples can hinder effective integration. In such cases, more sophisticated methods may be needed to successfully integrate and cluster samples as a unified dataset. One example of an advanced integration technique is <a href="https://www.nature.com/articles/s41592-019-0619-0">Harmony</a>, which will be discussed in more detail later in this tutorial. This tutorial will demonstrate the integration of two Visium datasets, examining the results before and after Harmony integration.</p>
+</div>
+<div id="background-1" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Background<a href="working-with-multiple-samples.html#background-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="dataset" class="section level3 hasAnchor" number="12.2.1">
+<h3><span class="header-section-number">12.2.1</span> Dataset<a href="working-with-multiple-samples.html#dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For this tutorial we will be using two prostate visium datasets produced by 10X Genomics, one an <a href="https://www.10xgenomics.com/datasets/human-prostate-cancer-adenocarcinoma-with-invasive-carcinoma-ffpe-1-standard-1-3-0">Adenocarcinoma with Invasive Carcinoma</a> and the other a <a href="https://www.10xgenomics.com/datasets/normal-human-prostate-ffpe-1-standard-1-3-0">normal prostate</a> sample.</p>
+</div>
+<div id="visium-technology" class="section level3 hasAnchor" number="12.2.2">
+<h3><span class="header-section-number">12.2.2</span> Visium technology<a href="working-with-multiple-samples.html#visium-technology" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-282"></span>
+<img src="img/03_session1/visium_overview.png" alt="Overview of Visium. Source: 10X Genomics." width="80%" />
+<p class="caption">
+Figure 12.1: Overview of Visium. Source: 10X Genomics.
+</p>
+</div>
+<p>Visium by 10x Genomics is a spatial gene expression platform that allows for the mapping of gene expression to high-resolution histology through RNA sequencing The process involves placing a tissue section on a specially prepared slide with an array of barcoded spots, which are 55 µm in diameter with a spot to spot distance of 100 µm. Each spot contains unique barcodes that capture the mRNA from the tissue section, preserving the spatial information. After the tissue is imaged and RNA is captured, the mRNA is sequenced, and the data is mapped back to the tissue’s spatial coordinates. This technology is particularly useful in understanding complex tissue environments, such as tumors, by providing insights into how gene expression varies across different regions.</p>
+</div>
+</div>
+<div id="create-individual-giotto-objects" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> Create individual giotto objects<a href="working-with-multiple-samples.html#create-individual-giotto-objects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="download-the-data" class="section level3 hasAnchor" number="12.3.1">
+<h3><span class="header-section-number">12.3.1</span> Download the data<a href="working-with-multiple-samples.html#download-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You need to download the expression matrix and spatial information by running these commands:</p>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="working-with-multiple-samples.html#cb203-1" tabindex="-1"></a>data_dir <span class="ot">&lt;-</span> <span class="st">&quot;data/3_session1&quot;</span></span>
+<span id="cb203-2"><a href="working-with-multiple-samples.html#cb203-2" tabindex="-1"></a></span>
+<span id="cb203-3"><a href="working-with-multiple-samples.html#cb203-3" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(data_dir, <span class="st">&quot;Visium_FFPE_Human_Prostate_Cancer&quot;</span>), </span>
+<span id="cb203-4"><a href="working-with-multiple-samples.html#cb203-4" tabindex="-1"></a>           <span class="at">showWarnings =</span> <span class="cn">TRUE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb203-5"><a href="working-with-multiple-samples.html#cb203-5" tabindex="-1"></a></span>
+<span id="cb203-6"><a href="working-with-multiple-samples.html#cb203-6" tabindex="-1"></a><span class="co"># Spatial data adenocarcinoma prostate</span></span>
+<span id="cb203-7"><a href="working-with-multiple-samples.html#cb203-7" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> <span class="st">&quot;https://cf.10xgenomics.com/samples/spatial-exp/1.3.0/Visium_FFPE_Human_Prostate_Cancer/Visium_FFPE_Human_Prostate_Cancer_spatial.tar.gz&quot;</span>, </span>
+<span id="cb203-8"><a href="working-with-multiple-samples.html#cb203-8" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="fu">file.path</span>(data_dir, <span class="st">&quot;Visium_FFPE_Human_Prostate_Cancer/Visium_FFPE_Human_Prostate_Cancer_spatial.tar.gz&quot;</span>))</span>
+<span id="cb203-9"><a href="working-with-multiple-samples.html#cb203-9" tabindex="-1"></a></span>
+<span id="cb203-10"><a href="working-with-multiple-samples.html#cb203-10" tabindex="-1"></a><span class="co"># Download matrix adenocarcinoma prostate</span></span>
+<span id="cb203-11"><a href="working-with-multiple-samples.html#cb203-11" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> <span class="st">&quot;https://cf.10xgenomics.com/samples/spatial-exp/1.3.0/Visium_FFPE_Human_Prostate_Cancer/Visium_FFPE_Human_Prostate_Cancer_raw_feature_bc_matrix.tar.gz&quot;</span>, </span>
+<span id="cb203-12"><a href="working-with-multiple-samples.html#cb203-12" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="fu">file.path</span>(data_dir, <span class="st">&quot;Visium_FFPE_Human_Prostate_Cancer/Visium_FFPE_Human_Prostate_Cancer_raw_feature_bc_matrix.tar.gz&quot;</span>))</span>
+<span id="cb203-13"><a href="working-with-multiple-samples.html#cb203-13" tabindex="-1"></a></span>
+<span id="cb203-14"><a href="working-with-multiple-samples.html#cb203-14" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(data_dir, <span class="st">&quot;Visium_FFPE_Human_Normal_Prostate&quot;</span>), </span>
+<span id="cb203-15"><a href="working-with-multiple-samples.html#cb203-15" tabindex="-1"></a>           <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb203-16"><a href="working-with-multiple-samples.html#cb203-16" tabindex="-1"></a></span>
+<span id="cb203-17"><a href="working-with-multiple-samples.html#cb203-17" tabindex="-1"></a><span class="co"># Spatial data normal prostate</span></span>
+<span id="cb203-18"><a href="working-with-multiple-samples.html#cb203-18" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> <span class="st">&quot;https://cf.10xgenomics.com/samples/spatial-exp/1.3.0/Visium_FFPE_Human_Normal_Prostate/Visium_FFPE_Human_Normal_Prostate_spatial.tar.gz&quot;</span>,</span>
+<span id="cb203-19"><a href="working-with-multiple-samples.html#cb203-19" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="fu">file.path</span>(data_dir, <span class="st">&quot;Visium_FFPE_Human_Normal_Prostate/Visium_FFPE_Human_Normal_Prostate_spatial.tar.gz&quot;</span>))</span>
+<span id="cb203-20"><a href="working-with-multiple-samples.html#cb203-20" tabindex="-1"></a></span>
+<span id="cb203-21"><a href="working-with-multiple-samples.html#cb203-21" tabindex="-1"></a><span class="co"># Download matrix normal prostate</span></span>
+<span id="cb203-22"><a href="working-with-multiple-samples.html#cb203-22" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> <span class="st">&quot;https://cf.10xgenomics.com/samples/spatial-exp/1.3.0/Visium_FFPE_Human_Normal_Prostate/Visium_FFPE_Human_Normal_Prostate_raw_feature_bc_matrix.tar.gz&quot;</span>,</span>
+<span id="cb203-23"><a href="working-with-multiple-samples.html#cb203-23" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="fu">file.path</span>(data_dir, <span class="st">&quot;Visium_FFPE_Human_Normal_Prostate/Visium_FFPE_Human_Normal_Prostate_raw_feature_bc_matrix.tar.gz&quot;</span>))</span></code></pre></div>
+</div>
+<div id="create-giotto-instructions" class="section level3 hasAnchor" number="12.3.2">
+<h3><span class="header-section-number">12.3.2</span> Create giotto instructions<a href="working-with-multiple-samples.html#create-giotto-instructions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We must first create instructions for our Giotto object. This will tell the object where to save outputs, whether to show or return plots, and the python path. Specifying the python path is often not required as Giotto will identify the relevant python environment, but might be required in some instances.</p>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="working-with-multiple-samples.html#cb204-1" tabindex="-1"></a><span class="fu">library</span>(Giotto)</span>
+<span id="cb204-2"><a href="working-with-multiple-samples.html#cb204-2" tabindex="-1"></a></span>
+<span id="cb204-3"><a href="working-with-multiple-samples.html#cb204-3" tabindex="-1"></a>save_dir <span class="ot">&lt;-</span> <span class="st">&quot;results/03_session1&quot;</span></span>
+<span id="cb204-4"><a href="working-with-multiple-samples.html#cb204-4" tabindex="-1"></a></span>
+<span id="cb204-5"><a href="working-with-multiple-samples.html#cb204-5" tabindex="-1"></a>instrs <span class="ot">&lt;-</span> <span class="fu">createGiottoInstructions</span>(<span class="at">save_dir =</span> save_dir,</span>
+<span id="cb204-6"><a href="working-with-multiple-samples.html#cb204-6" tabindex="-1"></a>                                   <span class="at">save_plot =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb204-7"><a href="working-with-multiple-samples.html#cb204-7" tabindex="-1"></a>                                   <span class="at">show_plot =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb204-8"><a href="working-with-multiple-samples.html#cb204-8" tabindex="-1"></a>                                   <span class="at">python_path =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+</div>
+<div id="load-visium-data-into-giotto" class="section level3 hasAnchor" number="12.3.3">
+<h3><span class="header-section-number">12.3.3</span> Load visium data into Giotto<a href="working-with-multiple-samples.html#load-visium-data-into-giotto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We next need to read in the data for the Giotto object. To do this we will use the createGiottoVisiumObject() convenience function. This requires us to specify the directory that contains the visium data output from 10X Genomics’s Spaceranger. We also specify the expression data to use (raw or filtered) as well as the image to align. Spaceranger outputs two images, a low and high resolution image.</p>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="working-with-multiple-samples.html#cb205-1" tabindex="-1"></a><span class="fu">print</span>(data_dir)</span>
+<span id="cb205-2"><a href="working-with-multiple-samples.html#cb205-2" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">file.path</span>(data_dir, <span class="st">&quot;Visium_FFPE_Human_Normal_Prostate&quot;</span>))</span>
+<span id="cb205-3"><a href="working-with-multiple-samples.html#cb205-3" tabindex="-1"></a></span>
+<span id="cb205-4"><a href="working-with-multiple-samples.html#cb205-4" tabindex="-1"></a><span class="do">## Healthy prostate</span></span>
+<span id="cb205-5"><a href="working-with-multiple-samples.html#cb205-5" tabindex="-1"></a>N_pros <span class="ot">&lt;-</span> <span class="fu">createGiottoVisiumObject</span>(</span>
+<span id="cb205-6"><a href="working-with-multiple-samples.html#cb205-6" tabindex="-1"></a>  <span class="at">visium_dir =</span> <span class="fu">file.path</span>(data_dir, <span class="st">&quot;Visium_FFPE_Human_Normal_Prostate&quot;</span>),</span>
+<span id="cb205-7"><a href="working-with-multiple-samples.html#cb205-7" tabindex="-1"></a>  <span class="at">expr_data =</span> <span class="st">&quot;raw&quot;</span>,</span>
+<span id="cb205-8"><a href="working-with-multiple-samples.html#cb205-8" tabindex="-1"></a>  <span class="at">png_name =</span> <span class="st">&quot;tissue_lowres_image.png&quot;</span>,</span>
+<span id="cb205-9"><a href="working-with-multiple-samples.html#cb205-9" tabindex="-1"></a>  <span class="at">gene_column_index =</span> <span class="dv">2</span>,</span>
+<span id="cb205-10"><a href="working-with-multiple-samples.html#cb205-10" tabindex="-1"></a>  <span class="at">instructions =</span> instrs</span>
+<span id="cb205-11"><a href="working-with-multiple-samples.html#cb205-11" tabindex="-1"></a>)</span>
+<span id="cb205-12"><a href="working-with-multiple-samples.html#cb205-12" tabindex="-1"></a></span>
+<span id="cb205-13"><a href="working-with-multiple-samples.html#cb205-13" tabindex="-1"></a><span class="do">## Adenocarcinoma </span></span>
+<span id="cb205-14"><a href="working-with-multiple-samples.html#cb205-14" tabindex="-1"></a>C_pros <span class="ot">&lt;-</span> <span class="fu">createGiottoVisiumObject</span>(</span>
+<span id="cb205-15"><a href="working-with-multiple-samples.html#cb205-15" tabindex="-1"></a>  <span class="at">visium_dir =</span> <span class="fu">file.path</span>(data_dir, <span class="st">&quot;Visium_FFPE_Human_Prostate_Cancer&quot;</span>),</span>
+<span id="cb205-16"><a href="working-with-multiple-samples.html#cb205-16" tabindex="-1"></a>  <span class="at">expr_data =</span> <span class="st">&quot;raw&quot;</span>,</span>
+<span id="cb205-17"><a href="working-with-multiple-samples.html#cb205-17" tabindex="-1"></a>  <span class="at">png_name =</span> <span class="st">&quot;tissue_lowres_image.png&quot;</span>,</span>
+<span id="cb205-18"><a href="working-with-multiple-samples.html#cb205-18" tabindex="-1"></a>  <span class="at">gene_column_index =</span> <span class="dv">2</span>,</span>
+<span id="cb205-19"><a href="working-with-multiple-samples.html#cb205-19" tabindex="-1"></a>  <span class="at">instructions =</span> instrs</span>
+<span id="cb205-20"><a href="working-with-multiple-samples.html#cb205-20" tabindex="-1"></a>)</span></code></pre></div>
+<p>We can see that the gobject contains information for the cells (polygon and spatial units), the RNA express (raw) and the relevant image.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-286"></span>
+<img src="img/03_session1/03_ses1_single_gobject.png" alt="Structure of Giotto object containing a single dataset." width="40%" />
+<p class="caption">
+Figure 12.2: Structure of Giotto object containing a single dataset.
+</p>
+</div>
+</div>
+<div id="healthy-prostate-tissue-coverage" class="section level3 hasAnchor" number="12.3.4">
+<h3><span class="header-section-number">12.3.4</span> Healthy prostate tissue coverage<a href="working-with-multiple-samples.html#healthy-prostate-tissue-coverage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Aligning the Visium spots to the tissue using the fiducials that border the capture area enables the identification of spots containing expression data from the tissue. These spots can be visualized using the spatPlot2D function by setting the cell_color parameter to “in_tissue”.</p>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="working-with-multiple-samples.html#cb206-1" tabindex="-1"></a><span class="fu">spatPlot2D</span>(<span class="at">gobject =</span> N_pros, </span>
+<span id="cb206-2"><a href="working-with-multiple-samples.html#cb206-2" tabindex="-1"></a>           <span class="at">cell_color =</span> <span class="st">&quot;in_tissue&quot;</span>,</span>
+<span id="cb206-3"><a href="working-with-multiple-samples.html#cb206-3" tabindex="-1"></a>           <span class="at">show_image =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb206-4"><a href="working-with-multiple-samples.html#cb206-4" tabindex="-1"></a>           <span class="at">point_size =</span> <span class="fl">2.5</span>,</span>
+<span id="cb206-5"><a href="working-with-multiple-samples.html#cb206-5" tabindex="-1"></a>           <span class="at">cell_color_code =</span> <span class="fu">c</span>(<span class="st">&quot;black&quot;</span>, <span class="st">&quot;red&quot;</span>),</span>
+<span id="cb206-6"><a href="working-with-multiple-samples.html#cb206-6" tabindex="-1"></a>           <span class="at">point_alpha =</span> <span class="fl">0.5</span>, </span>
+<span id="cb206-7"><a href="working-with-multiple-samples.html#cb206-7" tabindex="-1"></a>           <span class="at">save_param =</span> <span class="fu">list</span>(<span class="at">save_name =</span> <span class="st">&quot;03_ses1_normal_prostate_tissue&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-288"></span>
+<img src="img/03_session1/03_ses1_normal_prostate_tissue.png" alt="Tissue coverage for the normal prostate sample." width="70%" />
+<p class="caption">
+Figure 12.3: Tissue coverage for the normal prostate sample.
+</p>
+</div>
+</div>
+<div id="adenocarcinoma-prostate-tissue-coverage" class="section level3 hasAnchor" number="12.3.5">
+<h3><span class="header-section-number">12.3.5</span> Adenocarcinoma prostate tissue coverage<a href="working-with-multiple-samples.html#adenocarcinoma-prostate-tissue-coverage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="working-with-multiple-samples.html#cb207-1" tabindex="-1"></a><span class="fu">spatPlot2D</span>(<span class="at">gobject =</span> C_pros, </span>
+<span id="cb207-2"><a href="working-with-multiple-samples.html#cb207-2" tabindex="-1"></a>           <span class="at">cell_color =</span> <span class="st">&quot;in_tissue&quot;</span>,</span>
+<span id="cb207-3"><a href="working-with-multiple-samples.html#cb207-3" tabindex="-1"></a>           <span class="at">show_image =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb207-4"><a href="working-with-multiple-samples.html#cb207-4" tabindex="-1"></a>           <span class="at">point_size =</span> <span class="fl">2.5</span>,</span>
+<span id="cb207-5"><a href="working-with-multiple-samples.html#cb207-5" tabindex="-1"></a>           <span class="at">cell_color_code =</span> <span class="fu">c</span>(<span class="st">&quot;black&quot;</span>, <span class="st">&quot;red&quot;</span>), </span>
+<span id="cb207-6"><a href="working-with-multiple-samples.html#cb207-6" tabindex="-1"></a>           <span class="at">point_alpha =</span> <span class="fl">0.5</span>, </span>
+<span id="cb207-7"><a href="working-with-multiple-samples.html#cb207-7" tabindex="-1"></a>           <span class="at">save_param =</span> <span class="fu">list</span>(<span class="at">save_name =</span> <span class="st">&quot;03_ses1_adeno_prostate_tissue&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-290"></span>
+<img src="img/03_session1/03_ses1_adeno_prostate_tissue.png" alt="Tissue coverage for the adenocarcinoma prostate sample." width="70%" />
+<p class="caption">
+Figure 12.4: Tissue coverage for the adenocarcinoma prostate sample.
+</p>
+</div>
+</div>
+<div id="showing-the-data-strucutre-for-the-inidividual-objects" class="section level3 hasAnchor" number="12.3.6">
+<h3><span class="header-section-number">12.3.6</span> Showing the data strucutre for the inidividual objects<a href="working-with-multiple-samples.html#showing-the-data-strucutre-for-the-inidividual-objects" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="working-with-multiple-samples.html#cb208-1" tabindex="-1"></a><span class="co"># Printing the file structure for the individual datasets</span></span>
+<span id="cb208-2"><a href="working-with-multiple-samples.html#cb208-2" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">head</span>(<span class="fu">pDataDT</span>(N_pros)))</span>
+<span id="cb208-3"><a href="working-with-multiple-samples.html#cb208-3" tabindex="-1"></a><span class="fu">print</span>(N_pros)</span></code></pre></div>
+</div>
+</div>
+<div id="join-giotto-objects" class="section level2 hasAnchor" number="12.4">
+<h2><span class="header-section-number">12.4</span> Join Giotto Objects<a href="working-with-multiple-samples.html#join-giotto-objects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To join objects together we can use the joinGittoObjects() function. For this we need to supply a list of objects as well as the names for each of these objects. We can also specify the x and y padding to separate the objects in space or the Z position for 3D datasets. If the x_shift is set to NULL then the total shift will be guessed from the Giotto image.</p>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="working-with-multiple-samples.html#cb209-1" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">joinGiottoObjects</span>(<span class="at">gobject_list =</span> <span class="fu">list</span>(N_pros, C_pros),</span>
+<span id="cb209-2"><a href="working-with-multiple-samples.html#cb209-2" tabindex="-1"></a>                                   <span class="at">gobject_names =</span> <span class="fu">c</span>(<span class="st">&quot;NP&quot;</span>, <span class="st">&quot;CP&quot;</span>),</span>
+<span id="cb209-3"><a href="working-with-multiple-samples.html#cb209-3" tabindex="-1"></a>                                   <span class="at">join_method =</span> <span class="st">&quot;shift&quot;</span>, <span class="at">x_padding =</span> <span class="dv">1000</span>)</span>
+<span id="cb209-4"><a href="working-with-multiple-samples.html#cb209-4" tabindex="-1"></a></span>
+<span id="cb209-5"><a href="working-with-multiple-samples.html#cb209-5" tabindex="-1"></a><span class="co"># Printing the file structure for the individual datasets</span></span>
+<span id="cb209-6"><a href="working-with-multiple-samples.html#cb209-6" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">head</span>(<span class="fu">pDataDT</span>(combined_pros)))</span>
+<span id="cb209-7"><a href="working-with-multiple-samples.html#cb209-7" tabindex="-1"></a><span class="fu">print</span>(combined_pros)</span></code></pre></div>
+<p>From the joined data we can see the same information that was present in the single dataset objects as well as the addition of another image. The images are renamed from “image” to include the object name in the image name e.g. “NP-image”. We can also see in the cell metadata that there is a new column “list_ID” that contains the original object names. The cell_ID column also has the original object name appended to the beginning of each cell ID e.g. “NP-AAACAACGAATAGTTC-1”.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-293"></span>
+<img src="img/03_session1/03_ses1_combined_data.png" alt="Structure of Giotto object containing two datasets (left) and cell metadata on the left. Note the addition of multiple images and the addition of the list_ID column to define the dataset." width="100%" />
+<p class="caption">
+Figure 12.5: Structure of Giotto object containing two datasets (left) and cell metadata on the left. Note the addition of multiple images and the addition of the list_ID column to define the dataset.
+</p>
+</div>
+</div>
+<div id="visualizing-combined-datasets" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> Visualizing combined datasets<a href="working-with-multiple-samples.html#visualizing-combined-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The combined dataset can either visualized in the same space or in two separate plots through the group_by variable. To show images both the show_image variable and the image_name variable containing both image names needs to be used.</p>
+<div id="vizualizing-in-the-same-plot" class="section level3 hasAnchor" number="12.5.1">
+<h3><span class="header-section-number">12.5.1</span> Vizualizing in the same plot<a href="working-with-multiple-samples.html#vizualizing-in-the-same-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Due to the x_padding provided when joining the objects each of the datasets can be visualized in the same plotting area. We can see below the normal prostate sample on the left and the healthy prostate on the right. By including the show_image function and supplying both of the image names (“NP-image”, “CP-image”), we can also include the relevant images within the same plot.</p>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="working-with-multiple-samples.html#cb210-1" tabindex="-1"></a><span class="fu">spatPlot2D</span>(<span class="at">gobject =</span> combined_pros, </span>
+<span id="cb210-2"><a href="working-with-multiple-samples.html#cb210-2" tabindex="-1"></a>           <span class="at">cell_color =</span> <span class="st">&quot;in_tissue&quot;</span>, </span>
+<span id="cb210-3"><a href="working-with-multiple-samples.html#cb210-3" tabindex="-1"></a>           <span class="at">cell_color_code =</span> <span class="fu">c</span>(<span class="st">&quot;black&quot;</span>, <span class="st">&quot;red&quot;</span>),</span>
+<span id="cb210-4"><a href="working-with-multiple-samples.html#cb210-4" tabindex="-1"></a>           <span class="at">show_image =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb210-5"><a href="working-with-multiple-samples.html#cb210-5" tabindex="-1"></a>           <span class="at">image_name =</span> <span class="fu">c</span>(<span class="st">&quot;NP-image&quot;</span>, <span class="st">&quot;CP-image&quot;</span>), </span>
+<span id="cb210-6"><a href="working-with-multiple-samples.html#cb210-6" tabindex="-1"></a>           <span class="at">point_size =</span> <span class="dv">1</span>, </span>
+<span id="cb210-7"><a href="working-with-multiple-samples.html#cb210-7" tabindex="-1"></a>           <span class="at">point_alpha =</span> <span class="fl">0.5</span>, </span>
+<span id="cb210-8"><a href="working-with-multiple-samples.html#cb210-8" tabindex="-1"></a>           <span class="at">save_param =</span> <span class="fu">list</span>(<span class="at">save_name =</span> <span class="st">&quot;03_ses1_combined_tissue&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-295"></span>
+<img src="img/03_session1/03_ses1_combined_tissue.png" alt="Vizualizing the visium spots that overlap tissue in normal prostate (left) and adenocarcinoma samples (right) within the same plot." width="100%" />
+<p class="caption">
+Figure 12.6: Vizualizing the visium spots that overlap tissue in normal prostate (left) and adenocarcinoma samples (right) within the same plot.
+</p>
+</div>
+</div>
+<div id="vizualizing-on-separate-plots" class="section level3 hasAnchor" number="12.5.2">
+<h3><span class="header-section-number">12.5.2</span> Vizualizing on separate plots<a href="working-with-multiple-samples.html#vizualizing-on-separate-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If we want to visualize the datasets in separate plots we can supply the “group_by” variable. Below we group the data by “list_ID”, which corresponds to each dataset. We can specify the number of columns through the “cow_n_col” variable.</p>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="working-with-multiple-samples.html#cb211-1" tabindex="-1"></a><span class="fu">spatPlot2D</span>(<span class="at">gobject =</span> combined_pros, </span>
+<span id="cb211-2"><a href="working-with-multiple-samples.html#cb211-2" tabindex="-1"></a>           <span class="at">cell_color =</span> <span class="st">&quot;in_tissue&quot;</span>, </span>
+<span id="cb211-3"><a href="working-with-multiple-samples.html#cb211-3" tabindex="-1"></a>           <span class="at">cell_color_code =</span> <span class="fu">c</span>(<span class="st">&quot;black&quot;</span>, <span class="st">&quot;pink&quot;</span>),</span>
+<span id="cb211-4"><a href="working-with-multiple-samples.html#cb211-4" tabindex="-1"></a>           <span class="at">show_image =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb211-5"><a href="working-with-multiple-samples.html#cb211-5" tabindex="-1"></a>           <span class="at">image_name =</span> <span class="fu">c</span>(<span class="st">&quot;NP-image&quot;</span>, <span class="st">&quot;CP-image&quot;</span>),</span>
+<span id="cb211-6"><a href="working-with-multiple-samples.html#cb211-6" tabindex="-1"></a>           <span class="at">group_by =</span> <span class="st">&quot;list_ID&quot;</span>, </span>
+<span id="cb211-7"><a href="working-with-multiple-samples.html#cb211-7" tabindex="-1"></a>           <span class="at">point_alpha =</span> <span class="fl">0.5</span>, </span>
+<span id="cb211-8"><a href="working-with-multiple-samples.html#cb211-8" tabindex="-1"></a>           <span class="at">point_size =</span> <span class="fl">0.5</span>, </span>
+<span id="cb211-9"><a href="working-with-multiple-samples.html#cb211-9" tabindex="-1"></a>           <span class="at">cow_n_col =</span> <span class="dv">1</span>,</span>
+<span id="cb211-10"><a href="working-with-multiple-samples.html#cb211-10" tabindex="-1"></a>           <span class="at">save_param =</span> <span class="fu">list</span>(<span class="at">save_name =</span> <span class="st">&quot;03_ses1_combined_tissue_group&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-297"></span>
+<img src="img/03_session1/03_ses1_combined_tissue_group.png" alt="Vizualizing the visium spots that overlap tissue in normal prostate (left) and adenocarcinoma samples (right) in separate plots." width="100%" />
+<p class="caption">
+Figure 12.7: Vizualizing the visium spots that overlap tissue in normal prostate (left) and adenocarcinoma samples (right) in separate plots.
+</p>
+</div>
+</div>
+</div>
+<div id="splitting-combined-dataset" class="section level2 hasAnchor" number="12.6">
+<h2><span class="header-section-number">12.6</span> Splitting combined dataset<a href="working-with-multiple-samples.html#splitting-combined-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If needed it’s possible to split the individual objects into single objects again through subsetting the cell metadata as shown below.</p>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="working-with-multiple-samples.html#cb212-1" tabindex="-1"></a><span class="co"># Getting the cell information</span></span>
+<span id="cb212-2"><a href="working-with-multiple-samples.html#cb212-2" tabindex="-1"></a>combined_cells <span class="ot">&lt;-</span> <span class="fu">pDataDT</span>(combined_pros)</span>
+<span id="cb212-3"><a href="working-with-multiple-samples.html#cb212-3" tabindex="-1"></a>np_cells <span class="ot">&lt;-</span> combined_cells[list_ID <span class="sc">==</span> <span class="st">&quot;NP&quot;</span>]</span>
+<span id="cb212-4"><a href="working-with-multiple-samples.html#cb212-4" tabindex="-1"></a></span>
+<span id="cb212-5"><a href="working-with-multiple-samples.html#cb212-5" tabindex="-1"></a>np_split <span class="ot">&lt;-</span> <span class="fu">subsetGiotto</span>(combined_pros, </span>
+<span id="cb212-6"><a href="working-with-multiple-samples.html#cb212-6" tabindex="-1"></a>                         <span class="at">cell_ids =</span> np_cells<span class="sc">$</span>cell_ID,</span>
+<span id="cb212-7"><a href="working-with-multiple-samples.html#cb212-7" tabindex="-1"></a>                         <span class="at">poly_info =</span> np_cells<span class="sc">$</span>cell_ID,</span>
+<span id="cb212-8"><a href="working-with-multiple-samples.html#cb212-8" tabindex="-1"></a>                         <span class="at">spat_unit =</span> <span class="st">&quot;cell&quot;</span>)</span>
+<span id="cb212-9"><a href="working-with-multiple-samples.html#cb212-9" tabindex="-1"></a></span>
+<span id="cb212-10"><a href="working-with-multiple-samples.html#cb212-10" tabindex="-1"></a><span class="fu">spatPlot2D</span>(<span class="at">gobject =</span> np_split, </span>
+<span id="cb212-11"><a href="working-with-multiple-samples.html#cb212-11" tabindex="-1"></a>           <span class="at">cell_color =</span> <span class="st">&quot;in_tissue&quot;</span>, </span>
+<span id="cb212-12"><a href="working-with-multiple-samples.html#cb212-12" tabindex="-1"></a>           <span class="at">cell_color_code =</span> <span class="fu">c</span>(<span class="st">&quot;black&quot;</span>, <span class="st">&quot;red&quot;</span>),</span>
+<span id="cb212-13"><a href="working-with-multiple-samples.html#cb212-13" tabindex="-1"></a>           <span class="at">show_image =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb212-14"><a href="working-with-multiple-samples.html#cb212-14" tabindex="-1"></a>           <span class="at">point_alpha =</span> <span class="fl">0.5</span>, </span>
+<span id="cb212-15"><a href="working-with-multiple-samples.html#cb212-15" tabindex="-1"></a>           <span class="at">point_size =</span> <span class="fl">0.5</span>, </span>
+<span id="cb212-16"><a href="working-with-multiple-samples.html#cb212-16" tabindex="-1"></a>           <span class="at">save_param =</span> <span class="fu">list</span>(<span class="at">save_name =</span> <span class="st">&quot;03_ses1_split_object&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-299"></span>
+<img src="img/03_session1/03_ses1_split_object.png" alt="Structure of Giotto object containing two datasets (left) and cell metadata on the left. Note the addition of multiple images and the addition of the list_ID column to define the dataset." width="100%" />
+<p class="caption">
+Figure 12.8: Structure of Giotto object containing two datasets (left) and cell metadata on the left. Note the addition of multiple images and the addition of the list_ID column to define the dataset.
+</p>
+</div>
+</div>
+<div id="analyzing-joined-objects" class="section level2 hasAnchor" number="12.7">
+<h2><span class="header-section-number">12.7</span> Analyzing joined objects<a href="working-with-multiple-samples.html#analyzing-joined-objects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="normalization-and-adding-statistics" class="section level3 hasAnchor" number="12.7.1">
+<h3><span class="header-section-number">12.7.1</span> Normalization and adding statistics<a href="working-with-multiple-samples.html#normalization-and-adding-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now that the objects have been joined we can analyze the object as if it was a single object. This means all of the analyses will be performed in parallel. Therefore, all of the filtering and normalization will be identical between datasets.</p>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="working-with-multiple-samples.html#cb213-1" tabindex="-1"></a><span class="co"># subset on in-tissue spots</span></span>
+<span id="cb213-2"><a href="working-with-multiple-samples.html#cb213-2" tabindex="-1"></a>metadata <span class="ot">&lt;-</span> <span class="fu">pDataDT</span>(combined_pros)</span>
+<span id="cb213-3"><a href="working-with-multiple-samples.html#cb213-3" tabindex="-1"></a>in_tissue_barcodes <span class="ot">&lt;-</span> metadata[in_tissue <span class="sc">==</span> <span class="dv">1</span>]<span class="sc">$</span>cell_ID</span>
+<span id="cb213-4"><a href="working-with-multiple-samples.html#cb213-4" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">subsetGiotto</span>(combined_pros, </span>
+<span id="cb213-5"><a href="working-with-multiple-samples.html#cb213-5" tabindex="-1"></a>                              <span class="at">cell_ids =</span> in_tissue_barcodes)</span>
+<span id="cb213-6"><a href="working-with-multiple-samples.html#cb213-6" tabindex="-1"></a></span>
+<span id="cb213-7"><a href="working-with-multiple-samples.html#cb213-7" tabindex="-1"></a><span class="do">## filter</span></span>
+<span id="cb213-8"><a href="working-with-multiple-samples.html#cb213-8" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">filterGiotto</span>(<span class="at">gobject =</span> combined_pros,</span>
+<span id="cb213-9"><a href="working-with-multiple-samples.html#cb213-9" tabindex="-1"></a>                              <span class="at">expression_threshold =</span> <span class="dv">1</span>,</span>
+<span id="cb213-10"><a href="working-with-multiple-samples.html#cb213-10" tabindex="-1"></a>                              <span class="at">feat_det_in_min_cells =</span> <span class="dv">50</span>,</span>
+<span id="cb213-11"><a href="working-with-multiple-samples.html#cb213-11" tabindex="-1"></a>                              <span class="at">min_det_feats_per_cell =</span> <span class="dv">500</span>,</span>
+<span id="cb213-12"><a href="working-with-multiple-samples.html#cb213-12" tabindex="-1"></a>                              <span class="at">expression_values =</span> <span class="st">&quot;raw&quot;</span>,</span>
+<span id="cb213-13"><a href="working-with-multiple-samples.html#cb213-13" tabindex="-1"></a>                              <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb213-14"><a href="working-with-multiple-samples.html#cb213-14" tabindex="-1"></a></span>
+<span id="cb213-15"><a href="working-with-multiple-samples.html#cb213-15" tabindex="-1"></a><span class="do">## normalize</span></span>
+<span id="cb213-16"><a href="working-with-multiple-samples.html#cb213-16" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">normalizeGiotto</span>(<span class="at">gobject =</span> combined_pros, </span>
+<span id="cb213-17"><a href="working-with-multiple-samples.html#cb213-17" tabindex="-1"></a>                                 <span class="at">scalefactor =</span> <span class="dv">6000</span>)</span>
+<span id="cb213-18"><a href="working-with-multiple-samples.html#cb213-18" tabindex="-1"></a></span>
+<span id="cb213-19"><a href="working-with-multiple-samples.html#cb213-19" tabindex="-1"></a><span class="do">## add gene &amp; cell statistics</span></span>
+<span id="cb213-20"><a href="working-with-multiple-samples.html#cb213-20" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">addStatistics</span>(<span class="at">gobject =</span> combined_pros, </span>
+<span id="cb213-21"><a href="working-with-multiple-samples.html#cb213-21" tabindex="-1"></a>                               <span class="at">expression_values =</span> <span class="st">&quot;raw&quot;</span>)</span>
+<span id="cb213-22"><a href="working-with-multiple-samples.html#cb213-22" tabindex="-1"></a></span>
+<span id="cb213-23"><a href="working-with-multiple-samples.html#cb213-23" tabindex="-1"></a><span class="do">## visualize</span></span>
+<span id="cb213-24"><a href="working-with-multiple-samples.html#cb213-24" tabindex="-1"></a><span class="fu">spatPlot2D</span>(<span class="at">gobject =</span> combined_pros, </span>
+<span id="cb213-25"><a href="working-with-multiple-samples.html#cb213-25" tabindex="-1"></a>           <span class="at">cell_color =</span> <span class="st">&quot;nr_feats&quot;</span>, </span>
+<span id="cb213-26"><a href="working-with-multiple-samples.html#cb213-26" tabindex="-1"></a>           <span class="at">color_as_factor =</span> <span class="cn">FALSE</span>, </span>
+<span id="cb213-27"><a href="working-with-multiple-samples.html#cb213-27" tabindex="-1"></a>           <span class="at">point_size =</span> <span class="dv">1</span>, </span>
+<span id="cb213-28"><a href="working-with-multiple-samples.html#cb213-28" tabindex="-1"></a>           <span class="at">show_image =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb213-29"><a href="working-with-multiple-samples.html#cb213-29" tabindex="-1"></a>           <span class="at">image_name =</span> <span class="fu">c</span>(<span class="st">&quot;NP-image&quot;</span>, <span class="st">&quot;CP-image&quot;</span>),</span>
+<span id="cb213-30"><a href="working-with-multiple-samples.html#cb213-30" tabindex="-1"></a>           <span class="at">save_param =</span> <span class="fu">list</span>(<span class="at">save_name =</span> <span class="st">&quot;ses3_1_feat_expression&quot;</span>))</span></code></pre></div>
+<p>After performing the addStatistics() function on both the datasets we can see the relative expression for each spot in both samples.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-301"></span>
+<img src="img/03_session1/ses3_1_feat_expression.png" alt="Unique feat expression for visium spots for both prostate samples." width="100%" />
+<p class="caption">
+Figure 12.9: Unique feat expression for visium spots for both prostate samples.
+</p>
+</div>
+</div>
+<div id="clustering-the-datasets" class="section level3 hasAnchor" number="12.7.2">
+<h3><span class="header-section-number">12.7.2</span> Clustering the datasets<a href="working-with-multiple-samples.html#clustering-the-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Since we shifted the objects within space the spatial networks for each dataset will remain separate, assuming that the lower limits for neighbors is smaller than the distance of each dataset. However, the individual spot clustering will be performed on all spots from both datasets as if they were a single object, meaning that the same cell types between objects should be clustered together</p>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="working-with-multiple-samples.html#cb214-1" tabindex="-1"></a><span class="do">## PCA ##</span></span>
+<span id="cb214-2"><a href="working-with-multiple-samples.html#cb214-2" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">calculateHVF</span>(<span class="at">gobject =</span> combined_pros)</span>
+<span id="cb214-3"><a href="working-with-multiple-samples.html#cb214-3" tabindex="-1"></a></span>
+<span id="cb214-4"><a href="working-with-multiple-samples.html#cb214-4" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">runPCA</span>(<span class="at">gobject =</span> combined_pros, </span>
+<span id="cb214-5"><a href="working-with-multiple-samples.html#cb214-5" tabindex="-1"></a>                        <span class="at">center =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb214-6"><a href="working-with-multiple-samples.html#cb214-6" tabindex="-1"></a>                        <span class="at">scale_unit =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb214-7"><a href="working-with-multiple-samples.html#cb214-7" tabindex="-1"></a></span>
+<span id="cb214-8"><a href="working-with-multiple-samples.html#cb214-8" tabindex="-1"></a><span class="do">## cluster and run UMAP ##</span></span>
+<span id="cb214-9"><a href="working-with-multiple-samples.html#cb214-9" tabindex="-1"></a><span class="co"># sNN network (default)</span></span>
+<span id="cb214-10"><a href="working-with-multiple-samples.html#cb214-10" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">createNearestNetwork</span>(<span class="at">gobject =</span> combined_pros,</span>
+<span id="cb214-11"><a href="working-with-multiple-samples.html#cb214-11" tabindex="-1"></a>                                      <span class="at">dim_reduction_to_use =</span> <span class="st">&quot;pca&quot;</span>, </span>
+<span id="cb214-12"><a href="working-with-multiple-samples.html#cb214-12" tabindex="-1"></a>                                      <span class="at">dim_reduction_name =</span> <span class="st">&quot;pca&quot;</span>,</span>
+<span id="cb214-13"><a href="working-with-multiple-samples.html#cb214-13" tabindex="-1"></a>                                      <span class="at">dimensions_to_use =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
+<span id="cb214-14"><a href="working-with-multiple-samples.html#cb214-14" tabindex="-1"></a>                                      <span class="at">k =</span> <span class="dv">15</span>)</span>
+<span id="cb214-15"><a href="working-with-multiple-samples.html#cb214-15" tabindex="-1"></a></span>
+<span id="cb214-16"><a href="working-with-multiple-samples.html#cb214-16" tabindex="-1"></a><span class="co"># Leiden clustering</span></span>
+<span id="cb214-17"><a href="working-with-multiple-samples.html#cb214-17" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">doLeidenCluster</span>(<span class="at">gobject =</span> combined_pros, </span>
+<span id="cb214-18"><a href="working-with-multiple-samples.html#cb214-18" tabindex="-1"></a>                                 <span class="at">resolution =</span> <span class="fl">0.2</span>,</span>
+<span id="cb214-19"><a href="working-with-multiple-samples.html#cb214-19" tabindex="-1"></a>                                 <span class="at">n_iterations =</span> <span class="dv">200</span>)</span>
+<span id="cb214-20"><a href="working-with-multiple-samples.html#cb214-20" tabindex="-1"></a></span>
+<span id="cb214-21"><a href="working-with-multiple-samples.html#cb214-21" tabindex="-1"></a><span class="co"># UMAP</span></span>
+<span id="cb214-22"><a href="working-with-multiple-samples.html#cb214-22" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">runUMAP</span>(combined_pros)</span></code></pre></div>
+</div>
+<div id="vizualizing-spatial-location-of-clusters" class="section level3 hasAnchor" number="12.7.3">
+<h3><span class="header-section-number">12.7.3</span> Vizualizing spatial location of clusters<a href="working-with-multiple-samples.html#vizualizing-spatial-location-of-clusters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can visualize the clusters determined through Leiden clustering on both of the datasets within the same plot.</p>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="working-with-multiple-samples.html#cb215-1" tabindex="-1"></a><span class="fu">spatDimPlot2D</span>(<span class="at">gobject =</span> combined_pros,</span>
+<span id="cb215-2"><a href="working-with-multiple-samples.html#cb215-2" tabindex="-1"></a>              <span class="at">cell_color =</span> <span class="st">&quot;leiden_clus&quot;</span>, </span>
+<span id="cb215-3"><a href="working-with-multiple-samples.html#cb215-3" tabindex="-1"></a>              <span class="at">show_image =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb215-4"><a href="working-with-multiple-samples.html#cb215-4" tabindex="-1"></a>              <span class="at">image_name =</span> <span class="fu">c</span>(<span class="st">&quot;NP-image&quot;</span>, <span class="st">&quot;CP-image&quot;</span>),</span>
+<span id="cb215-5"><a href="working-with-multiple-samples.html#cb215-5" tabindex="-1"></a>              <span class="at">save_param =</span> <span class="fu">list</span>(<span class="at">save_name =</span> <span class="st">&quot;ses3_1_leiden_clus&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-304"></span>
+<img src="img/03_session1/ses3_1_leiden_clus.png" alt="UMAP (top) for both samples colored by Leiden clusters visualized in a spatial plot (bottom) for the normal prostate (left) and the adenocarcinoma prostate sample (right)." width="100%" />
+<p class="caption">
+Figure 12.10: UMAP (top) for both samples colored by Leiden clusters visualized in a spatial plot (bottom) for the normal prostate (left) and the adenocarcinoma prostate sample (right).
+</p>
+</div>
+</div>
+<div id="vizualizing-tissue-contribution-to-clusters" class="section level3 hasAnchor" number="12.7.4">
+<h3><span class="header-section-number">12.7.4</span> Vizualizing tissue contribution to clusters<a href="working-with-multiple-samples.html#vizualizing-tissue-contribution-to-clusters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can also color the UMAP to visualize the contribution from each tissue in the UMAP. To do this we color the UMAP by “list_ID” rather than “leiden_clus”. If each of the cell types between both samples cluster together then we would expect that clusters should contain the cell color of both samples. However, we can see that the samples are clustered distinctly within the UMAP. This indicates that the cell types shared between both samples are found within different clusters indicating that more complex integration techniques might be required for these samples.</p>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="working-with-multiple-samples.html#cb216-1" tabindex="-1"></a><span class="fu">spatDimPlot2D</span>(<span class="at">gobject =</span> combined_pros,</span>
+<span id="cb216-2"><a href="working-with-multiple-samples.html#cb216-2" tabindex="-1"></a>              <span class="at">cell_color =</span> <span class="st">&quot;list_ID&quot;</span>,</span>
+<span id="cb216-3"><a href="working-with-multiple-samples.html#cb216-3" tabindex="-1"></a>              <span class="at">show_image =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb216-4"><a href="working-with-multiple-samples.html#cb216-4" tabindex="-1"></a>              <span class="at">image_name =</span> <span class="fu">c</span>(<span class="st">&quot;NP-image&quot;</span>, <span class="st">&quot;CP-image&quot;</span>),</span>
+<span id="cb216-5"><a href="working-with-multiple-samples.html#cb216-5" tabindex="-1"></a>              <span class="at">save_param =</span> <span class="fu">list</span>(<span class="at">save_name =</span> <span class="st">&quot;ses3_1_tissue_contribution&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-306"></span>
+<img src="img/03_session1/ses3_1_tissue_contribution.png" alt="Tissue contribution for leiden clustering for the normal prostate (left) and the adenocarcinoma prostate sample (right)." width="100%" />
+<p class="caption">
+Figure 12.11: Tissue contribution for leiden clustering for the normal prostate (left) and the adenocarcinoma prostate sample (right).
+</p>
+</div>
+</div>
+</div>
+<div id="perform-harmony-and-default-workflows" class="section level2 hasAnchor" number="12.8">
+<h2><span class="header-section-number">12.8</span> Perform Harmony and default workflows<a href="working-with-multiple-samples.html#perform-harmony-and-default-workflows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can use Harmony to integrate multiple datasets, grouping equivelent cell types between samples. Harmony is an algorithm that iteratively adjusts cell coordinates in a reduced-dimensional space to correct for dataset-specific effects. It uses fuzzy clustering to assign cells to multiple clusters, calculates dataset-specific correction factors, and applies these corrections to each cell, repeating the process until the influence of the dataset diminishes.</p>
+<p>Before running Harmony we need to run the PCA function or set “do_pca” to TRUE. We ran this above so do not need to perform this step. Harmony will default to attempting 10 rounds of integration. Not all samples will need the full 10 and will finish accordingly. The following dataset should converge after 5 iterations.</p>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="working-with-multiple-samples.html#cb217-1" tabindex="-1"></a><span class="fu">library</span>(harmony)</span>
+<span id="cb217-2"><a href="working-with-multiple-samples.html#cb217-2" tabindex="-1"></a></span>
+<span id="cb217-3"><a href="working-with-multiple-samples.html#cb217-3" tabindex="-1"></a><span class="do">## run harmony integration</span></span>
+<span id="cb217-4"><a href="working-with-multiple-samples.html#cb217-4" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">runGiottoHarmony</span>(combined_pros, </span>
+<span id="cb217-5"><a href="working-with-multiple-samples.html#cb217-5" tabindex="-1"></a>                                  <span class="at">vars_use =</span> <span class="st">&quot;list_ID&quot;</span>)</span></code></pre></div>
+<p>After running the Harmony function successfully we can see that the outputted gobject has a new dim reduction names “harmony”. We can use this for all subsequent spatial steps.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-308"></span>
+<img src="img/03_session1/harmony_gobject.png" alt="Data structure of the gobject after running Harmony integration." width="40%" />
+<p class="caption">
+Figure 12.12: Data structure of the gobject after running Harmony integration.
+</p>
+</div>
+<div id="clustering-harmonized-object" class="section level3 hasAnchor" number="12.8.1">
+<h3><span class="header-section-number">12.8.1</span> Clustering harmonized object<a href="working-with-multiple-samples.html#clustering-harmonized-object" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can now perform the same clustering steps as before but instead using the “harmony” dim reduction rather than PCA. We will also be creating new UMAP and nearest network data for the gobject that will be named differently to before to preserve the original analyses. If using the same name then this will overwrite the original analysis.</p>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="working-with-multiple-samples.html#cb218-1" tabindex="-1"></a><span class="do">## sNN network (default)</span></span>
+<span id="cb218-2"><a href="working-with-multiple-samples.html#cb218-2" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">createNearestNetwork</span>(<span class="at">gobject =</span> combined_pros,</span>
+<span id="cb218-3"><a href="working-with-multiple-samples.html#cb218-3" tabindex="-1"></a>                                      <span class="at">dim_reduction_to_use =</span> <span class="st">&quot;harmony&quot;</span>,</span>
+<span id="cb218-4"><a href="working-with-multiple-samples.html#cb218-4" tabindex="-1"></a>                                      <span class="at">dim_reduction_name =</span> <span class="st">&quot;harmony&quot;</span>, </span>
+<span id="cb218-5"><a href="working-with-multiple-samples.html#cb218-5" tabindex="-1"></a>                                      <span class="at">name =</span> <span class="st">&quot;NN.harmony&quot;</span>,</span>
+<span id="cb218-6"><a href="working-with-multiple-samples.html#cb218-6" tabindex="-1"></a>                                      <span class="at">dimensions_to_use =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
+<span id="cb218-7"><a href="working-with-multiple-samples.html#cb218-7" tabindex="-1"></a>                                      <span class="at">k =</span> <span class="dv">15</span>)</span>
+<span id="cb218-8"><a href="working-with-multiple-samples.html#cb218-8" tabindex="-1"></a></span>
+<span id="cb218-9"><a href="working-with-multiple-samples.html#cb218-9" tabindex="-1"></a><span class="do">## Leiden clustering</span></span>
+<span id="cb218-10"><a href="working-with-multiple-samples.html#cb218-10" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">doLeidenCluster</span>(<span class="at">gobject =</span> combined_pros,</span>
+<span id="cb218-11"><a href="working-with-multiple-samples.html#cb218-11" tabindex="-1"></a>                                 <span class="at">network_name =</span> <span class="st">&quot;NN.harmony&quot;</span>, </span>
+<span id="cb218-12"><a href="working-with-multiple-samples.html#cb218-12" tabindex="-1"></a>                                 <span class="at">resolution =</span> <span class="fl">0.2</span>, </span>
+<span id="cb218-13"><a href="working-with-multiple-samples.html#cb218-13" tabindex="-1"></a>                                 <span class="at">n_iterations =</span> <span class="dv">1000</span>, </span>
+<span id="cb218-14"><a href="working-with-multiple-samples.html#cb218-14" tabindex="-1"></a>                                 <span class="at">name =</span> <span class="st">&quot;leiden_harmony&quot;</span>)</span>
+<span id="cb218-15"><a href="working-with-multiple-samples.html#cb218-15" tabindex="-1"></a></span>
+<span id="cb218-16"><a href="working-with-multiple-samples.html#cb218-16" tabindex="-1"></a><span class="co"># UMAP dimension reduction</span></span>
+<span id="cb218-17"><a href="working-with-multiple-samples.html#cb218-17" tabindex="-1"></a>combined_pros <span class="ot">&lt;-</span> <span class="fu">runUMAP</span>(combined_pros, </span>
+<span id="cb218-18"><a href="working-with-multiple-samples.html#cb218-18" tabindex="-1"></a>                         <span class="at">dim_reduction_name =</span> <span class="st">&quot;harmony&quot;</span>, </span>
+<span id="cb218-19"><a href="working-with-multiple-samples.html#cb218-19" tabindex="-1"></a>                         <span class="at">dim_reduction_to_use =</span> <span class="st">&quot;harmony&quot;</span>, </span>
+<span id="cb218-20"><a href="working-with-multiple-samples.html#cb218-20" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&quot;umap_harmony&quot;</span>)</span>
+<span id="cb218-21"><a href="working-with-multiple-samples.html#cb218-21" tabindex="-1"></a></span>
+<span id="cb218-22"><a href="working-with-multiple-samples.html#cb218-22" tabindex="-1"></a><span class="fu">spatDimPlot2D</span>(<span class="at">gobject =</span> combined_pros,</span>
+<span id="cb218-23"><a href="working-with-multiple-samples.html#cb218-23" tabindex="-1"></a>              <span class="at">dim_reduction_to_use =</span> <span class="st">&quot;umap&quot;</span>, </span>
+<span id="cb218-24"><a href="working-with-multiple-samples.html#cb218-24" tabindex="-1"></a>              <span class="at">dim_reduction_name =</span> <span class="st">&quot;umap_harmony&quot;</span>,</span>
+<span id="cb218-25"><a href="working-with-multiple-samples.html#cb218-25" tabindex="-1"></a>              <span class="at">cell_color =</span> <span class="st">&quot;leiden_harmony&quot;</span>, </span>
+<span id="cb218-26"><a href="working-with-multiple-samples.html#cb218-26" tabindex="-1"></a>              <span class="at">show_image =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb218-27"><a href="working-with-multiple-samples.html#cb218-27" tabindex="-1"></a>              <span class="at">image_name =</span> <span class="fu">c</span>(<span class="st">&quot;NP-image&quot;</span>, <span class="st">&quot;CP-image&quot;</span>),</span>
+<span id="cb218-28"><a href="working-with-multiple-samples.html#cb218-28" tabindex="-1"></a>              <span class="at">spat_point_size =</span> <span class="dv">1</span>, </span>
+<span id="cb218-29"><a href="working-with-multiple-samples.html#cb218-29" tabindex="-1"></a>              <span class="at">save_param =</span> <span class="fu">list</span>(<span class="at">save_name =</span> <span class="st">&quot;leiden_clustering_harmony&quot;</span>))</span></code></pre></div>
+<p>We can see a different UMAP and clustering to that seen in the original steps above. We can again map these onto the tissue spots and see where the clusters are spatially.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-310"></span>
+<img src="img/03_session1/leiden_clustering_harmony.png" alt="Leiden clustering after harmony was performed for the normal prostate (left) and the adenocarcinoma prostate sample (right)." width="100%" />
+<p class="caption">
+Figure 12.13: Leiden clustering after harmony was performed for the normal prostate (left) and the adenocarcinoma prostate sample (right).
+</p>
+</div>
+</div>
+<div id="vizualizing-the-tissue-contribution" class="section level3 hasAnchor" number="12.8.2">
+<h3><span class="header-section-number">12.8.2</span> Vizualizing the tissue contribution<a href="working-with-multiple-samples.html#vizualizing-the-tissue-contribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can see that after performing harmony that the clusters from the two tissue samples are now clustered together. There is still a cluster that is unique to the adenocarcinoma sample, however this is expected as this represents the visium spots that cover the tumor regions of the tissue, which are not found in the normal tissue.</p>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="working-with-multiple-samples.html#cb219-1" tabindex="-1"></a><span class="fu">spatDimPlot2D</span>(<span class="at">gobject =</span> combined_pros,</span>
+<span id="cb219-2"><a href="working-with-multiple-samples.html#cb219-2" tabindex="-1"></a>              <span class="at">dim_reduction_to_use =</span> <span class="st">&quot;umap&quot;</span>, </span>
+<span id="cb219-3"><a href="working-with-multiple-samples.html#cb219-3" tabindex="-1"></a>              <span class="at">dim_reduction_name =</span> <span class="st">&quot;umap_harmony&quot;</span>,</span>
+<span id="cb219-4"><a href="working-with-multiple-samples.html#cb219-4" tabindex="-1"></a>              <span class="at">cell_color =</span> <span class="st">&quot;list_ID&quot;</span>, </span>
+<span id="cb219-5"><a href="working-with-multiple-samples.html#cb219-5" tabindex="-1"></a>              <span class="at">save_plot =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb219-6"><a href="working-with-multiple-samples.html#cb219-6" tabindex="-1"></a>              <span class="at">save_param =</span> <span class="fu">list</span>(<span class="at">save_name =</span> <span class="st">&quot;leiden_clustering_harmony_contribution&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-312"></span>
+<img src="img/03_session1/leiden_clustering_harmony_contribution.png" alt="Tissue contribution for leiden clustering after harmony for the normal prostate (left) and the adenocarcinoma prostate sample (right)." width="100%" />
+<p class="caption">
+Figure 12.14: Tissue contribution for leiden clustering after harmony for the normal prostate (left) and the adenocarcinoma prostate sample (right).
+</p>
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="spatial-proteomics-multiplexed-immunofluorescence.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="spatial-multi-modal-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
