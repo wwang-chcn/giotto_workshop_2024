@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1.7" data-path="datasets-packages.html"><a href="datasets-packages.html#x-genomics-normal-human-prostate-ffpe"><i class="fa fa-check"></i><b>2.1.7</b> 10X Genomics Normal Human Prostate (FFPE)</a></li>
 <li class="chapter" data-level="2.1.8" data-path="datasets-packages.html"><a href="datasets-packages.html#xenium"><i class="fa fa-check"></i><b>2.1.8</b> Xenium</a></li>
 <li class="chapter" data-level="2.1.9" data-path="datasets-packages.html"><a href="datasets-packages.html#merfish-cortex-dataset"><i class="fa fa-check"></i><b>2.1.9</b> MERFISH cortex dataset</a></li>
+<li class="chapter" data-level="2.1.10" data-path="datasets-packages.html"><a href="datasets-packages.html#lunaphore-if-dataset"><i class="fa fa-check"></i><b>2.1.10</b> Lunaphore IF dataset</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="datasets-packages.html"><a href="datasets-packages.html#needed-packages"><i class="fa fa-check"></i><b>2.2</b> Needed packages</a>
 <ul>
@@ -195,20 +196,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html"><i class="fa fa-check"></i><b>5</b> Data formatting and Pre-processing</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#data-formats"><i class="fa fa-check"></i><b>5.1</b> Data formats</a></li>
-<li class="chapter" data-level="5.2" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#pre-processing"><i class="fa fa-check"></i><b>5.2</b> Pre-processing</a></li>
+<li class="chapter" data-level="5.1" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#data-formats"><i class="fa fa-check"></i><b>5.1</b> Data formats</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#general-formats"><i class="fa fa-check"></i><b>5.1.1</b> General formats</a></li>
+<li class="chapter" data-level="5.1.2" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#matrix-formats"><i class="fa fa-check"></i><b>5.1.2</b> Matrix formats</a></li>
+<li class="chapter" data-level="5.1.3" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#tabular-formats"><i class="fa fa-check"></i><b>5.1.3</b> Tabular formats</a></li>
+<li class="chapter" data-level="5.1.4" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#spatial-formats"><i class="fa fa-check"></i><b>5.1.4</b> Spatial formats</a></li>
+<li class="chapter" data-level="5.1.5" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#mask-files"><i class="fa fa-check"></i><b>5.1.5</b> Mask files</a></li>
+<li class="chapter" data-level="5.1.6" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#images"><i class="fa fa-check"></i><b>5.1.6</b> images</a></li>
+<li class="chapter" data-level="5.1.7" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#jsonlike-formats"><i class="fa fa-check"></i><b>5.1.7</b> jsonlike formats</a></li>
+<li class="chapter" data-level="5.1.8" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#hierarchical-formats"><i class="fa fa-check"></i><b>5.1.8</b> Hierarchical formats</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#pre-processing"><i class="fa fa-check"></i><b>5.2</b> Pre-processing</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#expression-matrix"><i class="fa fa-check"></i><b>5.2.1</b> Expression matrix</a></li>
+<li class="chapter" data-level="5.2.2" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#spatial-locations"><i class="fa fa-check"></i><b>5.2.2</b> Spatial locations</a></li>
+<li class="chapter" data-level="5.2.3" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#giottopoints"><i class="fa fa-check"></i><b>5.2.3</b> giottoPoints</a></li>
+<li class="chapter" data-level="5.2.4" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#giottopolygon"><i class="fa fa-check"></i><b>5.2.4</b> giottoPolygon</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#subobject-utility-functions"><i class="fa fa-check"></i><b>5.3</b> Subobject utility functions</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#ids"><i class="fa fa-check"></i><b>5.3.1</b> IDs</a></li>
+<li class="chapter" data-level="5.3.2" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#bracket-subsetting-and-extraction"><i class="fa fa-check"></i><b>5.3.2</b> Bracket subsetting and extraction</a></li>
+<li class="chapter" data-level="5.3.3" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#nesting-metadata-generics"><i class="fa fa-check"></i><b>5.3.3</b> Nesting metadata generics</a></li>
+<li class="chapter" data-level="5.3.4" data-path="data-formatting-and-pre-processing.html"><a href="data-formatting-and-pre-processing.html#appending-to-a-giotto-object"><i class="fa fa-check"></i><b>5.3.4</b> Appending to a giotto object</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html"><i class="fa fa-check"></i><b>6</b> Creating a Giotto object</a>
 <ul>
-<li class="chapter" data-level="6.0.1" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#used-packages"><i class="fa fa-check"></i><b>6.0.1</b> Used packages</a></li>
 <li class="chapter" data-level="6.1" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#overview"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
-<li class="chapter" data-level="6.2" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#from-matrix-locations"><i class="fa fa-check"></i><b>6.2</b> From matrix + locations</a></li>
-<li class="chapter" data-level="6.3" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#from-subcellular-raw-data-transcripts-or-images-polygons"><i class="fa fa-check"></i><b>6.3</b> From subcellular raw data (transcripts or images) + polygons</a></li>
-<li class="chapter" data-level="6.4" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#from-piece-wise"><i class="fa fa-check"></i><b>6.4</b> From piece-wise</a></li>
-<li class="chapter" data-level="6.5" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#using-convenience-functions-for-popular-technologies-vizgen-xenium-cosmx"><i class="fa fa-check"></i><b>6.5</b> Using convenience functions for popular technologies (Vizgen, Xenium, CosMx, …)</a></li>
-<li class="chapter" data-level="6.6" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#spatial-plots"><i class="fa fa-check"></i><b>6.6</b> Spatial plots</a></li>
-<li class="chapter" data-level="6.7" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#subsetting"><i class="fa fa-check"></i><b>6.7</b> Subsetting</a></li>
-<li class="chapter" data-level="6.8" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#mini-objects-giottodata"><i class="fa fa-check"></i><b>6.8</b> Mini objects &amp; GiottoData</a></li>
+<li class="chapter" data-level="6.2" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#giottodata-modular-package"><i class="fa fa-check"></i><b>6.2</b> GiottoData modular package</a></li>
+<li class="chapter" data-level="6.3" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#from-matrix-locations"><i class="fa fa-check"></i><b>6.3</b> From matrix + locations</a></li>
+<li class="chapter" data-level="6.4" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#from-subcellular-raw-data-transcripts-or-images-polygons"><i class="fa fa-check"></i><b>6.4</b> From subcellular raw data (transcripts or images) + polygons</a></li>
+<li class="chapter" data-level="6.5" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#from-piece-wise"><i class="fa fa-check"></i><b>6.5</b> From piece-wise</a></li>
+<li class="chapter" data-level="6.6" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#using-convenience-functions-for-popular-technologies-vizgen-xenium-cosmx"><i class="fa fa-check"></i><b>6.6</b> Using convenience functions for popular technologies (Vizgen, Xenium, CosMx, …)</a></li>
+<li class="chapter" data-level="6.7" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#plotting"><i class="fa fa-check"></i><b>6.7</b> Plotting</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#subobject-plotting"><i class="fa fa-check"></i><b>6.7.1</b> Subobject plotting</a></li>
+<li class="chapter" data-level="6.7.2" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#additive-subobject-plotting"><i class="fa fa-check"></i><b>6.7.2</b> Additive subobject plotting</a></li>
+<li class="chapter" data-level="6.7.3" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#giotto-object-plotting"><i class="fa fa-check"></i><b>6.7.3</b> Giotto object plotting</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#subsetting"><i class="fa fa-check"></i><b>6.8</b> Subsetting</a>
+<ul>
+<li class="chapter" data-level="6.8.1" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#id-subsetting"><i class="fa fa-check"></i><b>6.8.1</b> ID subsetting</a></li>
+<li class="chapter" data-level="6.8.2" data-path="creating-a-giotto-object.html"><a href="creating-a-giotto-object.html#coordinate-based-subsetting"><i class="fa fa-check"></i><b>6.8.2</b> Coordinate-based subsetting</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="visium-part-i.html"><a href="visium-part-i.html"><i class="fa fa-check"></i><b>7</b> Visium Part I</a>
 <ul>
@@ -259,7 +291,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.5" data-path="visium-part-ii.html"><a href="visium-part-ii.html#spatially-informed-clusters"><i class="fa fa-check"></i><b>8.5</b> Spatially informed clusters</a></li>
 <li class="chapter" data-level="8.6" data-path="visium-part-ii.html"><a href="visium-part-ii.html#spatial-domains-hmrf"><i class="fa fa-check"></i><b>8.6</b> Spatial domains HMRF</a></li>
 <li class="chapter" data-level="8.7" data-path="visium-part-ii.html"><a href="visium-part-ii.html#interactive-tools"><i class="fa fa-check"></i><b>8.7</b> Interactive tools</a></li>
-<li class="chapter" data-level="8.8" data-path="visium-part-ii.html"><a href="visium-part-ii.html#session-info-1"><i class="fa fa-check"></i><b>8.8</b> Session info</a></li>
+<li class="chapter" data-level="8.8" data-path="visium-part-ii.html"><a href="visium-part-ii.html#save-the-object-1"><i class="fa fa-check"></i><b>8.8</b> Save the object</a></li>
+<li class="chapter" data-level="8.9" data-path="visium-part-ii.html"><a href="visium-part-ii.html#session-info-1"><i class="fa fa-check"></i><b>8.9</b> Session info</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="visium-hd.html"><a href="visium-hd.html"><i class="fa fa-check"></i><b>9</b> Visium HD</a>
 <ul>
@@ -272,13 +305,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.3" data-path="visium-hd.html"><a href="visium-hd.html#data-ingestion"><i class="fa fa-check"></i><b>9.3</b> Data Ingestion</a>
 <ul>
 <li class="chapter" data-level="9.3.1" data-path="visium-hd.html"><a href="visium-hd.html#visium-hd-output-data-format"><i class="fa fa-check"></i><b>9.3.1</b> Visium HD output data format</a></li>
-<li class="chapter" data-level="9.3.2" data-path="visium-hd.html"><a href="visium-hd.html#read-in-raw-data"><i class="fa fa-check"></i><b>9.3.2</b> Read in raw data</a></li>
+<li class="chapter" data-level="9.3.2" data-path="visium-hd.html"><a href="visium-hd.html#mini-visium-hd-dataset"><i class="fa fa-check"></i><b>9.3.2</b> Mini Visium HD dataset</a></li>
 <li class="chapter" data-level="9.3.3" data-path="visium-hd.html"><a href="visium-hd.html#giotto-visium-hd-convenience-function"><i class="fa fa-check"></i><b>9.3.3</b> Giotto Visium HD convenience function</a></li>
+<li class="chapter" data-level="9.3.4" data-path="visium-hd.html"><a href="visium-hd.html#read-in-data-manually"><i class="fa fa-check"></i><b>9.3.4</b> Read in data manually</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="visium-hd.html"><a href="visium-hd.html#tiling-and-aggregation"><i class="fa fa-check"></i><b>9.4</b> Tiling and aggregation</a></li>
-<li class="chapter" data-level="9.5" data-path="visium-hd.html"><a href="visium-hd.html#scalability-and-projection-functions"><i class="fa fa-check"></i><b>9.5</b> Scalability and projection functions</a></li>
-<li class="chapter" data-level="9.6" data-path="visium-hd.html"><a href="visium-hd.html#spatial-expression-patterns-1"><i class="fa fa-check"></i><b>9.6</b> Spatial expression patterns</a></li>
-<li class="chapter" data-level="9.7" data-path="visium-hd.html"><a href="visium-hd.html#spatial-co-expression-modules-1"><i class="fa fa-check"></i><b>9.7</b> Spatial co-expression modules</a></li>
+<li class="chapter" data-level="9.4" data-path="visium-hd.html"><a href="visium-hd.html#hexbin-400-giotto-object"><i class="fa fa-check"></i><b>9.4</b> Hexbin 400 Giotto object</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="visium-hd.html"><a href="visium-hd.html#create-giotto-points"><i class="fa fa-check"></i><b>9.4.1</b> create giotto points</a></li>
+<li class="chapter" data-level="9.4.2" data-path="visium-hd.html"><a href="visium-hd.html#create-giotto-polygons"><i class="fa fa-check"></i><b>9.4.2</b> create giotto polygons</a></li>
+<li class="chapter" data-level="9.4.3" data-path="visium-hd.html"><a href="visium-hd.html#combine-giotto-points-and-polygons-to-create-giotto-object"><i class="fa fa-check"></i><b>9.4.3</b> combine Giotto points and polygons to create Giotto object</a></li>
+<li class="chapter" data-level="9.4.4" data-path="visium-hd.html"><a href="visium-hd.html#process-giotto-object"><i class="fa fa-check"></i><b>9.4.4</b> Process Giotto object</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="visium-hd.html"><a href="visium-hd.html#hexbin-100"><i class="fa fa-check"></i><b>9.5</b> Hexbin 100</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="visium-hd.html"><a href="visium-hd.html#standard-subcellular-pipeline"><i class="fa fa-check"></i><b>9.5.1</b> Standard subcellular pipeline</a></li>
+<li class="chapter" data-level="9.5.2" data-path="visium-hd.html"><a href="visium-hd.html#spatial-expression-patterns-1"><i class="fa fa-check"></i><b>9.5.2</b> Spatial expression patterns</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="visium-hd.html"><a href="visium-hd.html#hexbin-25"><i class="fa fa-check"></i><b>9.6</b> Hexbin 25</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="visium-hd.html"><a href="visium-hd.html#subcellular-workflow"><i class="fa fa-check"></i><b>9.6.1</b> Subcellular workflow</a></li>
+<li class="chapter" data-level="9.6.2" data-path="visium-hd.html"><a href="visium-hd.html#projections"><i class="fa fa-check"></i><b>9.6.2</b> Projections</a></li>
+<li class="chapter" data-level="9.6.3" data-path="visium-hd.html"><a href="visium-hd.html#niche-clustering"><i class="fa fa-check"></i><b>9.6.3</b> Niche clustering</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="visium-hd.html"><a href="visium-hd.html#database-backend---work-in-progress-but-coming-soon"><i class="fa fa-check"></i><b>9.7</b> Database backend - Work in progress, but coming soon!</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="xenium-1.html"><a href="xenium-1.html"><i class="fa fa-check"></i><b>10</b> Xenium</a>
 <ul>
@@ -287,7 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.1.1" data-path="xenium-1.html"><a href="xenium-1.html#output-directory-structure"><i class="fa fa-check"></i><b>10.1.1</b> Output directory structure</a></li>
 <li class="chapter" data-level="10.1.2" data-path="xenium-1.html"><a href="xenium-1.html#mini-xenium-dataset"><i class="fa fa-check"></i><b>10.1.2</b> Mini Xenium Dataset</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="xenium-1.html"><a href="xenium-1.html#data-prep"><i class="fa fa-check"></i><b>10.2</b> Data prep</a>
+<li class="chapter" data-level="10.2" data-path="xenium-1.html"><a href="xenium-1.html#data-preparation"><i class="fa fa-check"></i><b>10.2</b> Data preparation</a>
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="xenium-1.html"><a href="xenium-1.html#image-conversion-may-change"><i class="fa fa-check"></i><b>10.2.1</b> Image conversion (may change)</a></li>
 </ul></li>
@@ -301,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="xenium-1.html"><a href="xenium-1.html#piecewise-loading"><i class="fa fa-check"></i><b>10.4</b> Piecewise loading</a>
 <ul>
-<li class="chapter" data-level="10.4.1" data-path="xenium-1.html"><a href="xenium-1.html#load-giottopoints-transcripts"><i class="fa fa-check"></i><b>10.4.1</b> load giottoPoints transcripts</a></li>
+<li class="chapter" data-level="10.4.1" data-path="xenium-1.html"><a href="xenium-1.html#load-giottopoints-transcripts"><i class="fa fa-check"></i><b>10.4.1</b> Load giottoPoints transcripts</a></li>
 <li class="chapter" data-level="10.4.2" data-path="xenium-1.html"><a href="xenium-1.html#optional-loading-pre-aggregated-data"><i class="fa fa-check"></i><b>10.4.2</b> (optional) Loading pre-aggregated data</a></li>
 </ul></li>
 <li class="chapter" data-level="10.5" data-path="xenium-1.html"><a href="xenium-1.html#xenium-images"><i class="fa fa-check"></i><b>10.5</b> Xenium Images</a>
@@ -312,16 +361,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.6" data-path="xenium-1.html"><a href="xenium-1.html#spatial-aggregation"><i class="fa fa-check"></i><b>10.6</b> Spatial aggregation</a></li>
 <li class="chapter" data-level="10.7" data-path="xenium-1.html"><a href="xenium-1.html#aggregate-analyses-workflow"><i class="fa fa-check"></i><b>10.7</b> Aggregate analyses workflow</a>
 <ul>
-<li class="chapter" data-level="10.7.1" data-path="xenium-1.html"><a href="xenium-1.html#filtering-1"><i class="fa fa-check"></i><b>10.7.1</b> Filtering</a></li>
-<li class="chapter" data-level="10.7.2" data-path="xenium-1.html"><a href="xenium-1.html#normalization-1"><i class="fa fa-check"></i><b>10.7.2</b> Normalization</a></li>
-<li class="chapter" data-level="10.7.3" data-path="xenium-1.html"><a href="xenium-1.html#dimension-reduction-1"><i class="fa fa-check"></i><b>10.7.3</b> Dimension Reduction</a></li>
-<li class="chapter" data-level="10.7.4" data-path="xenium-1.html"><a href="xenium-1.html#clustering-1"><i class="fa fa-check"></i><b>10.7.4</b> Clustering</a></li>
+<li class="chapter" data-level="10.7.1" data-path="xenium-1.html"><a href="xenium-1.html#transcripts-per-cell"><i class="fa fa-check"></i><b>10.7.1</b> Transcripts per cell</a></li>
+<li class="chapter" data-level="10.7.2" data-path="xenium-1.html"><a href="xenium-1.html#filtering-1"><i class="fa fa-check"></i><b>10.7.2</b> Filtering</a></li>
+<li class="chapter" data-level="10.7.3" data-path="xenium-1.html"><a href="xenium-1.html#normalization-1"><i class="fa fa-check"></i><b>10.7.3</b> Normalization</a></li>
+<li class="chapter" data-level="10.7.4" data-path="xenium-1.html"><a href="xenium-1.html#dimension-reduction-1"><i class="fa fa-check"></i><b>10.7.4</b> Dimension Reduction</a></li>
+<li class="chapter" data-level="10.7.5" data-path="xenium-1.html"><a href="xenium-1.html#clustering-1"><i class="fa fa-check"></i><b>10.7.5</b> Clustering</a></li>
 </ul></li>
-<li class="chapter" data-level="10.8" data-path="xenium-1.html"><a href="xenium-1.html#niche-clustering"><i class="fa fa-check"></i><b>10.8</b> Niche clustering</a>
+<li class="chapter" data-level="10.8" data-path="xenium-1.html"><a href="xenium-1.html#niche-clustering-1"><i class="fa fa-check"></i><b>10.8</b> Niche clustering</a>
 <ul>
 <li class="chapter" data-level="10.8.1" data-path="xenium-1.html"><a href="xenium-1.html#spatial-network"><i class="fa fa-check"></i><b>10.8.1</b> Spatial network</a></li>
 <li class="chapter" data-level="10.8.2" data-path="xenium-1.html"><a href="xenium-1.html#niche-calculation"><i class="fa fa-check"></i><b>10.8.2</b> Niche calculation</a></li>
-<li class="chapter" data-level="10.8.3" data-path="xenium-1.html"><a href="xenium-1.html#kmeans-clustering-based-on-niche-signature"><i class="fa fa-check"></i><b>10.8.3</b> kmeans clustering based on niche signature</a></li>
+<li class="chapter" data-level="10.8.3" data-path="xenium-1.html"><a href="xenium-1.html#k-means-clustering-based-on-niche-signature"><i class="fa fa-check"></i><b>10.8.3</b> k-means clustering based on niche signature</a></li>
 </ul></li>
 <li class="chapter" data-level="10.9" data-path="xenium-1.html"><a href="xenium-1.html#cell-proximity-enrichment"><i class="fa fa-check"></i><b>10.9</b> Cell proximity enrichment</a></li>
 <li class="chapter" data-level="10.10" data-path="xenium-1.html"><a href="xenium-1.html#pseudovisium"><i class="fa fa-check"></i><b>10.10</b> Pseudovisium</a>
@@ -349,9 +399,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.4.3" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#rescale-polygons"><i class="fa fa-check"></i><b>11.4.3</b> Rescale polygons</a></li>
 <li class="chapter" data-level="11.4.4" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#perform-clustering-and-differential-expression"><i class="fa fa-check"></i><b>11.4.4</b> Perform clustering and differential expression</a></li>
 <li class="chapter" data-level="11.4.5" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#give-the-cluster-an-annotation-based-on-expression-values"><i class="fa fa-check"></i><b>11.4.5</b> Give the cluster an annotation based on expression values</a></li>
-<li class="chapter" data-level="11.4.6" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#spatial-network-1"><i class="fa fa-check"></i><b>11.4.6</b> spatial network</a></li>
+<li class="chapter" data-level="11.4.6" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#spatial-network-1"><i class="fa fa-check"></i><b>11.4.6</b> Spatial network</a></li>
 <li class="chapter" data-level="11.4.7" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#cell-neighborhood-cell-typecell-type-interactions"><i class="fa fa-check"></i><b>11.4.7</b> Cell Neighborhood: Cell-Type/Cell-Type Interactions</a></li>
 </ul></li>
+<li class="chapter" data-level="11.5" data-path="spatial-proteomics-multiplexed-immunofluorescence.html"><a href="spatial-proteomics-multiplexed-immunofluorescence.html#session-info-2"><i class="fa fa-check"></i><b>11.5</b> Session info</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html"><i class="fa fa-check"></i><b>12</b> Working with multiple samples</a>
 <ul>
@@ -364,30 +415,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.3" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#create-individual-giotto-objects"><i class="fa fa-check"></i><b>12.3</b> Create individual giotto objects</a>
 <ul>
 <li class="chapter" data-level="12.3.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#download-the-data"><i class="fa fa-check"></i><b>12.3.1</b> Download the data</a></li>
-<li class="chapter" data-level="12.3.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#create-giotto-instructions"><i class="fa fa-check"></i><b>12.3.2</b> Create giotto instructions</a></li>
-<li class="chapter" data-level="12.3.3" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#load-visium-data-into-giotto"><i class="fa fa-check"></i><b>12.3.3</b> Load visium data into Giotto</a></li>
-<li class="chapter" data-level="12.3.4" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#healthy-prostate-tissue-coverage"><i class="fa fa-check"></i><b>12.3.4</b> Healthy prostate tissue coverage</a></li>
-<li class="chapter" data-level="12.3.5" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#adenocarcinoma-prostate-tissue-coverage"><i class="fa fa-check"></i><b>12.3.5</b> Adenocarcinoma prostate tissue coverage</a></li>
-<li class="chapter" data-level="12.3.6" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#showing-the-data-strucutre-for-the-inidividual-objects"><i class="fa fa-check"></i><b>12.3.6</b> Showing the data strucutre for the inidividual objects</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#join-giotto-objects"><i class="fa fa-check"></i><b>12.4</b> Join Giotto Objects</a></li>
-<li class="chapter" data-level="12.5" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#visualizing-combined-datasets"><i class="fa fa-check"></i><b>12.5</b> Visualizing combined datasets</a>
+<li class="chapter" data-level="12.4" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#extracting-the-downloaded-files"><i class="fa fa-check"></i><b>12.4</b> Extracting the downloaded files</a>
 <ul>
-<li class="chapter" data-level="12.5.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-in-the-same-plot"><i class="fa fa-check"></i><b>12.5.1</b> Vizualizing in the same plot</a></li>
-<li class="chapter" data-level="12.5.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-on-separate-plots"><i class="fa fa-check"></i><b>12.5.2</b> Vizualizing on separate plots</a></li>
+<li class="chapter" data-level="12.4.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#create-giotto-instructions"><i class="fa fa-check"></i><b>12.4.1</b> Create giotto instructions</a></li>
+<li class="chapter" data-level="12.4.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#load-visium-data-into-giotto"><i class="fa fa-check"></i><b>12.4.2</b> Load visium data into Giotto</a></li>
+<li class="chapter" data-level="12.4.3" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#healthy-prostate-tissue-coverage"><i class="fa fa-check"></i><b>12.4.3</b> Healthy prostate tissue coverage</a></li>
+<li class="chapter" data-level="12.4.4" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#adenocarcinoma-prostate-tissue-coverage"><i class="fa fa-check"></i><b>12.4.4</b> Adenocarcinoma prostate tissue coverage</a></li>
+<li class="chapter" data-level="12.4.5" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#showing-the-data-strucutre-for-the-inidividual-objects"><i class="fa fa-check"></i><b>12.4.5</b> Showing the data strucutre for the inidividual objects</a></li>
 </ul></li>
-<li class="chapter" data-level="12.6" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#splitting-combined-dataset"><i class="fa fa-check"></i><b>12.6</b> Splitting combined dataset</a></li>
-<li class="chapter" data-level="12.7" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#analyzing-joined-objects"><i class="fa fa-check"></i><b>12.7</b> Analyzing joined objects</a>
+<li class="chapter" data-level="12.5" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#join-giotto-objects"><i class="fa fa-check"></i><b>12.5</b> Join Giotto Objects</a></li>
+<li class="chapter" data-level="12.6" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#visualizing-combined-datasets"><i class="fa fa-check"></i><b>12.6</b> Visualizing combined datasets</a>
 <ul>
-<li class="chapter" data-level="12.7.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#normalization-and-adding-statistics"><i class="fa fa-check"></i><b>12.7.1</b> Normalization and adding statistics</a></li>
-<li class="chapter" data-level="12.7.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#clustering-the-datasets"><i class="fa fa-check"></i><b>12.7.2</b> Clustering the datasets</a></li>
-<li class="chapter" data-level="12.7.3" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-spatial-location-of-clusters"><i class="fa fa-check"></i><b>12.7.3</b> Vizualizing spatial location of clusters</a></li>
-<li class="chapter" data-level="12.7.4" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-tissue-contribution-to-clusters"><i class="fa fa-check"></i><b>12.7.4</b> Vizualizing tissue contribution to clusters</a></li>
+<li class="chapter" data-level="12.6.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-in-the-same-plot"><i class="fa fa-check"></i><b>12.6.1</b> Vizualizing in the same plot</a></li>
+<li class="chapter" data-level="12.6.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#visualizing-on-separate-plots"><i class="fa fa-check"></i><b>12.6.2</b> Visualizing on separate plots</a></li>
 </ul></li>
-<li class="chapter" data-level="12.8" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#perform-harmony-and-default-workflows"><i class="fa fa-check"></i><b>12.8</b> Perform Harmony and default workflows</a>
+<li class="chapter" data-level="12.7" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#splitting-combined-dataset"><i class="fa fa-check"></i><b>12.7</b> Splitting combined dataset</a></li>
+<li class="chapter" data-level="12.8" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#analyzing-joined-objects"><i class="fa fa-check"></i><b>12.8</b> Analyzing joined objects</a>
 <ul>
-<li class="chapter" data-level="12.8.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#clustering-harmonized-object"><i class="fa fa-check"></i><b>12.8.1</b> Clustering harmonized object</a></li>
-<li class="chapter" data-level="12.8.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-the-tissue-contribution"><i class="fa fa-check"></i><b>12.8.2</b> Vizualizing the tissue contribution</a></li>
+<li class="chapter" data-level="12.8.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#normalization-and-adding-statistics"><i class="fa fa-check"></i><b>12.8.1</b> Normalization and adding statistics</a></li>
+<li class="chapter" data-level="12.8.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#clustering-the-datasets"><i class="fa fa-check"></i><b>12.8.2</b> Clustering the datasets</a></li>
+<li class="chapter" data-level="12.8.3" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-spatial-location-of-clusters"><i class="fa fa-check"></i><b>12.8.3</b> Vizualizing spatial location of clusters</a></li>
+<li class="chapter" data-level="12.8.4" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-tissue-contribution-to-clusters"><i class="fa fa-check"></i><b>12.8.4</b> Vizualizing tissue contribution to clusters</a></li>
+</ul></li>
+<li class="chapter" data-level="12.9" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#perform-harmony-and-default-workflows"><i class="fa fa-check"></i><b>12.9</b> Perform Harmony and default workflows</a>
+<ul>
+<li class="chapter" data-level="12.9.1" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#clustering-harmonized-object"><i class="fa fa-check"></i><b>12.9.1</b> Clustering harmonized object</a></li>
+<li class="chapter" data-level="12.9.2" data-path="working-with-multiple-samples.html"><a href="working-with-multiple-samples.html#vizualizing-the-tissue-contribution"><i class="fa fa-check"></i><b>12.9.2</b> Vizualizing the tissue contribution</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="spatial-multi-modal-analysis.html"><a href="spatial-multi-modal-analysis.html"><i class="fa fa-check"></i><b>13</b> Spatial multi-modal analysis</a>
@@ -422,7 +476,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14.6" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#rna-processing"><i class="fa fa-check"></i><b>14.6</b> RNA processing</a></li>
 <li class="chapter" data-level="14.7" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#protein-processing"><i class="fa fa-check"></i><b>14.7</b> Protein processing</a></li>
 <li class="chapter" data-level="14.8" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#multi-omics-integration-1"><i class="fa fa-check"></i><b>14.8</b> Multi-omics integration</a></li>
-<li class="chapter" data-level="14.9" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#session-info-2"><i class="fa fa-check"></i><b>14.9</b> Session info</a></li>
+<li class="chapter" data-level="14.9" data-path="multi-omics-integration.html"><a href="multi-omics-integration.html#session-info-3"><i class="fa fa-check"></i><b>14.9</b> Session info</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="interoperability-with-other-frameworks.html"><a href="interoperability-with-other-frameworks.html"><i class="fa fa-check"></i><b>15</b> Interoperability with other frameworks</a>
 <ul>
@@ -452,49 +506,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="16.1.1" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#introduction-to-ontrac"><i class="fa fa-check"></i><b>16.1.1</b> Introduction to ONTraC</a></li>
 <li class="chapter" data-level="16.1.2" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#introduction-to-merfish"><i class="fa fa-check"></i><b>16.1.2</b> Introduction to MERFISH</a></li>
-<li class="chapter" data-level="16.1.3" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#settings"><i class="fa fa-check"></i><b>16.1.3</b> settings</a></li>
+<li class="chapter" data-level="16.1.3" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#settings"><i class="fa fa-check"></i><b>16.1.3</b> Settings</a></li>
 <li class="chapter" data-level="16.1.4" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#dataset-1"><i class="fa fa-check"></i><b>16.1.4</b> Dataset</a></li>
 <li class="chapter" data-level="16.1.5" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#create-the-giotto-object-2"><i class="fa fa-check"></i><b>16.1.5</b> Create the Giotto object</a></li>
 <li class="chapter" data-level="16.1.6" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#perform-spatial-niche-trajectory-analysis-using-ontrac"><i class="fa fa-check"></i><b>16.1.6</b> Perform spatial niche trajectory analysis using ONTraC</a></li>
-<li class="chapter" data-level="16.1.7" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#visualization"><i class="fa fa-check"></i><b>16.1.7</b> visualization</a></li>
+<li class="chapter" data-level="16.1.7" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#visualization"><i class="fa fa-check"></i><b>16.1.7</b> Visualization</a></li>
 </ul></li>
-<li class="chapter" data-level="16.2" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#session-info-3"><i class="fa fa-check"></i><b>16.2</b> Session info</a></li>
+<li class="chapter" data-level="16.2" data-path="interoperability-with-isolated-tools.html"><a href="interoperability-with-isolated-tools.html#session-info-4"><i class="fa fa-check"></i><b>16.2</b> Session info</a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html"><i class="fa fa-check"></i><b>17</b> Interactivity with the R/Spatial ecosystem</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#kriging"><i class="fa fa-check"></i><b>17.1</b> Kriging</a>
+<li class="chapter" data-level="17.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#visium-technology-1"><i class="fa fa-check"></i><b>17.1</b> Visium technology</a></li>
+<li class="chapter" data-level="17.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#gene-expression-interpolation-through-kriging"><i class="fa fa-check"></i><b>17.2</b> Gene expression interpolation through kriging</a>
 <ul>
-<li class="chapter" data-level="17.1.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#visium-technology-1"><i class="fa fa-check"></i><b>17.1.1</b> Visium technology</a></li>
-<li class="chapter" data-level="17.1.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#dataset-2"><i class="fa fa-check"></i><b>17.1.2</b> Dataset</a></li>
-<li class="chapter" data-level="17.1.3" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#generating-a-geojson-file-of-nuclei-location"><i class="fa fa-check"></i><b>17.1.3</b> Generating a geojson file of nuclei location</a></li>
+<li class="chapter" data-level="17.2.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#dataset-2"><i class="fa fa-check"></i><b>17.2.1</b> Dataset</a></li>
+<li class="chapter" data-level="17.2.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#generating-a-geojson-file-of-nuclei-location"><i class="fa fa-check"></i><b>17.2.2</b> Generating a geojson file of nuclei location</a></li>
 </ul></li>
-<li class="chapter" data-level="17.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#downloading-the-dataset"><i class="fa fa-check"></i><b>17.2</b> Downloading the dataset</a></li>
-<li class="chapter" data-level="17.3" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#importing-visium-data"><i class="fa fa-check"></i><b>17.3</b> Importing visium data</a>
+<li class="chapter" data-level="17.3" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#downloading-the-dataset"><i class="fa fa-check"></i><b>17.3</b> Downloading the dataset</a></li>
+<li class="chapter" data-level="17.4" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#extracting-the-files"><i class="fa fa-check"></i><b>17.4</b> Extracting the files</a></li>
+<li class="chapter" data-level="17.5" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#downloading-giotto-object-and-nuclei-segmentation"><i class="fa fa-check"></i><b>17.5</b> Downloading giotto object and nuclei segmentation</a></li>
+<li class="chapter" data-level="17.6" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#importing-visium-data"><i class="fa fa-check"></i><b>17.6</b> Importing visium data</a>
 <ul>
-<li class="chapter" data-level="17.3.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#identifying-spatially-organized-features"><i class="fa fa-check"></i><b>17.3.1</b> Identifying spatially organized features</a></li>
+<li class="chapter" data-level="17.6.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#identifying-spatially-organized-features"><i class="fa fa-check"></i><b>17.6.1</b> Identifying spatially organized features</a></li>
 </ul></li>
-<li class="chapter" data-level="17.4" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#adding-cell-polygons-to-giotto-object"><i class="fa fa-check"></i><b>17.4</b> Adding cell polygons to Giotto object</a>
+<li class="chapter" data-level="17.7" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#performing-kriging"><i class="fa fa-check"></i><b>17.7</b> Performing kriging</a>
 <ul>
-<li class="chapter" data-level="17.4.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#read-in-the-poly-information"><i class="fa fa-check"></i><b>17.4.1</b> Read in the poly information</a></li>
-<li class="chapter" data-level="17.4.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#vizualizing-polygons"><i class="fa fa-check"></i><b>17.4.2</b> Vizualizing polygons</a></li>
-<li class="chapter" data-level="17.4.3" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#showing-giotto-object-prior-to-polygon-addition"><i class="fa fa-check"></i><b>17.4.3</b> Showing Giotto object prior to polygon addition</a></li>
-<li class="chapter" data-level="17.4.4" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#adding-polygons-to-giotto-object"><i class="fa fa-check"></i><b>17.4.4</b> Adding polygons to giotto object</a></li>
-<li class="chapter" data-level="17.4.5" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#check-polygon-information"><i class="fa fa-check"></i><b>17.4.5</b> Check polygon information</a></li>
+<li class="chapter" data-level="17.7.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#interpolating-features"><i class="fa fa-check"></i><b>17.7.1</b> Interpolating features</a></li>
 </ul></li>
-<li class="chapter" data-level="17.5" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#performing-kriging"><i class="fa fa-check"></i><b>17.5</b> Performing kriging</a>
+<li class="chapter" data-level="17.8" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#adding-cell-polygons-to-giotto-object"><i class="fa fa-check"></i><b>17.8</b> Adding cell polygons to Giotto object</a>
 <ul>
-<li class="chapter" data-level="17.5.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#interpolating-features"><i class="fa fa-check"></i><b>17.5.1</b> Interpolating features</a></li>
-<li class="chapter" data-level="17.5.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#expression-overlap"><i class="fa fa-check"></i><b>17.5.2</b> Expression overlap</a></li>
+<li class="chapter" data-level="17.8.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#read-in-the-poly-information"><i class="fa fa-check"></i><b>17.8.1</b> Read in the poly information</a></li>
+<li class="chapter" data-level="17.8.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#vizualizing-polygons"><i class="fa fa-check"></i><b>17.8.2</b> Vizualizing polygons</a></li>
+<li class="chapter" data-level="17.8.3" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#showing-giotto-object-prior-to-polygon-addition"><i class="fa fa-check"></i><b>17.8.3</b> Showing Giotto object prior to polygon addition</a></li>
+<li class="chapter" data-level="17.8.4" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#adding-polygons-to-giotto-object"><i class="fa fa-check"></i><b>17.8.4</b> Adding polygons to giotto object</a></li>
+<li class="chapter" data-level="17.8.5" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#check-polygon-information"><i class="fa fa-check"></i><b>17.8.5</b> Check polygon information</a></li>
+<li class="chapter" data-level="17.8.6" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#expression-overlap"><i class="fa fa-check"></i><b>17.8.6</b> Expression overlap</a></li>
 </ul></li>
-<li class="chapter" data-level="17.6" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#reading-in-larger-dataset"><i class="fa fa-check"></i><b>17.6</b> Reading in larger dataset</a></li>
-<li class="chapter" data-level="17.7" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#analyzing-interpolated-features"><i class="fa fa-check"></i><b>17.7</b> Analyzing interpolated features</a>
+<li class="chapter" data-level="17.9" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#reading-in-larger-dataset"><i class="fa fa-check"></i><b>17.9</b> Reading in larger dataset</a></li>
+<li class="chapter" data-level="17.10" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#analyzing-interpolated-features"><i class="fa fa-check"></i><b>17.10</b> Analyzing interpolated features</a>
 <ul>
-<li class="chapter" data-level="17.7.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#filter-and-normalization"><i class="fa fa-check"></i><b>17.7.1</b> Filter and normalization</a></li>
-<li class="chapter" data-level="17.7.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#visualizing-gene-expression-from-interpolated-expression"><i class="fa fa-check"></i><b>17.7.2</b> Visualizing gene expression from interpolated expression</a></li>
-<li class="chapter" data-level="17.7.3" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#run-pca"><i class="fa fa-check"></i><b>17.7.3</b> Run PCA</a></li>
-<li class="chapter" data-level="17.7.4" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#clustering-2"><i class="fa fa-check"></i><b>17.7.4</b> Clustering</a></li>
-<li class="chapter" data-level="17.7.5" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#visualizing-clustering"><i class="fa fa-check"></i><b>17.7.5</b> Visualizing clustering</a></li>
-<li class="chapter" data-level="17.7.6" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#cropping-objects"><i class="fa fa-check"></i><b>17.7.6</b> Cropping objects</a></li>
+<li class="chapter" data-level="17.10.1" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#filter-and-normalization"><i class="fa fa-check"></i><b>17.10.1</b> Filter and normalization</a></li>
+<li class="chapter" data-level="17.10.2" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#visualizing-gene-expression-from-interpolated-expression"><i class="fa fa-check"></i><b>17.10.2</b> Visualizing gene expression from interpolated expression</a></li>
+<li class="chapter" data-level="17.10.3" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#run-pca"><i class="fa fa-check"></i><b>17.10.3</b> Run PCA</a></li>
+<li class="chapter" data-level="17.10.4" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#clustering-2"><i class="fa fa-check"></i><b>17.10.4</b> Clustering</a></li>
+<li class="chapter" data-level="17.10.5" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#visualizing-clustering"><i class="fa fa-check"></i><b>17.10.5</b> Visualizing clustering</a></li>
+<li class="chapter" data-level="17.10.6" data-path="interactivity-with-the-rspatial-ecosystem.html"><a href="interactivity-with-the-rspatial-ecosystem.html#cropping-objects"><i class="fa fa-check"></i><b>17.10.6</b> Cropping objects</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="18" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html"><i class="fa fa-check"></i><b>18</b> Contributing to Giotto</a>
@@ -520,8 +576,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="spatial-multi-modal-analysis" class="section level1 hasAnchor" number="13">
 <h1><span class="header-section-number">13</span> Spatial multi-modal analysis<a href="spatial-multi-modal-analysis.html#spatial-multi-modal-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>George Chen
-Junxiang Xu</p>
+<p>George Chen</p>
+<p>Junxiang Xu</p>
 <p>August 7th 2024</p>
 <div id="overview-1" class="section level2 hasAnchor" number="13.1">
 <h2><span class="header-section-number">13.1</span> Overview<a href="spatial-multi-modal-analysis.html#overview-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -568,48 +624,48 @@ Junxiang Xu</p>
 <li><code>affine2d</code> - affine matrix container</li>
 <li><code>giotto</code> - giotto analysis object</li>
 </ul>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="spatial-multi-modal-analysis.html#cb220-1" tabindex="-1"></a><span class="co"># load in data</span></span>
-<span id="cb220-2"><a href="spatial-multi-modal-analysis.html#cb220-2" tabindex="-1"></a><span class="fu">library</span>(Giotto)</span>
-<span id="cb220-3"><a href="spatial-multi-modal-analysis.html#cb220-3" tabindex="-1"></a></span>
-<span id="cb220-4"><a href="spatial-multi-modal-analysis.html#cb220-4" tabindex="-1"></a>g <span class="ot">&lt;-</span> GiottoData<span class="sc">::</span><span class="fu">loadGiottoMini</span>(<span class="st">&quot;vizgen&quot;</span>)</span>
-<span id="cb220-5"><a href="spatial-multi-modal-analysis.html#cb220-5" tabindex="-1"></a></span>
-<span id="cb220-6"><a href="spatial-multi-modal-analysis.html#cb220-6" tabindex="-1"></a><span class="fu">activeSpatUnit</span>(g) <span class="ot">&lt;-</span> <span class="st">&quot;aggregate&quot;</span></span>
-<span id="cb220-7"><a href="spatial-multi-modal-analysis.html#cb220-7" tabindex="-1"></a></span>
-<span id="cb220-8"><a href="spatial-multi-modal-analysis.html#cb220-8" tabindex="-1"></a>gpoly <span class="ot">&lt;-</span> <span class="fu">getPolygonInfo</span>(g, <span class="at">return_giottoPolygon =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb220-9"><a href="spatial-multi-modal-analysis.html#cb220-9" tabindex="-1"></a></span>
-<span id="cb220-10"><a href="spatial-multi-modal-analysis.html#cb220-10" tabindex="-1"></a>gimg <span class="ot">&lt;-</span> <span class="fu">getGiottoImage</span>(g)</span></code></pre></div>
+<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="spatial-multi-modal-analysis.html#cb362-1" tabindex="-1"></a><span class="co"># load in data</span></span>
+<span id="cb362-2"><a href="spatial-multi-modal-analysis.html#cb362-2" tabindex="-1"></a><span class="fu">library</span>(Giotto)</span>
+<span id="cb362-3"><a href="spatial-multi-modal-analysis.html#cb362-3" tabindex="-1"></a></span>
+<span id="cb362-4"><a href="spatial-multi-modal-analysis.html#cb362-4" tabindex="-1"></a>g <span class="ot">&lt;-</span> GiottoData<span class="sc">::</span><span class="fu">loadGiottoMini</span>(<span class="st">&quot;vizgen&quot;</span>)</span>
+<span id="cb362-5"><a href="spatial-multi-modal-analysis.html#cb362-5" tabindex="-1"></a></span>
+<span id="cb362-6"><a href="spatial-multi-modal-analysis.html#cb362-6" tabindex="-1"></a><span class="fu">activeSpatUnit</span>(g) <span class="ot">&lt;-</span> <span class="st">&quot;aggregate&quot;</span></span>
+<span id="cb362-7"><a href="spatial-multi-modal-analysis.html#cb362-7" tabindex="-1"></a></span>
+<span id="cb362-8"><a href="spatial-multi-modal-analysis.html#cb362-8" tabindex="-1"></a>gpoly <span class="ot">&lt;-</span> <span class="fu">getPolygonInfo</span>(g, <span class="at">return_giottoPolygon =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb362-9"><a href="spatial-multi-modal-analysis.html#cb362-9" tabindex="-1"></a></span>
+<span id="cb362-10"><a href="spatial-multi-modal-analysis.html#cb362-10" tabindex="-1"></a>gimg <span class="ot">&lt;-</span> <span class="fu">getGiottoImage</span>(g)</span></code></pre></div>
 </div>
 </div>
 <div id="examples-of-the-simple-transforms-with-a-giottopolygon" class="section level2 hasAnchor" number="13.3">
 <h2><span class="header-section-number">13.3</span> Examples of the simple transforms with a giottoPolygon<a href="spatial-multi-modal-analysis.html#examples-of-the-simple-transforms-with-a-giottopolygon" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="spatial-multi-modal-analysis.html#cb221-1" tabindex="-1"></a>rain <span class="ot">&lt;-</span> <span class="fu">rainbow</span>(<span class="fu">nrow</span>(gpoly))</span>
-<span id="cb221-2"><a href="spatial-multi-modal-analysis.html#cb221-2" tabindex="-1"></a></span>
-<span id="cb221-3"><a href="spatial-multi-modal-analysis.html#cb221-3" tabindex="-1"></a>line_width <span class="ot">&lt;-</span> <span class="fl">0.3</span></span>
-<span id="cb221-4"><a href="spatial-multi-modal-analysis.html#cb221-4" tabindex="-1"></a></span>
-<span id="cb221-5"><a href="spatial-multi-modal-analysis.html#cb221-5" tabindex="-1"></a><span class="co"># par to setup the grid plotting layout</span></span>
-<span id="cb221-6"><a href="spatial-multi-modal-analysis.html#cb221-6" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">no.readonly =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb221-7"><a href="spatial-multi-modal-analysis.html#cb221-7" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">3</span>))</span>
-<span id="cb221-8"><a href="spatial-multi-modal-analysis.html#cb221-8" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> </span>
-<span id="cb221-9"><a href="spatial-multi-modal-analysis.html#cb221-9" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;no transform&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb221-10"><a href="spatial-multi-modal-analysis.html#cb221-10" tabindex="-1"></a></span>
-<span id="cb221-11"><a href="spatial-multi-modal-analysis.html#cb221-11" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">spatShift</span>(<span class="at">dx =</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb221-12"><a href="spatial-multi-modal-analysis.html#cb221-12" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;spatShift(dx = 1000)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb221-13"><a href="spatial-multi-modal-analysis.html#cb221-13" tabindex="-1"></a></span>
-<span id="cb221-14"><a href="spatial-multi-modal-analysis.html#cb221-14" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">spin</span>(<span class="dv">45</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb221-15"><a href="spatial-multi-modal-analysis.html#cb221-15" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;spin(45)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb221-16"><a href="spatial-multi-modal-analysis.html#cb221-16" tabindex="-1"></a></span>
-<span id="cb221-17"><a href="spatial-multi-modal-analysis.html#cb221-17" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">rescale</span>(<span class="at">fx =</span> <span class="dv">10</span>, <span class="at">fy =</span> <span class="dv">6</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb221-18"><a href="spatial-multi-modal-analysis.html#cb221-18" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;rescale(fx = 10, fy = 6)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb221-19"><a href="spatial-multi-modal-analysis.html#cb221-19" tabindex="-1"></a></span>
-<span id="cb221-20"><a href="spatial-multi-modal-analysis.html#cb221-20" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">flip</span>(<span class="at">direction =</span> <span class="st">&quot;vertical&quot;</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb221-21"><a href="spatial-multi-modal-analysis.html#cb221-21" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;flip()&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb221-22"><a href="spatial-multi-modal-analysis.html#cb221-22" tabindex="-1"></a></span>
-<span id="cb221-23"><a href="spatial-multi-modal-analysis.html#cb221-23" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">t</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb221-24"><a href="spatial-multi-modal-analysis.html#cb221-24" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;t()&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb221-25"><a href="spatial-multi-modal-analysis.html#cb221-25" tabindex="-1"></a></span>
-<span id="cb221-26"><a href="spatial-multi-modal-analysis.html#cb221-26" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">shear</span>(<span class="at">fx =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb221-27"><a href="spatial-multi-modal-analysis.html#cb221-27" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;shear(fx = 0.5)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb221-28"><a href="spatial-multi-modal-analysis.html#cb221-28" tabindex="-1"></a><span class="fu">par</span>(p)</span></code></pre></div>
+<div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="spatial-multi-modal-analysis.html#cb363-1" tabindex="-1"></a>rain <span class="ot">&lt;-</span> <span class="fu">rainbow</span>(<span class="fu">nrow</span>(gpoly))</span>
+<span id="cb363-2"><a href="spatial-multi-modal-analysis.html#cb363-2" tabindex="-1"></a></span>
+<span id="cb363-3"><a href="spatial-multi-modal-analysis.html#cb363-3" tabindex="-1"></a>line_width <span class="ot">&lt;-</span> <span class="fl">0.3</span></span>
+<span id="cb363-4"><a href="spatial-multi-modal-analysis.html#cb363-4" tabindex="-1"></a></span>
+<span id="cb363-5"><a href="spatial-multi-modal-analysis.html#cb363-5" tabindex="-1"></a><span class="co"># par to setup the grid plotting layout</span></span>
+<span id="cb363-6"><a href="spatial-multi-modal-analysis.html#cb363-6" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">no.readonly =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb363-7"><a href="spatial-multi-modal-analysis.html#cb363-7" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">3</span>))</span>
+<span id="cb363-8"><a href="spatial-multi-modal-analysis.html#cb363-8" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> </span>
+<span id="cb363-9"><a href="spatial-multi-modal-analysis.html#cb363-9" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;no transform&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-10"><a href="spatial-multi-modal-analysis.html#cb363-10" tabindex="-1"></a></span>
+<span id="cb363-11"><a href="spatial-multi-modal-analysis.html#cb363-11" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">spatShift</span>(<span class="at">dx =</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb363-12"><a href="spatial-multi-modal-analysis.html#cb363-12" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;spatShift(dx = 1000)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-13"><a href="spatial-multi-modal-analysis.html#cb363-13" tabindex="-1"></a></span>
+<span id="cb363-14"><a href="spatial-multi-modal-analysis.html#cb363-14" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">spin</span>(<span class="dv">45</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb363-15"><a href="spatial-multi-modal-analysis.html#cb363-15" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;spin(45)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-16"><a href="spatial-multi-modal-analysis.html#cb363-16" tabindex="-1"></a></span>
+<span id="cb363-17"><a href="spatial-multi-modal-analysis.html#cb363-17" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">rescale</span>(<span class="at">fx =</span> <span class="dv">10</span>, <span class="at">fy =</span> <span class="dv">6</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb363-18"><a href="spatial-multi-modal-analysis.html#cb363-18" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;rescale(fx = 10, fy = 6)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-19"><a href="spatial-multi-modal-analysis.html#cb363-19" tabindex="-1"></a></span>
+<span id="cb363-20"><a href="spatial-multi-modal-analysis.html#cb363-20" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">flip</span>(<span class="at">direction =</span> <span class="st">&quot;vertical&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb363-21"><a href="spatial-multi-modal-analysis.html#cb363-21" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;flip()&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-22"><a href="spatial-multi-modal-analysis.html#cb363-22" tabindex="-1"></a></span>
+<span id="cb363-23"><a href="spatial-multi-modal-analysis.html#cb363-23" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">t</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb363-24"><a href="spatial-multi-modal-analysis.html#cb363-24" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;t()&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-25"><a href="spatial-multi-modal-analysis.html#cb363-25" tabindex="-1"></a></span>
+<span id="cb363-26"><a href="spatial-multi-modal-analysis.html#cb363-26" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">shear</span>(<span class="at">fx =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb363-27"><a href="spatial-multi-modal-analysis.html#cb363-27" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;shear(fx = 0.5)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-28"><a href="spatial-multi-modal-analysis.html#cb363-28" tabindex="-1"></a><span class="fu">par</span>(p)</span></code></pre></div>
 <p><img src="img/03_session2/transforms.png" /><!-- --></p>
 </div>
 <div id="affine-transforms" class="section level2 hasAnchor" number="13.4">
@@ -622,20 +678,20 @@ Junxiang Xu</p>
 <p>Due to the nature of matrix multiplication, you can simply multiply the affine matrices with each other and when the xy coordinates are multiplied by the resulting matrix, it performs both linear transforms in the same step.</p>
 <p><em>Giotto</em> provides a utility <code>affine2d</code> S4 class that can be created from any affine matrix and responds to the affine transform functions to simplify this accumulation of simple transforms.</p>
 <p>Once done, the <code>affine2d</code> can be applied to spatial objects in a single step using <code>affine()</code> in the same way that you would use a matrix.</p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="spatial-multi-modal-analysis.html#cb222-1" tabindex="-1"></a><span class="co"># create affine2d</span></span>
-<span id="cb222-2"><a href="spatial-multi-modal-analysis.html#cb222-2" tabindex="-1"></a>aff <span class="ot">&lt;-</span> <span class="fu">affine</span>() <span class="co"># when called without params, this is the same as affine(diag(c(1, 1)))</span></span></code></pre></div>
+<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="spatial-multi-modal-analysis.html#cb364-1" tabindex="-1"></a><span class="co"># create affine2d</span></span>
+<span id="cb364-2"><a href="spatial-multi-modal-analysis.html#cb364-2" tabindex="-1"></a>aff <span class="ot">&lt;-</span> <span class="fu">affine</span>() <span class="co"># when called without params, this is the same as affine(diag(c(1, 1)))</span></span></code></pre></div>
 <p>The <code>affine2d</code> object also has an anchor spatial extent, which is used in calculations of the translation values. <code>affine2d</code> generates with a default extent, but a specific one matching that of the object you are manipulating (such as that of the giottoPolygon) should be set.</p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="spatial-multi-modal-analysis.html#cb223-1" tabindex="-1"></a>aff<span class="sc">@</span>anchor <span class="ot">&lt;-</span> <span class="fu">ext</span>(gpoly)</span>
-<span id="cb223-2"><a href="spatial-multi-modal-analysis.html#cb223-2" tabindex="-1"></a>aff <span class="ot">&lt;-</span> <span class="fu">initialize</span>(aff)</span></code></pre></div>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="spatial-multi-modal-analysis.html#cb224-1" tabindex="-1"></a><span class="co"># append several simple transforms</span></span>
-<span id="cb224-2"><a href="spatial-multi-modal-analysis.html#cb224-2" tabindex="-1"></a>aff <span class="ot">&lt;-</span> aff <span class="sc">|&gt;</span> </span>
-<span id="cb224-3"><a href="spatial-multi-modal-analysis.html#cb224-3" tabindex="-1"></a>    <span class="fu">spatShift</span>(<span class="at">dx =</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span></span>
-<span id="cb224-4"><a href="spatial-multi-modal-analysis.html#cb224-4" tabindex="-1"></a>    <span class="fu">spin</span>(<span class="dv">45</span>, <span class="at">x0 =</span> <span class="dv">0</span>, <span class="at">y0 =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> <span class="co"># without the x0, y0 params, the extent center is used</span></span>
-<span id="cb224-5"><a href="spatial-multi-modal-analysis.html#cb224-5" tabindex="-1"></a>    <span class="fu">rescale</span>(<span class="dv">10</span>, <span class="at">x0 =</span> <span class="dv">0</span>, <span class="at">y0 =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> <span class="co"># without the x0, y0 params, the extent center is used</span></span>
-<span id="cb224-6"><a href="spatial-multi-modal-analysis.html#cb224-6" tabindex="-1"></a>    <span class="fu">flip</span>(<span class="at">direction =</span> <span class="st">&quot;vertical&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb224-7"><a href="spatial-multi-modal-analysis.html#cb224-7" tabindex="-1"></a>    <span class="fu">t</span>() <span class="sc">|&gt;</span></span>
-<span id="cb224-8"><a href="spatial-multi-modal-analysis.html#cb224-8" tabindex="-1"></a>    <span class="fu">shear</span>(<span class="at">fx =</span> <span class="fl">0.5</span>)</span>
-<span id="cb224-9"><a href="spatial-multi-modal-analysis.html#cb224-9" tabindex="-1"></a><span class="fu">force</span>(aff)</span></code></pre></div>
+<div class="sourceCode" id="cb365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb365-1"><a href="spatial-multi-modal-analysis.html#cb365-1" tabindex="-1"></a>aff<span class="sc">@</span>anchor <span class="ot">&lt;-</span> <span class="fu">ext</span>(gpoly)</span>
+<span id="cb365-2"><a href="spatial-multi-modal-analysis.html#cb365-2" tabindex="-1"></a>aff <span class="ot">&lt;-</span> <span class="fu">initialize</span>(aff)</span></code></pre></div>
+<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="spatial-multi-modal-analysis.html#cb366-1" tabindex="-1"></a><span class="co"># append several simple transforms</span></span>
+<span id="cb366-2"><a href="spatial-multi-modal-analysis.html#cb366-2" tabindex="-1"></a>aff <span class="ot">&lt;-</span> aff <span class="sc">|&gt;</span> </span>
+<span id="cb366-3"><a href="spatial-multi-modal-analysis.html#cb366-3" tabindex="-1"></a>    <span class="fu">spatShift</span>(<span class="at">dx =</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span></span>
+<span id="cb366-4"><a href="spatial-multi-modal-analysis.html#cb366-4" tabindex="-1"></a>    <span class="fu">spin</span>(<span class="dv">45</span>, <span class="at">x0 =</span> <span class="dv">0</span>, <span class="at">y0 =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> <span class="co"># without the x0, y0 params, the extent center is used</span></span>
+<span id="cb366-5"><a href="spatial-multi-modal-analysis.html#cb366-5" tabindex="-1"></a>    <span class="fu">rescale</span>(<span class="dv">10</span>, <span class="at">x0 =</span> <span class="dv">0</span>, <span class="at">y0 =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> <span class="co"># without the x0, y0 params, the extent center is used</span></span>
+<span id="cb366-6"><a href="spatial-multi-modal-analysis.html#cb366-6" tabindex="-1"></a>    <span class="fu">flip</span>(<span class="at">direction =</span> <span class="st">&quot;vertical&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb366-7"><a href="spatial-multi-modal-analysis.html#cb366-7" tabindex="-1"></a>    <span class="fu">t</span>() <span class="sc">|&gt;</span></span>
+<span id="cb366-8"><a href="spatial-multi-modal-analysis.html#cb366-8" tabindex="-1"></a>    <span class="fu">shear</span>(<span class="at">fx =</span> <span class="fl">0.5</span>)</span>
+<span id="cb366-9"><a href="spatial-multi-modal-analysis.html#cb366-9" tabindex="-1"></a><span class="fu">force</span>(aff)</span></code></pre></div>
 <pre><code>&lt;affine2d&gt;
 anchor    : 6399.24384990901, 6903.24298517207, -5152.38959073896, -4694.86823300896  (xmin, xmax, ymin, ymax)
 rotate    : -0.785398163397448  (rad)
@@ -644,35 +700,35 @@ scale     : 10, 10  (x, y)
 translate : 963.028150700062, 7071.06781186548  (x, y)</code></pre>
 <p>The show() function displays some information about the stored affine transform, including a set of decomposed simple transformations.</p>
 <p>You can then plot the affine object and see a projection of the spatial transform where blue is the starting position and red is the end.</p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="spatial-multi-modal-analysis.html#cb226-1" tabindex="-1"></a><span class="fu">plot</span>(aff)</span></code></pre></div>
+<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="spatial-multi-modal-analysis.html#cb368-1" tabindex="-1"></a><span class="fu">plot</span>(aff)</span></code></pre></div>
 <p><img src="img/03_session2/affplot.png" /><!-- --></p>
 <p>We can then apply the affine transforms to the <code>giottoPolygon</code> to see that it indeed in the location and orientation that the projection suggests.</p>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="spatial-multi-modal-analysis.html#cb227-1" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">affine</span>(aff) <span class="sc">|&gt;</span> </span>
-<span id="cb227-2"><a href="spatial-multi-modal-analysis.html#cb227-2" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;affine()&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span></code></pre></div>
+<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="spatial-multi-modal-analysis.html#cb369-1" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">affine</span>(aff) <span class="sc">|&gt;</span> </span>
+<span id="cb369-2"><a href="spatial-multi-modal-analysis.html#cb369-2" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;affine()&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span></code></pre></div>
 <p><img src="img/03_session2/affine.png" /><!-- --></p>
 </div>
 <div id="image-transforms" class="section level2 hasAnchor" number="13.5">
 <h2><span class="header-section-number">13.5</span> Image transforms<a href="spatial-multi-modal-analysis.html#image-transforms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Giotto uses <code>giottoLargeImages</code> as the core image class which is based on <em>terra</em> <code>SpatRaster</code>. Images are not loaded into memory when the object is generated and instead an amount of regular sampling appropriate to the zoom level requested is performed at time of plotting.</p>
 <p><code>spatShift()</code> and <code>rescale()</code> operations are supported by <em>terra</em> <code>SpatRaster</code>, and we inherit those functionalities. <code>spin()</code>, <code>flip()</code>, <code>t()</code>, <code>shear()</code>, <code>affine()</code> operations will coerce <code>giottoLargeImage</code> to <code>giottoAffineImage</code>, which is much the same, except it contains an <code>affine2d</code> object that tracks spatial manipulations performed, so that they can be applied through <code>magick::image_distort()</code> processing after sampled values are pulled into memory. <code>giottoAffineImage</code> also has alternative <code>ext()</code> and <code>crop()</code> methods so that those operations respect both the expected post-affine space and un-transformed source image.</p>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="spatial-multi-modal-analysis.html#cb228-1" tabindex="-1"></a><span class="co"># affine transform of image info matches with polygon info</span></span>
-<span id="cb228-2"><a href="spatial-multi-modal-analysis.html#cb228-2" tabindex="-1"></a>gimg <span class="sc">|&gt;</span> <span class="fu">affine</span>(aff) <span class="sc">|&gt;</span> <span class="fu">plot</span>()</span>
-<span id="cb228-3"><a href="spatial-multi-modal-analysis.html#cb228-3" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">affine</span>(aff) <span class="sc">|&gt;</span> </span>
-<span id="cb228-4"><a href="spatial-multi-modal-analysis.html#cb228-4" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">add =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb228-5"><a href="spatial-multi-modal-analysis.html#cb228-5" tabindex="-1"></a>         <span class="at">border =</span> <span class="st">&quot;cyan&quot;</span>,</span>
-<span id="cb228-6"><a href="spatial-multi-modal-analysis.html#cb228-6" tabindex="-1"></a>         <span class="at">lwd =</span> <span class="fl">0.3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="spatial-multi-modal-analysis.html#cb370-1" tabindex="-1"></a><span class="co"># affine transform of image info matches with polygon info</span></span>
+<span id="cb370-2"><a href="spatial-multi-modal-analysis.html#cb370-2" tabindex="-1"></a>gimg <span class="sc">|&gt;</span> <span class="fu">affine</span>(aff) <span class="sc">|&gt;</span> <span class="fu">plot</span>()</span>
+<span id="cb370-3"><a href="spatial-multi-modal-analysis.html#cb370-3" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">affine</span>(aff) <span class="sc">|&gt;</span> </span>
+<span id="cb370-4"><a href="spatial-multi-modal-analysis.html#cb370-4" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">add =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb370-5"><a href="spatial-multi-modal-analysis.html#cb370-5" tabindex="-1"></a>         <span class="at">border =</span> <span class="st">&quot;cyan&quot;</span>,</span>
+<span id="cb370-6"><a href="spatial-multi-modal-analysis.html#cb370-6" tabindex="-1"></a>         <span class="at">lwd =</span> <span class="fl">0.3</span>)</span></code></pre></div>
 <p><img src="img/03_session2/polys_and_image.png" /><!-- --></p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="spatial-multi-modal-analysis.html#cb229-1" tabindex="-1"></a><span class="co"># affine of the giotto object</span></span>
-<span id="cb229-2"><a href="spatial-multi-modal-analysis.html#cb229-2" tabindex="-1"></a>g <span class="sc">|&gt;</span> <span class="fu">affine</span>(aff) <span class="sc">|&gt;</span> </span>
-<span id="cb229-3"><a href="spatial-multi-modal-analysis.html#cb229-3" tabindex="-1"></a>    <span class="fu">spatInSituPlotPoints</span>(</span>
-<span id="cb229-4"><a href="spatial-multi-modal-analysis.html#cb229-4" tabindex="-1"></a>        <span class="at">show_image =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb229-5"><a href="spatial-multi-modal-analysis.html#cb229-5" tabindex="-1"></a>        <span class="at">feats =</span> <span class="fu">list</span>(<span class="at">rna =</span> <span class="fu">c</span>(<span class="st">&quot;Adgrl1&quot;</span>, <span class="st">&quot;Gfap&quot;</span>, <span class="st">&quot;Ntrk3&quot;</span>, <span class="st">&quot;Slc17a7&quot;</span>)),</span>
-<span id="cb229-6"><a href="spatial-multi-modal-analysis.html#cb229-6" tabindex="-1"></a>        <span class="at">feats_color_code =</span> <span class="fu">rainbow</span>(<span class="dv">4</span>),</span>
-<span id="cb229-7"><a href="spatial-multi-modal-analysis.html#cb229-7" tabindex="-1"></a>        <span class="at">polygon_color =</span> <span class="st">&quot;cyan&quot;</span>,</span>
-<span id="cb229-8"><a href="spatial-multi-modal-analysis.html#cb229-8" tabindex="-1"></a>        <span class="at">polygon_line_size =</span> <span class="fl">0.1</span>,</span>
-<span id="cb229-9"><a href="spatial-multi-modal-analysis.html#cb229-9" tabindex="-1"></a>        <span class="at">point_size =</span> <span class="fl">0.1</span>,</span>
-<span id="cb229-10"><a href="spatial-multi-modal-analysis.html#cb229-10" tabindex="-1"></a>        <span class="at">use_overlap =</span> <span class="cn">FALSE</span></span>
-<span id="cb229-11"><a href="spatial-multi-modal-analysis.html#cb229-11" tabindex="-1"></a>    )</span></code></pre></div>
+<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="spatial-multi-modal-analysis.html#cb371-1" tabindex="-1"></a><span class="co"># affine of the giotto object</span></span>
+<span id="cb371-2"><a href="spatial-multi-modal-analysis.html#cb371-2" tabindex="-1"></a>g <span class="sc">|&gt;</span> <span class="fu">affine</span>(aff) <span class="sc">|&gt;</span> </span>
+<span id="cb371-3"><a href="spatial-multi-modal-analysis.html#cb371-3" tabindex="-1"></a>    <span class="fu">spatInSituPlotPoints</span>(</span>
+<span id="cb371-4"><a href="spatial-multi-modal-analysis.html#cb371-4" tabindex="-1"></a>        <span class="at">show_image =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb371-5"><a href="spatial-multi-modal-analysis.html#cb371-5" tabindex="-1"></a>        <span class="at">feats =</span> <span class="fu">list</span>(<span class="at">rna =</span> <span class="fu">c</span>(<span class="st">&quot;Adgrl1&quot;</span>, <span class="st">&quot;Gfap&quot;</span>, <span class="st">&quot;Ntrk3&quot;</span>, <span class="st">&quot;Slc17a7&quot;</span>)),</span>
+<span id="cb371-6"><a href="spatial-multi-modal-analysis.html#cb371-6" tabindex="-1"></a>        <span class="at">feats_color_code =</span> <span class="fu">rainbow</span>(<span class="dv">4</span>),</span>
+<span id="cb371-7"><a href="spatial-multi-modal-analysis.html#cb371-7" tabindex="-1"></a>        <span class="at">polygon_color =</span> <span class="st">&quot;cyan&quot;</span>,</span>
+<span id="cb371-8"><a href="spatial-multi-modal-analysis.html#cb371-8" tabindex="-1"></a>        <span class="at">polygon_line_size =</span> <span class="fl">0.1</span>,</span>
+<span id="cb371-9"><a href="spatial-multi-modal-analysis.html#cb371-9" tabindex="-1"></a>        <span class="at">point_size =</span> <span class="fl">0.1</span>,</span>
+<span id="cb371-10"><a href="spatial-multi-modal-analysis.html#cb371-10" tabindex="-1"></a>        <span class="at">use_overlap =</span> <span class="cn">FALSE</span></span>
+<span id="cb371-11"><a href="spatial-multi-modal-analysis.html#cb371-11" tabindex="-1"></a>    )</span></code></pre></div>
 <p><img src="img/03_session2/gobj_affine.png" /><!-- --></p>
 <p>Currently <em>giotto</em> image objects are not fully compatible with .ome.tif files. <em>terra</em> which relies on <em>gdal</em> drivers for image loading will find that the Gtiff driver opens some .ome.tif images, but fails when certain compressions (notably JP2000 as used by 10x for their single-channel stains) are used.</p>
 </div>
@@ -683,265 +739,269 @@ translate : 963.028150700062, 7071.06781186548  (x, y)</code></pre>
 <p>10X Genomics Released a comprehensive dataset on 2022. To capture spatial structure by complementing different spatial resolutions and modalities across different assays, they provided a dataset with Xenium in situ transcriptomics data, together with Visium on closely adjacent sections. Additional IF staining was also performed on the Xenium slides. For more information, please refer to the pre-release dataset <a href="https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast">page</a> as well as the <a href="https://www.nature.com/articles/s41467-023-43458-x">publication</a>.</p>
 <ul>
 <li>Visium
-– H&amp;E Histology
-– 55um spot level expression with transcriptome coverage</li>
+<ul>
+<li>H&amp;E Histology</li>
+<li>55um spot level expression with transcriptome coverage</li>
+</ul></li>
 <li>Xenium
-– H&amp;E Histology
-– IF image staining DAPI, HER2 and CD20
-– in situ transcripts
-– cooresponding centroid locations</li>
+<ul>
+<li>H&amp;E Histology</li>
+<li>IF image staining DAPI, HER2 and CD20</li>
+<li>in situ transcripts</li>
+<li>cooresponding centroid locations</li>
+</ul></li>
 </ul>
 <p>The goal of creating this multi-modal dataset is to register all the modalities listed above to the same coordinate system as Xenium in situ transcripts as the coordinate represents a certain micron distance.</p>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="spatial-multi-modal-analysis.html#cb230-1" tabindex="-1"></a><span class="fu">library</span>(Giotto)</span>
-<span id="cb230-2"><a href="spatial-multi-modal-analysis.html#cb230-2" tabindex="-1"></a>instrs <span class="ot">&lt;-</span> <span class="fu">createGiottoInstructions</span>(<span class="at">save_dir =</span> <span class="fu">file.path</span>(<span class="fu">getwd</span>(),<span class="st">&#39;/img/03_session2/&#39;</span>),</span>
-<span id="cb230-3"><a href="spatial-multi-modal-analysis.html#cb230-3" tabindex="-1"></a>                                  <span class="at">save_plot =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb230-4"><a href="spatial-multi-modal-analysis.html#cb230-4" tabindex="-1"></a>                                  <span class="at">show_plot =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb230-5"><a href="spatial-multi-modal-analysis.html#cb230-5" tabindex="-1"></a><span class="fu">options</span>(<span class="at">timeout =</span> <span class="dv">999999</span>)</span>
-<span id="cb230-6"><a href="spatial-multi-modal-analysis.html#cb230-6" tabindex="-1"></a>download_dir <span class="ot">&lt;-</span><span class="fu">file.path</span>(<span class="fu">getwd</span>(),<span class="st">&#39;/data/03_session2/&#39;</span>)</span>
-<span id="cb230-7"><a href="spatial-multi-modal-analysis.html#cb230-7" tabindex="-1"></a>destfile <span class="ot">&lt;-</span> <span class="fu">file.path</span>(download_dir,<span class="st">&#39;Multimodal_registration.zip&#39;</span>)</span>
-<span id="cb230-8"><a href="spatial-multi-modal-analysis.html#cb230-8" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(download_dir)) { <span class="fu">dir.create</span>(download_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>) }</span>
-<span id="cb230-9"><a href="spatial-multi-modal-analysis.html#cb230-9" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">&#39;https://zenodo.org/records/13208139/files/Multimodal_registration.zip?download=1&#39;</span>, <span class="at">destfile =</span> destfile)</span>
-<span id="cb230-10"><a href="spatial-multi-modal-analysis.html#cb230-10" tabindex="-1"></a><span class="fu">unzip</span>(<span class="fu">paste0</span>(download_dir,<span class="st">&#39;/Multimodal_registration.zip&#39;</span>), <span class="at">exdir =</span> download_dir)</span>
-<span id="cb230-11"><a href="spatial-multi-modal-analysis.html#cb230-11" tabindex="-1"></a>Xenium_dir <span class="ot">&lt;-</span> <span class="fu">paste0</span>(download_dir,<span class="st">&#39;/Multimodal_registration/Xenium/&#39;</span>)</span>
-<span id="cb230-12"><a href="spatial-multi-modal-analysis.html#cb230-12" tabindex="-1"></a>Visium_dir <span class="ot">&lt;-</span> <span class="fu">paste0</span>(download_dir,<span class="st">&#39;/Multimodal_registration/Visium/&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="spatial-multi-modal-analysis.html#cb372-1" tabindex="-1"></a><span class="fu">library</span>(Giotto)</span>
+<span id="cb372-2"><a href="spatial-multi-modal-analysis.html#cb372-2" tabindex="-1"></a>instrs <span class="ot">&lt;-</span> <span class="fu">createGiottoInstructions</span>(<span class="at">save_dir =</span> <span class="fu">file.path</span>(<span class="fu">getwd</span>(),<span class="st">&#39;/img/03_session2/&#39;</span>),</span>
+<span id="cb372-3"><a href="spatial-multi-modal-analysis.html#cb372-3" tabindex="-1"></a>                                  <span class="at">save_plot =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb372-4"><a href="spatial-multi-modal-analysis.html#cb372-4" tabindex="-1"></a>                                  <span class="at">show_plot =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb372-5"><a href="spatial-multi-modal-analysis.html#cb372-5" tabindex="-1"></a><span class="fu">options</span>(<span class="at">timeout =</span> <span class="dv">999999</span>)</span>
+<span id="cb372-6"><a href="spatial-multi-modal-analysis.html#cb372-6" tabindex="-1"></a>download_dir <span class="ot">&lt;-</span><span class="fu">file.path</span>(<span class="fu">getwd</span>(),<span class="st">&#39;/data/03_session2/&#39;</span>)</span>
+<span id="cb372-7"><a href="spatial-multi-modal-analysis.html#cb372-7" tabindex="-1"></a>destfile <span class="ot">&lt;-</span> <span class="fu">file.path</span>(download_dir,<span class="st">&#39;Multimodal_registration.zip&#39;</span>)</span>
+<span id="cb372-8"><a href="spatial-multi-modal-analysis.html#cb372-8" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(download_dir)) { <span class="fu">dir.create</span>(download_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>) }</span>
+<span id="cb372-9"><a href="spatial-multi-modal-analysis.html#cb372-9" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">&#39;https://zenodo.org/records/13208139/files/Multimodal_registration.zip?download=1&#39;</span>, <span class="at">destfile =</span> destfile)</span>
+<span id="cb372-10"><a href="spatial-multi-modal-analysis.html#cb372-10" tabindex="-1"></a><span class="fu">unzip</span>(<span class="fu">paste0</span>(download_dir,<span class="st">&#39;/Multimodal_registration.zip&#39;</span>), <span class="at">exdir =</span> download_dir)</span>
+<span id="cb372-11"><a href="spatial-multi-modal-analysis.html#cb372-11" tabindex="-1"></a>Xenium_dir <span class="ot">&lt;-</span> <span class="fu">paste0</span>(download_dir,<span class="st">&#39;/Xenium/&#39;</span>)</span>
+<span id="cb372-12"><a href="spatial-multi-modal-analysis.html#cb372-12" tabindex="-1"></a>Visium_dir <span class="ot">&lt;-</span> <span class="fu">paste0</span>(download_dir,<span class="st">&#39;/Visium/&#39;</span>)</span></code></pre></div>
 </div>
 <div id="target-coordinate-system" class="section level3 hasAnchor" number="13.6.2">
 <h3><span class="header-section-number">13.6.2</span> Target Coordinate system<a href="spatial-multi-modal-analysis.html#target-coordinate-system" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Xenium transcripts, polygon information and corresponding centroids are output from the Xenium instrument and are in the same coordinate system from the raw output. We can start with checking the centroid information as a representation of the target coordinate system.</p>
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="spatial-multi-modal-analysis.html#cb231-1" tabindex="-1"></a>xen_cell_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&quot;cells.csv.gz&quot;</span>))</span>
-<span id="cb231-2"><a href="spatial-multi-modal-analysis.html#cb231-2" tabindex="-1"></a>xen_cell_pl <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> xen_cell_df, ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x_centroid , <span class="at">y =</span> y_centroid),<span class="at">size =</span> <span class="fl">1e-150</span>,,<span class="at">color =</span> <span class="st">&#39;orange&#39;</span>) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">theme_classic</span>()</span>
-<span id="cb231-3"><a href="spatial-multi-modal-analysis.html#cb231-3" tabindex="-1"></a>xen_cell_pl</span></code></pre></div>
+<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="spatial-multi-modal-analysis.html#cb373-1" tabindex="-1"></a>xen_cell_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&quot;/cells.csv.gz&quot;</span>))</span>
+<span id="cb373-2"><a href="spatial-multi-modal-analysis.html#cb373-2" tabindex="-1"></a>xen_cell_pl <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> xen_cell_df, ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x_centroid , <span class="at">y =</span> y_centroid),<span class="at">size =</span> <span class="fl">1e-150</span>,,<span class="at">color =</span> <span class="st">&#39;orange&#39;</span>) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">theme_classic</span>()</span>
+<span id="cb373-3"><a href="spatial-multi-modal-analysis.html#cb373-3" tabindex="-1"></a>xen_cell_pl</span></code></pre></div>
 <p><img src="img/03_session2/Xen_cell_centroid.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="visium-to-register" class="section level3 hasAnchor" number="13.6.3">
 <h3><span class="header-section-number">13.6.3</span> Visium to register<a href="spatial-multi-modal-analysis.html#visium-to-register" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Load the Visium directory using the Giotto convenience function, note that here we are using the “tissue_hires_image.png” as a image to plot. Using the convenience function, hires image and scale factor stored in the <a href="https://www.10xgenomics.com/support/software/space-ranger/latest/analysis/outputs/output-overview">spaceranger</a> will be used for automatic alignment while the Giotto Visium Object creation. SpatPlot2D provided by Giotto will random sample pixels from the image you provide, thus providing microscopic image as the image input for createGiottoVisiumObject() will improve the visual performance for downstream registration</p>
-<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="spatial-multi-modal-analysis.html#cb232-1" tabindex="-1"></a>G_visium <span class="ot">&lt;-</span> <span class="fu">createGiottoVisiumObject</span>(<span class="at">visium_dir =</span> Visium_dir,</span>
-<span id="cb232-2"><a href="spatial-multi-modal-analysis.html#cb232-2" tabindex="-1"></a>                                     <span class="at">gene_column_index =</span> <span class="dv">2</span>,</span>
-<span id="cb232-3"><a href="spatial-multi-modal-analysis.html#cb232-3" tabindex="-1"></a>                                     <span class="at">png_name =</span> <span class="st">&#39;tissue_hires_image.png&#39;</span>,</span>
-<span id="cb232-4"><a href="spatial-multi-modal-analysis.html#cb232-4" tabindex="-1"></a>                                     <span class="at">instructions =</span> <span class="cn">NULL</span>)</span>
-<span id="cb232-5"><a href="spatial-multi-modal-analysis.html#cb232-5" tabindex="-1"></a><span class="co"># In the meantime, calculate statistics for easier plot showing</span></span>
-<span id="cb232-6"><a href="spatial-multi-modal-analysis.html#cb232-6" tabindex="-1"></a>G_visium <span class="ot">&lt;-</span> <span class="fu">normalizeGiotto</span>(G_visium)</span>
-<span id="cb232-7"><a href="spatial-multi-modal-analysis.html#cb232-7" tabindex="-1"></a>G_visium <span class="ot">&lt;-</span> <span class="fu">addStatistics</span>(G_visium)</span>
-<span id="cb232-8"><a href="spatial-multi-modal-analysis.html#cb232-8" tabindex="-1"></a>V_origin <span class="ot">&lt;-</span> <span class="fu">spatPlot2D</span>(G_visium,<span class="at">show_image =</span> T,<span class="at">point_size =</span> <span class="dv">0</span>,<span class="at">return_plot =</span> T)</span>
-<span id="cb232-9"><a href="spatial-multi-modal-analysis.html#cb232-9" tabindex="-1"></a>V_origin</span></code></pre></div>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="spatial-multi-modal-analysis.html#cb374-1" tabindex="-1"></a>G_visium <span class="ot">&lt;-</span> <span class="fu">createGiottoVisiumObject</span>(<span class="at">visium_dir =</span> Visium_dir,</span>
+<span id="cb374-2"><a href="spatial-multi-modal-analysis.html#cb374-2" tabindex="-1"></a>                                     <span class="at">gene_column_index =</span> <span class="dv">2</span>,</span>
+<span id="cb374-3"><a href="spatial-multi-modal-analysis.html#cb374-3" tabindex="-1"></a>                                     <span class="at">png_name =</span> <span class="st">&#39;tissue_hires_image.png&#39;</span>,</span>
+<span id="cb374-4"><a href="spatial-multi-modal-analysis.html#cb374-4" tabindex="-1"></a>                                     <span class="at">instructions =</span> <span class="cn">NULL</span>)</span>
+<span id="cb374-5"><a href="spatial-multi-modal-analysis.html#cb374-5" tabindex="-1"></a><span class="co"># In the meantime, calculate statistics for easier plot showing</span></span>
+<span id="cb374-6"><a href="spatial-multi-modal-analysis.html#cb374-6" tabindex="-1"></a>G_visium <span class="ot">&lt;-</span> <span class="fu">normalizeGiotto</span>(G_visium)</span>
+<span id="cb374-7"><a href="spatial-multi-modal-analysis.html#cb374-7" tabindex="-1"></a>G_visium <span class="ot">&lt;-</span> <span class="fu">addStatistics</span>(G_visium)</span>
+<span id="cb374-8"><a href="spatial-multi-modal-analysis.html#cb374-8" tabindex="-1"></a>V_origin <span class="ot">&lt;-</span> <span class="fu">spatPlot2D</span>(G_visium,<span class="at">show_image =</span> T,<span class="at">point_size =</span> <span class="dv">0</span>,<span class="at">return_plot =</span> T)</span>
+<span id="cb374-9"><a href="spatial-multi-modal-analysis.html#cb374-9" tabindex="-1"></a>V_origin</span></code></pre></div>
 <p><img src="img/03_session2/Visium_SpatPlot_Original.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>The Visium Object needs to be transformed to the same orientation as target coordinate system, so we perform the first transform.</p>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="spatial-multi-modal-analysis.html#cb233-1" tabindex="-1"></a><span class="co"># create affine2d</span></span>
-<span id="cb233-2"><a href="spatial-multi-modal-analysis.html#cb233-2" tabindex="-1"></a>aff <span class="ot">&lt;-</span> <span class="fu">affine</span>(<span class="fu">diag</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)))</span>
-<span id="cb233-3"><a href="spatial-multi-modal-analysis.html#cb233-3" tabindex="-1"></a>aff <span class="ot">&lt;-</span> aff <span class="sc">|&gt;</span> </span>
-<span id="cb233-4"><a href="spatial-multi-modal-analysis.html#cb233-4" tabindex="-1"></a>    <span class="fu">spin</span>(<span class="dv">90</span>) <span class="sc">|&gt;</span></span>
-<span id="cb233-5"><a href="spatial-multi-modal-analysis.html#cb233-5" tabindex="-1"></a>    <span class="fu">flip</span>(<span class="at">direction =</span> <span class="st">&quot;horizontal&quot;</span>)</span>
-<span id="cb233-6"><a href="spatial-multi-modal-analysis.html#cb233-6" tabindex="-1"></a><span class="fu">force</span>(aff)</span>
-<span id="cb233-7"><a href="spatial-multi-modal-analysis.html#cb233-7" tabindex="-1"></a></span>
-<span id="cb233-8"><a href="spatial-multi-modal-analysis.html#cb233-8" tabindex="-1"></a><span class="co"># Apply the transform</span></span>
-<span id="cb233-9"><a href="spatial-multi-modal-analysis.html#cb233-9" tabindex="-1"></a>V_tansformed <span class="ot">&lt;-</span> <span class="fu">affine</span>(G_visium,aff)</span>
-<span id="cb233-10"><a href="spatial-multi-modal-analysis.html#cb233-10" tabindex="-1"></a>spatplot_to_register <span class="ot">&lt;-</span> <span class="fu">spatPlot2D</span>(V_tansformed,<span class="at">show_image =</span> T,<span class="at">point_size =</span> <span class="dv">0</span>,<span class="at">return_plot =</span> T)</span>
-<span id="cb233-11"><a href="spatial-multi-modal-analysis.html#cb233-11" tabindex="-1"></a>spatplot_to_register</span></code></pre></div>
+<div class="sourceCode" id="cb375"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb375-1"><a href="spatial-multi-modal-analysis.html#cb375-1" tabindex="-1"></a><span class="co"># create affine2d</span></span>
+<span id="cb375-2"><a href="spatial-multi-modal-analysis.html#cb375-2" tabindex="-1"></a>aff <span class="ot">&lt;-</span> <span class="fu">affine</span>(<span class="fu">diag</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)))</span>
+<span id="cb375-3"><a href="spatial-multi-modal-analysis.html#cb375-3" tabindex="-1"></a>aff <span class="ot">&lt;-</span> aff <span class="sc">|&gt;</span> </span>
+<span id="cb375-4"><a href="spatial-multi-modal-analysis.html#cb375-4" tabindex="-1"></a>    <span class="fu">spin</span>(<span class="dv">90</span>) <span class="sc">|&gt;</span></span>
+<span id="cb375-5"><a href="spatial-multi-modal-analysis.html#cb375-5" tabindex="-1"></a>    <span class="fu">flip</span>(<span class="at">direction =</span> <span class="st">&quot;horizontal&quot;</span>)</span>
+<span id="cb375-6"><a href="spatial-multi-modal-analysis.html#cb375-6" tabindex="-1"></a><span class="fu">force</span>(aff)</span>
+<span id="cb375-7"><a href="spatial-multi-modal-analysis.html#cb375-7" tabindex="-1"></a></span>
+<span id="cb375-8"><a href="spatial-multi-modal-analysis.html#cb375-8" tabindex="-1"></a><span class="co"># Apply the transform</span></span>
+<span id="cb375-9"><a href="spatial-multi-modal-analysis.html#cb375-9" tabindex="-1"></a>V_tansformed <span class="ot">&lt;-</span> <span class="fu">affine</span>(G_visium,aff)</span>
+<span id="cb375-10"><a href="spatial-multi-modal-analysis.html#cb375-10" tabindex="-1"></a>spatplot_to_register <span class="ot">&lt;-</span> <span class="fu">spatPlot2D</span>(V_tansformed,<span class="at">show_image =</span> T,<span class="at">point_size =</span> <span class="dv">0</span>,<span class="at">return_plot =</span> T)</span>
+<span id="cb375-11"><a href="spatial-multi-modal-analysis.html#cb375-11" tabindex="-1"></a>spatplot_to_register</span></code></pre></div>
 <p><img src="img/03_session2/spatplot_to_regsiter.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Landmarks are considered to be a set of points that are defining same location from two different resources. They are very helpful to be used as anchors to create affine transformtion. For example, after the affine transformation source landmarks should be as close to target landmarks as possible. Since images from different modalities can share similar morphology, the easiest way is to pin landmarks at the morphological identities shared between images.
 Giotto provides a interactive landmark selection tool to pin landmarks, two input plots can be generated from a ggplot object, a GiottoLargeImage object, or a path to a image you want to register for. Note that if you directly provide image path, you will need to create a separate GiottoLargeImage to perform transformation, and make sure the GiottoLargeImage has the same coordinate system as shown in the shiny app.</p>
-<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="spatial-multi-modal-analysis.html#cb234-1" tabindex="-1"></a>landmarks <span class="ot">&lt;-</span> <span class="fu">interactiveLandmarkSelection</span>(spatplot_to_register, xen_cell_pl)</span></code></pre></div>
+<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="spatial-multi-modal-analysis.html#cb376-1" tabindex="-1"></a>landmarks <span class="ot">&lt;-</span> <span class="fu">interactiveLandmarkSelection</span>(spatplot_to_register, xen_cell_pl)</span></code></pre></div>
 <p><img src="img/03_session2/landmark_interactive.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Now, use the landmarks to estimate the transformation matrix needed, and to register the Giotto Visium Object to the target coordinate system. For reproducibility purpose, the landmarks used in the chunck below will be loaded from saved result.</p>
-<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="spatial-multi-modal-analysis.html#cb235-1" tabindex="-1"></a>landmarks<span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/Visium_to_Xen_Landmarks.rds&#39;</span>))</span>
-<span id="cb235-2"><a href="spatial-multi-modal-analysis.html#cb235-2" tabindex="-1"></a>affine_mtx <span class="ot">&lt;-</span> <span class="fu">calculateAffineMatrixFromLandmarks</span>(landmarks[[<span class="dv">1</span>]],landmarks[[<span class="dv">2</span>]])</span>
-<span id="cb235-3"><a href="spatial-multi-modal-analysis.html#cb235-3" tabindex="-1"></a></span>
-<span id="cb235-4"><a href="spatial-multi-modal-analysis.html#cb235-4" tabindex="-1"></a>V_final <span class="ot">&lt;-</span> <span class="fu">affine</span>(G_visium,affine_mtx <span class="sc">%*%</span> aff<span class="sc">@</span>affine)</span>
-<span id="cb235-5"><a href="spatial-multi-modal-analysis.html#cb235-5" tabindex="-1"></a></span>
-<span id="cb235-6"><a href="spatial-multi-modal-analysis.html#cb235-6" tabindex="-1"></a>spatplot_final <span class="ot">&lt;-</span> <span class="fu">spatPlot2D</span>(V_final,<span class="at">show_image =</span> T,<span class="at">point_size =</span> <span class="dv">0</span>,<span class="at">show_plot =</span> F) </span>
-<span id="cb235-7"><a href="spatial-multi-modal-analysis.html#cb235-7" tabindex="-1"></a>spatplot_final <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> xen_cell_df, ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x_centroid , <span class="at">y =</span> y_centroid),<span class="at">size =</span> <span class="fl">1e-150</span>,,<span class="at">color =</span> <span class="st">&#39;orange&#39;</span>) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">theme_classic</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb377-1"><a href="spatial-multi-modal-analysis.html#cb377-1" tabindex="-1"></a>landmarks<span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/Visium_to_Xen_Landmarks.rds&#39;</span>))</span>
+<span id="cb377-2"><a href="spatial-multi-modal-analysis.html#cb377-2" tabindex="-1"></a>affine_mtx <span class="ot">&lt;-</span> <span class="fu">calculateAffineMatrixFromLandmarks</span>(landmarks[[<span class="dv">1</span>]],landmarks[[<span class="dv">2</span>]])</span>
+<span id="cb377-3"><a href="spatial-multi-modal-analysis.html#cb377-3" tabindex="-1"></a></span>
+<span id="cb377-4"><a href="spatial-multi-modal-analysis.html#cb377-4" tabindex="-1"></a>V_final <span class="ot">&lt;-</span> <span class="fu">affine</span>(G_visium,affine_mtx <span class="sc">%*%</span> aff<span class="sc">@</span>affine)</span>
+<span id="cb377-5"><a href="spatial-multi-modal-analysis.html#cb377-5" tabindex="-1"></a></span>
+<span id="cb377-6"><a href="spatial-multi-modal-analysis.html#cb377-6" tabindex="-1"></a>spatplot_final <span class="ot">&lt;-</span> <span class="fu">spatPlot2D</span>(V_final,<span class="at">show_image =</span> T,<span class="at">point_size =</span> <span class="dv">0</span>,<span class="at">show_plot =</span> F) </span>
+<span id="cb377-7"><a href="spatial-multi-modal-analysis.html#cb377-7" tabindex="-1"></a>spatplot_final <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> xen_cell_df, ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x_centroid , <span class="at">y =</span> y_centroid),<span class="at">size =</span> <span class="fl">1e-150</span>,,<span class="at">color =</span> <span class="st">&#39;orange&#39;</span>) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">theme_classic</span>()</span></code></pre></div>
 <p><img src="img/03_session2/Visium_resgister_check.png" width="80%" style="display: block; margin: auto;" /></p>
 <div id="create-pseudo-visium-dataset-for-comparison" class="section level4 hasAnchor" number="13.6.3.1">
 <h4><span class="header-section-number">13.6.3.1</span> Create Pseudo Visium dataset for comparison<a href="spatial-multi-modal-analysis.html#create-pseudo-visium-dataset-for-comparison" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Giotto provides a way to create different shapes on certain locations, we can use that to create a pseudo-visium polygons to aggregate transcripts or image intensities. To do that, we will need the centroid locations, which can be get using getSpatialLocations(). and also the radius information to create circles. We know that Visium certer to center distance is 100um and spot diameter is 55um, thus we can estimate the radius from certer to center distance. And we can use a spatial network created by nearest neighbor = 2 to capture the distance.</p>
-<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="spatial-multi-modal-analysis.html#cb236-1" tabindex="-1"></a>V_final <span class="ot">&lt;-</span> <span class="fu">createSpatialNetwork</span>(V_final, <span class="at">k =</span> <span class="dv">1</span>,<span class="at">method =</span> <span class="st">&#39;kNN&#39;</span>)</span>
-<span id="cb236-2"><a href="spatial-multi-modal-analysis.html#cb236-2" tabindex="-1"></a>spat_network <span class="ot">&lt;-</span> <span class="fu">getSpatialNetwork</span>(V_final,<span class="at">output =</span> <span class="st">&#39;networkDT&#39;</span>)</span>
-<span id="cb236-3"><a href="spatial-multi-modal-analysis.html#cb236-3" tabindex="-1"></a><span class="fu">spatPlot2D</span>(V_final, </span>
-<span id="cb236-4"><a href="spatial-multi-modal-analysis.html#cb236-4" tabindex="-1"></a>           <span class="at">show_network =</span> T,</span>
-<span id="cb236-5"><a href="spatial-multi-modal-analysis.html#cb236-5" tabindex="-1"></a>           <span class="at">network_color =</span> <span class="st">&#39;blue&#39;</span>,</span>
-<span id="cb236-6"><a href="spatial-multi-modal-analysis.html#cb236-6" tabindex="-1"></a>           <span class="at">point_size =</span> <span class="dv">1</span>)</span>
-<span id="cb236-7"><a href="spatial-multi-modal-analysis.html#cb236-7" tabindex="-1"></a>center_to_center <span class="ot">&lt;-</span> <span class="fu">min</span>(spat_network<span class="sc">$</span>distance)</span>
-<span id="cb236-8"><a href="spatial-multi-modal-analysis.html#cb236-8" tabindex="-1"></a>radius <span class="ot">&lt;-</span> center_to_center<span class="sc">*</span><span class="dv">55</span><span class="sc">/</span><span class="dv">200</span></span></code></pre></div>
+<div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="spatial-multi-modal-analysis.html#cb378-1" tabindex="-1"></a>V_final <span class="ot">&lt;-</span> <span class="fu">createSpatialNetwork</span>(V_final, <span class="at">k =</span> <span class="dv">1</span>)</span>
+<span id="cb378-2"><a href="spatial-multi-modal-analysis.html#cb378-2" tabindex="-1"></a>spat_network <span class="ot">&lt;-</span> <span class="fu">getSpatialNetwork</span>(V_final,<span class="at">output =</span> <span class="st">&#39;networkDT&#39;</span>)</span>
+<span id="cb378-3"><a href="spatial-multi-modal-analysis.html#cb378-3" tabindex="-1"></a><span class="fu">spatPlot2D</span>(V_final, </span>
+<span id="cb378-4"><a href="spatial-multi-modal-analysis.html#cb378-4" tabindex="-1"></a>           <span class="at">show_network =</span> T,</span>
+<span id="cb378-5"><a href="spatial-multi-modal-analysis.html#cb378-5" tabindex="-1"></a>           <span class="at">network_color =</span> <span class="st">&#39;blue&#39;</span>,</span>
+<span id="cb378-6"><a href="spatial-multi-modal-analysis.html#cb378-6" tabindex="-1"></a>           <span class="at">point_size =</span> <span class="dv">1</span>)</span>
+<span id="cb378-7"><a href="spatial-multi-modal-analysis.html#cb378-7" tabindex="-1"></a>center_to_center <span class="ot">&lt;-</span> <span class="fu">min</span>(spat_network<span class="sc">$</span>distance)</span>
+<span id="cb378-8"><a href="spatial-multi-modal-analysis.html#cb378-8" tabindex="-1"></a>radius <span class="ot">&lt;-</span> center_to_center<span class="sc">*</span><span class="dv">55</span><span class="sc">/</span><span class="dv">200</span></span></code></pre></div>
 <p><img src="img/03_session2/Spatial_network.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Now we get the Pseudo Visium polygons</p>
-<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="spatial-multi-modal-analysis.html#cb237-1" tabindex="-1"></a>Visium_centroid <span class="ot">&lt;-</span> <span class="fu">getSpatialLocations</span>(V_final,<span class="at">output =</span> <span class="st">&#39;data.table&#39;</span>)</span>
-<span id="cb237-2"><a href="spatial-multi-modal-analysis.html#cb237-2" tabindex="-1"></a>stamp_dt <span class="ot">&lt;-</span> <span class="fu">circleVertices</span>(<span class="at">radius =</span> radius, <span class="at">npoints =</span> <span class="dv">100</span>)</span>
-<span id="cb237-3"><a href="spatial-multi-modal-analysis.html#cb237-3" tabindex="-1"></a>pseudo_visium_dt <span class="ot">&lt;-</span> <span class="fu">polyStamp</span>(stamp_dt, Visium_centroid)</span>
-<span id="cb237-4"><a href="spatial-multi-modal-analysis.html#cb237-4" tabindex="-1"></a>pseudo_visium_poly <span class="ot">&lt;-</span> <span class="fu">createGiottoPolygonsFromDfr</span>(pseudo_visium_dt,<span class="at">calc_centroids =</span> T)</span>
-<span id="cb237-5"><a href="spatial-multi-modal-analysis.html#cb237-5" tabindex="-1"></a><span class="fu">plot</span>(pseudo_visium_poly)</span></code></pre></div>
+<div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb379-1"><a href="spatial-multi-modal-analysis.html#cb379-1" tabindex="-1"></a>Visium_centroid <span class="ot">&lt;-</span> <span class="fu">getSpatialLocations</span>(V_final,<span class="at">output =</span> <span class="st">&#39;data.table&#39;</span>)</span>
+<span id="cb379-2"><a href="spatial-multi-modal-analysis.html#cb379-2" tabindex="-1"></a>stamp_dt <span class="ot">&lt;-</span> <span class="fu">circleVertices</span>(<span class="at">radius =</span> radius, <span class="at">npoints =</span> <span class="dv">100</span>)</span>
+<span id="cb379-3"><a href="spatial-multi-modal-analysis.html#cb379-3" tabindex="-1"></a>pseudo_visium_dt <span class="ot">&lt;-</span> <span class="fu">polyStamp</span>(stamp_dt, Visium_centroid)</span>
+<span id="cb379-4"><a href="spatial-multi-modal-analysis.html#cb379-4" tabindex="-1"></a>pseudo_visium_poly <span class="ot">&lt;-</span> <span class="fu">createGiottoPolygonsFromDfr</span>(pseudo_visium_dt,<span class="at">calc_centroids =</span> T)</span>
+<span id="cb379-5"><a href="spatial-multi-modal-analysis.html#cb379-5" tabindex="-1"></a><span class="fu">plot</span>(pseudo_visium_poly)</span></code></pre></div>
 <p><img src="img/03_session2/Visium_polygon.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Create Xenium object with pseudo Visium polygon. To save run time, example shown here only have MS4A1 and ERBB2 genes to create Giotto points</p>
-<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="spatial-multi-modal-analysis.html#cb238-1" tabindex="-1"></a>xen_transcripts <span class="ot">&lt;-</span> data.table<span class="sc">::</span><span class="fu">fread</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;Xen_2_genes.csv.gz&#39;</span>))</span>
-<span id="cb238-2"><a href="spatial-multi-modal-analysis.html#cb238-2" tabindex="-1"></a>gpoints <span class="ot">&lt;-</span> <span class="fu">createGiottoPoints</span>(xen_transcripts)</span>
-<span id="cb238-3"><a href="spatial-multi-modal-analysis.html#cb238-3" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span><span class="fu">createGiottoObjectSubcellular</span>(<span class="at">gpoints =</span> <span class="fu">list</span>(<span class="st">&#39;rna&#39;</span> <span class="ot">=</span> gpoints),</span>
-<span id="cb238-4"><a href="spatial-multi-modal-analysis.html#cb238-4" tabindex="-1"></a>                                        <span class="at">gpolygons =</span> <span class="fu">list</span>(<span class="st">&#39;visium&#39;</span> <span class="ot">=</span> pseudo_visium_poly))</span></code></pre></div>
+<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb380-1"><a href="spatial-multi-modal-analysis.html#cb380-1" tabindex="-1"></a>xen_transcripts <span class="ot">&lt;-</span> data.table<span class="sc">::</span><span class="fu">fread</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/Xen_2_genes.csv.gz&#39;</span>))</span>
+<span id="cb380-2"><a href="spatial-multi-modal-analysis.html#cb380-2" tabindex="-1"></a>gpoints <span class="ot">&lt;-</span> <span class="fu">createGiottoPoints</span>(xen_transcripts)</span>
+<span id="cb380-3"><a href="spatial-multi-modal-analysis.html#cb380-3" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span><span class="fu">createGiottoObjectSubcellular</span>(<span class="at">gpoints =</span> <span class="fu">list</span>(<span class="st">&#39;rna&#39;</span> <span class="ot">=</span> gpoints),</span>
+<span id="cb380-4"><a href="spatial-multi-modal-analysis.html#cb380-4" tabindex="-1"></a>                                        <span class="at">gpolygons =</span> <span class="fu">list</span>(<span class="st">&#39;visium&#39;</span> <span class="ot">=</span> pseudo_visium_poly))</span></code></pre></div>
 <p>Get gene expression information by overlapping polygon to points</p>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="spatial-multi-modal-analysis.html#cb239-1" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">calculateOverlap</span>(Xen_obj,</span>
-<span id="cb239-2"><a href="spatial-multi-modal-analysis.html#cb239-2" tabindex="-1"></a>                           <span class="at">feat_info =</span> <span class="st">&#39;rna&#39;</span>,</span>
-<span id="cb239-3"><a href="spatial-multi-modal-analysis.html#cb239-3" tabindex="-1"></a>                           <span class="at">spatial_info =</span> <span class="st">&#39;visium&#39;</span>)</span>
-<span id="cb239-4"><a href="spatial-multi-modal-analysis.html#cb239-4" tabindex="-1"></a></span>
-<span id="cb239-5"><a href="spatial-multi-modal-analysis.html#cb239-5" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">overlapToMatrix</span>(<span class="at">x =</span> Xen_obj,</span>
-<span id="cb239-6"><a href="spatial-multi-modal-analysis.html#cb239-6" tabindex="-1"></a>                          <span class="at">type =</span> <span class="st">&quot;point&quot;</span>, </span>
-<span id="cb239-7"><a href="spatial-multi-modal-analysis.html#cb239-7" tabindex="-1"></a>                          <span class="at">poly_info =</span> <span class="st">&quot;visium&quot;</span>, </span>
-<span id="cb239-8"><a href="spatial-multi-modal-analysis.html#cb239-8" tabindex="-1"></a>                          <span class="at">feat_info =</span> <span class="st">&quot;rna&quot;</span>,</span>
-<span id="cb239-9"><a href="spatial-multi-modal-analysis.html#cb239-9" tabindex="-1"></a>                          <span class="at">aggr_function =</span> <span class="st">&quot;sum&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb381-1"><a href="spatial-multi-modal-analysis.html#cb381-1" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">calculateOverlap</span>(Xen_obj,</span>
+<span id="cb381-2"><a href="spatial-multi-modal-analysis.html#cb381-2" tabindex="-1"></a>                           <span class="at">feat_info =</span> <span class="st">&#39;rna&#39;</span>,</span>
+<span id="cb381-3"><a href="spatial-multi-modal-analysis.html#cb381-3" tabindex="-1"></a>                           <span class="at">spatial_info =</span> <span class="st">&#39;visium&#39;</span>)</span>
+<span id="cb381-4"><a href="spatial-multi-modal-analysis.html#cb381-4" tabindex="-1"></a></span>
+<span id="cb381-5"><a href="spatial-multi-modal-analysis.html#cb381-5" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">overlapToMatrix</span>(<span class="at">x =</span> Xen_obj,</span>
+<span id="cb381-6"><a href="spatial-multi-modal-analysis.html#cb381-6" tabindex="-1"></a>                          <span class="at">type =</span> <span class="st">&quot;point&quot;</span>, </span>
+<span id="cb381-7"><a href="spatial-multi-modal-analysis.html#cb381-7" tabindex="-1"></a>                          <span class="at">poly_info =</span> <span class="st">&quot;visium&quot;</span>, </span>
+<span id="cb381-8"><a href="spatial-multi-modal-analysis.html#cb381-8" tabindex="-1"></a>                          <span class="at">feat_info =</span> <span class="st">&quot;rna&quot;</span>,</span>
+<span id="cb381-9"><a href="spatial-multi-modal-analysis.html#cb381-9" tabindex="-1"></a>                          <span class="at">aggr_function =</span> <span class="st">&quot;sum&quot;</span>)</span></code></pre></div>
 <p>Manipulate the expression for plotting</p>
-<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="spatial-multi-modal-analysis.html#cb240-1" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">filterGiotto</span>(Xen_obj,</span>
-<span id="cb240-2"><a href="spatial-multi-modal-analysis.html#cb240-2" tabindex="-1"></a>                        <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
-<span id="cb240-3"><a href="spatial-multi-modal-analysis.html#cb240-3" tabindex="-1"></a>                        <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
-<span id="cb240-4"><a href="spatial-multi-modal-analysis.html#cb240-4" tabindex="-1"></a>                        <span class="at">expression_threshold =</span> <span class="dv">1</span>, </span>
-<span id="cb240-5"><a href="spatial-multi-modal-analysis.html#cb240-5" tabindex="-1"></a>                        <span class="at">feat_det_in_min_cells =</span> <span class="dv">0</span>,</span>
-<span id="cb240-6"><a href="spatial-multi-modal-analysis.html#cb240-6" tabindex="-1"></a>                        <span class="at">min_det_feats_per_cell =</span> <span class="dv">1</span>)</span>
-<span id="cb240-7"><a href="spatial-multi-modal-analysis.html#cb240-7" tabindex="-1"></a>tmp_exprs <span class="ot">&lt;-</span> <span class="fu">getExpression</span>(Xen_obj,</span>
-<span id="cb240-8"><a href="spatial-multi-modal-analysis.html#cb240-8" tabindex="-1"></a>                       <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
-<span id="cb240-9"><a href="spatial-multi-modal-analysis.html#cb240-9" tabindex="-1"></a>                       <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
-<span id="cb240-10"><a href="spatial-multi-modal-analysis.html#cb240-10" tabindex="-1"></a>                       <span class="at">output =</span> <span class="st">&#39;matrix&#39;</span>)</span>
-<span id="cb240-11"><a href="spatial-multi-modal-analysis.html#cb240-11" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">setExpression</span>(Xen_obj,</span>
-<span id="cb240-12"><a href="spatial-multi-modal-analysis.html#cb240-12" tabindex="-1"></a>                         <span class="at">x =</span> <span class="fu">createExprObj</span>(<span class="fu">log</span>(tmp_exprs<span class="sc">+</span><span class="dv">1</span>)),</span>
-<span id="cb240-13"><a href="spatial-multi-modal-analysis.html#cb240-13" tabindex="-1"></a>                         <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
-<span id="cb240-14"><a href="spatial-multi-modal-analysis.html#cb240-14" tabindex="-1"></a>                         <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
-<span id="cb240-15"><a href="spatial-multi-modal-analysis.html#cb240-15" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&#39;plot&#39;</span>)</span>
-<span id="cb240-16"><a href="spatial-multi-modal-analysis.html#cb240-16" tabindex="-1"></a></span>
-<span id="cb240-17"><a href="spatial-multi-modal-analysis.html#cb240-17" tabindex="-1"></a><span class="fu">spatFeatPlot2D</span>(Xen_obj,</span>
-<span id="cb240-18"><a href="spatial-multi-modal-analysis.html#cb240-18" tabindex="-1"></a>               <span class="at">point_size =</span> <span class="fl">3.5</span>,</span>
-<span id="cb240-19"><a href="spatial-multi-modal-analysis.html#cb240-19" tabindex="-1"></a>               <span class="at">expression_values =</span> <span class="st">&#39;plot&#39;</span>,</span>
-<span id="cb240-20"><a href="spatial-multi-modal-analysis.html#cb240-20" tabindex="-1"></a>               <span class="at">show_image =</span> F,</span>
-<span id="cb240-21"><a href="spatial-multi-modal-analysis.html#cb240-21" tabindex="-1"></a>               <span class="at">feats =</span> <span class="st">&#39;ERBB2&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="spatial-multi-modal-analysis.html#cb382-1" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">filterGiotto</span>(Xen_obj,</span>
+<span id="cb382-2"><a href="spatial-multi-modal-analysis.html#cb382-2" tabindex="-1"></a>                        <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
+<span id="cb382-3"><a href="spatial-multi-modal-analysis.html#cb382-3" tabindex="-1"></a>                        <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
+<span id="cb382-4"><a href="spatial-multi-modal-analysis.html#cb382-4" tabindex="-1"></a>                        <span class="at">expression_threshold =</span> <span class="dv">1</span>, </span>
+<span id="cb382-5"><a href="spatial-multi-modal-analysis.html#cb382-5" tabindex="-1"></a>                        <span class="at">feat_det_in_min_cells =</span> <span class="dv">0</span>,</span>
+<span id="cb382-6"><a href="spatial-multi-modal-analysis.html#cb382-6" tabindex="-1"></a>                        <span class="at">min_det_feats_per_cell =</span> <span class="dv">1</span>)</span>
+<span id="cb382-7"><a href="spatial-multi-modal-analysis.html#cb382-7" tabindex="-1"></a>tmp_exprs <span class="ot">&lt;-</span> <span class="fu">getExpression</span>(Xen_obj,</span>
+<span id="cb382-8"><a href="spatial-multi-modal-analysis.html#cb382-8" tabindex="-1"></a>                       <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
+<span id="cb382-9"><a href="spatial-multi-modal-analysis.html#cb382-9" tabindex="-1"></a>                       <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
+<span id="cb382-10"><a href="spatial-multi-modal-analysis.html#cb382-10" tabindex="-1"></a>                       <span class="at">output =</span> <span class="st">&#39;matrix&#39;</span>)</span>
+<span id="cb382-11"><a href="spatial-multi-modal-analysis.html#cb382-11" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">setExpression</span>(Xen_obj,</span>
+<span id="cb382-12"><a href="spatial-multi-modal-analysis.html#cb382-12" tabindex="-1"></a>                         <span class="at">x =</span> <span class="fu">createExprObj</span>(<span class="fu">log</span>(tmp_exprs<span class="sc">+</span><span class="dv">1</span>)),</span>
+<span id="cb382-13"><a href="spatial-multi-modal-analysis.html#cb382-13" tabindex="-1"></a>                         <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
+<span id="cb382-14"><a href="spatial-multi-modal-analysis.html#cb382-14" tabindex="-1"></a>                         <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
+<span id="cb382-15"><a href="spatial-multi-modal-analysis.html#cb382-15" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&#39;plot&#39;</span>)</span>
+<span id="cb382-16"><a href="spatial-multi-modal-analysis.html#cb382-16" tabindex="-1"></a></span>
+<span id="cb382-17"><a href="spatial-multi-modal-analysis.html#cb382-17" tabindex="-1"></a><span class="fu">spatFeatPlot2D</span>(Xen_obj,</span>
+<span id="cb382-18"><a href="spatial-multi-modal-analysis.html#cb382-18" tabindex="-1"></a>               <span class="at">point_size =</span> <span class="fl">3.5</span>,</span>
+<span id="cb382-19"><a href="spatial-multi-modal-analysis.html#cb382-19" tabindex="-1"></a>               <span class="at">expression_values =</span> <span class="st">&#39;plot&#39;</span>,</span>
+<span id="cb382-20"><a href="spatial-multi-modal-analysis.html#cb382-20" tabindex="-1"></a>               <span class="at">show_image =</span> F,</span>
+<span id="cb382-21"><a href="spatial-multi-modal-analysis.html#cb382-21" tabindex="-1"></a>               <span class="at">feats =</span> <span class="st">&#39;ERBB2&#39;</span>)</span></code></pre></div>
 <p><img src="img/03_session2/PsuedoVisium_spatfeatplot.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Subset the registered Visium and plot same gene</p>
-<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="spatial-multi-modal-analysis.html#cb241-1" tabindex="-1"></a><span class="co">#get the extent of giotto points, xmin, xmax, ymin, ymax</span></span>
-<span id="cb241-2"><a href="spatial-multi-modal-analysis.html#cb241-2" tabindex="-1"></a>subset_extent <span class="ot">&lt;-</span> <span class="fu">ext</span>(gpoints<span class="sc">@</span>spatVector)</span>
-<span id="cb241-3"><a href="spatial-multi-modal-analysis.html#cb241-3" tabindex="-1"></a>sub_visium <span class="ot">&lt;-</span> <span class="fu">subsetGiottoLocs</span>(V_final,</span>
-<span id="cb241-4"><a href="spatial-multi-modal-analysis.html#cb241-4" tabindex="-1"></a>                               <span class="at">x_min =</span> subset_extent[<span class="dv">1</span>],</span>
-<span id="cb241-5"><a href="spatial-multi-modal-analysis.html#cb241-5" tabindex="-1"></a>                               <span class="at">x_max =</span> subset_extent[<span class="dv">2</span>],</span>
-<span id="cb241-6"><a href="spatial-multi-modal-analysis.html#cb241-6" tabindex="-1"></a>                               <span class="at">y_min =</span> subset_extent[<span class="dv">3</span>],</span>
-<span id="cb241-7"><a href="spatial-multi-modal-analysis.html#cb241-7" tabindex="-1"></a>                               <span class="at">y_max =</span> subset_extent[<span class="dv">4</span>])</span>
-<span id="cb241-8"><a href="spatial-multi-modal-analysis.html#cb241-8" tabindex="-1"></a><span class="fu">spatFeatPlot2D</span>(sub_visium,</span>
-<span id="cb241-9"><a href="spatial-multi-modal-analysis.html#cb241-9" tabindex="-1"></a>               <span class="at">point_size =</span> <span class="dv">2</span>,</span>
-<span id="cb241-10"><a href="spatial-multi-modal-analysis.html#cb241-10" tabindex="-1"></a>               <span class="at">expression_values =</span> <span class="st">&#39;scaled&#39;</span>,</span>
-<span id="cb241-11"><a href="spatial-multi-modal-analysis.html#cb241-11" tabindex="-1"></a>               <span class="at">show_image =</span> F,</span>
-<span id="cb241-12"><a href="spatial-multi-modal-analysis.html#cb241-12" tabindex="-1"></a>               <span class="at">feats =</span> <span class="st">&#39;ERBB2&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="spatial-multi-modal-analysis.html#cb383-1" tabindex="-1"></a><span class="co">#get the extent of giotto points, xmin, xmax, ymin, ymax</span></span>
+<span id="cb383-2"><a href="spatial-multi-modal-analysis.html#cb383-2" tabindex="-1"></a>subset_extent <span class="ot">&lt;-</span> <span class="fu">ext</span>(gpoints<span class="sc">@</span>spatVector)</span>
+<span id="cb383-3"><a href="spatial-multi-modal-analysis.html#cb383-3" tabindex="-1"></a>sub_visium <span class="ot">&lt;-</span> <span class="fu">subsetGiottoLocs</span>(V_final,</span>
+<span id="cb383-4"><a href="spatial-multi-modal-analysis.html#cb383-4" tabindex="-1"></a>                               <span class="at">x_min =</span> subset_extent[<span class="dv">1</span>],</span>
+<span id="cb383-5"><a href="spatial-multi-modal-analysis.html#cb383-5" tabindex="-1"></a>                               <span class="at">x_max =</span> subset_extent[<span class="dv">2</span>],</span>
+<span id="cb383-6"><a href="spatial-multi-modal-analysis.html#cb383-6" tabindex="-1"></a>                               <span class="at">y_min =</span> subset_extent[<span class="dv">3</span>],</span>
+<span id="cb383-7"><a href="spatial-multi-modal-analysis.html#cb383-7" tabindex="-1"></a>                               <span class="at">y_max =</span> subset_extent[<span class="dv">4</span>])</span>
+<span id="cb383-8"><a href="spatial-multi-modal-analysis.html#cb383-8" tabindex="-1"></a><span class="fu">spatFeatPlot2D</span>(sub_visium,</span>
+<span id="cb383-9"><a href="spatial-multi-modal-analysis.html#cb383-9" tabindex="-1"></a>               <span class="at">point_size =</span> <span class="dv">2</span>,</span>
+<span id="cb383-10"><a href="spatial-multi-modal-analysis.html#cb383-10" tabindex="-1"></a>               <span class="at">expression_values =</span> <span class="st">&#39;scaled&#39;</span>,</span>
+<span id="cb383-11"><a href="spatial-multi-modal-analysis.html#cb383-11" tabindex="-1"></a>               <span class="at">show_image =</span> F,</span>
+<span id="cb383-12"><a href="spatial-multi-modal-analysis.html#cb383-12" tabindex="-1"></a>               <span class="at">feats =</span> <span class="st">&#39;ERBB2&#39;</span>)</span></code></pre></div>
 <p><img src="img/03_session2/Visium_spatfeatplot.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="register-post-xenium-he-and-if-image" class="section level3 hasAnchor" number="13.6.4">
 <h3><span class="header-section-number">13.6.4</span> Register post-Xenium H&amp;E and IF image<a href="spatial-multi-modal-analysis.html#register-post-xenium-he-and-if-image" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For Xenium instrument output, Giotto provide a convenience function to load the output from the Xenium ranger output. Note that 10X created the affine image alignment file by applying rotation, scale at (0,0) of the top left corner and translation last. Thus, it will look different than the affine matrix created from landmarks above. In this example, we used a 0.05X compressed ometiff and the alignment file is also create by first rescale at 20X, then apply the affine matrix provided by 10X Genomics.</p>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="spatial-multi-modal-analysis.html#cb242-1" tabindex="-1"></a>HE_xen <span class="ot">&lt;-</span> <span class="fu">read10xAffineImage</span>(<span class="at">file =</span> <span class="fu">paste0</span>(Xenium_dir, <span class="st">&quot;HE_ome_compressed.tiff&quot;</span>),</span>
-<span id="cb242-2"><a href="spatial-multi-modal-analysis.html#cb242-2" tabindex="-1"></a>                           <span class="at">imagealignment_path =</span> <span class="fu">paste0</span>(Xenium_dir,<span class="st">&quot;Xenium_he_imagealignment.csv&quot;</span>),</span>
-<span id="cb242-3"><a href="spatial-multi-modal-analysis.html#cb242-3" tabindex="-1"></a>                           <span class="at">micron =</span> <span class="fl">0.2125</span>)</span>
-<span id="cb242-4"><a href="spatial-multi-modal-analysis.html#cb242-4" tabindex="-1"></a><span class="fu">plot</span>(HE_xen)</span></code></pre></div>
+<div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb384-1"><a href="spatial-multi-modal-analysis.html#cb384-1" tabindex="-1"></a>HE_xen <span class="ot">&lt;-</span> <span class="fu">read10xAffineImage</span>(<span class="at">file =</span> <span class="fu">paste0</span>(Xenium_dir, <span class="st">&quot;/HE_ome_compressed.tiff&quot;</span>),</span>
+<span id="cb384-2"><a href="spatial-multi-modal-analysis.html#cb384-2" tabindex="-1"></a>                           <span class="at">imagealignment_path =</span> <span class="fu">paste0</span>(Xenium_dir,<span class="st">&quot;/Xenium_he_imagealignment.csv&quot;</span>),</span>
+<span id="cb384-3"><a href="spatial-multi-modal-analysis.html#cb384-3" tabindex="-1"></a>                           <span class="at">micron =</span> <span class="fl">0.2125</span>)</span>
+<span id="cb384-4"><a href="spatial-multi-modal-analysis.html#cb384-4" tabindex="-1"></a><span class="fu">plot</span>(HE_xen)</span></code></pre></div>
 <p><img src="img/03_session2/HE_register_1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>The image is still on the top left corner, so we flip the image to make it align with the target coordinate system. We can also save the transformed image raster by re-sample all pixel from the original image, and write it to a file on disk for future use.</p>
-<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="spatial-multi-modal-analysis.html#cb243-1" tabindex="-1"></a>HE_xen <span class="ot">&lt;-</span> HE_xen <span class="sc">|&gt;</span> <span class="fu">flip</span>(<span class="at">direction =</span> <span class="st">&quot;vertical&quot;</span>)</span>
-<span id="cb243-2"><a href="spatial-multi-modal-analysis.html#cb243-2" tabindex="-1"></a>gimg_rast <span class="ot">&lt;-</span> HE_xen<span class="sc">@</span>funs<span class="sc">$</span><span class="fu">realize_magick</span>(<span class="at">size =</span> <span class="fu">prod</span>(<span class="fu">dim</span>(HE_xen)))</span>
-<span id="cb243-3"><a href="spatial-multi-modal-analysis.html#cb243-3" tabindex="-1"></a><span class="fu">plot</span>(gimg_rast)</span>
-<span id="cb243-4"><a href="spatial-multi-modal-analysis.html#cb243-4" tabindex="-1"></a><span class="co">#terra::writeRaster(gimg_rast@raster_object, filename = output,  gdal = &quot;COG&quot; # save as GeoTIFF with extent info)</span></span></code></pre></div>
+<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="spatial-multi-modal-analysis.html#cb385-1" tabindex="-1"></a>HE_xen <span class="ot">&lt;-</span> HE_xen <span class="sc">|&gt;</span> <span class="fu">flip</span>(<span class="at">direction =</span> <span class="st">&quot;vertical&quot;</span>)</span>
+<span id="cb385-2"><a href="spatial-multi-modal-analysis.html#cb385-2" tabindex="-1"></a>gimg_rast <span class="ot">&lt;-</span> HE_xen<span class="sc">@</span>funs<span class="sc">$</span><span class="fu">realize_magick</span>(<span class="at">size =</span> <span class="fu">prod</span>(<span class="fu">dim</span>(HE_xen)))</span>
+<span id="cb385-3"><a href="spatial-multi-modal-analysis.html#cb385-3" tabindex="-1"></a><span class="fu">plot</span>(gimg_rast)</span>
+<span id="cb385-4"><a href="spatial-multi-modal-analysis.html#cb385-4" tabindex="-1"></a><span class="co">#terra::writeRaster(gimg_rast@raster_object, filename = output,  gdal = &quot;COG&quot; # save as GeoTIFF with extent info)</span></span></code></pre></div>
 <p><img src="img/03_session2/HE_register_2.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Now we can check the registration results. GiottoVisuals provide a function to plot a giottoLargeImage to a ggplot object in order to plot additional layers of ggplots</p>
-<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="spatial-multi-modal-analysis.html#cb244-1" tabindex="-1"></a>gg <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">ggplot</span>()</span>
-<span id="cb244-2"><a href="spatial-multi-modal-analysis.html#cb244-2" tabindex="-1"></a>pl <span class="ot">&lt;-</span> GiottoVisuals<span class="sc">::</span><span class="fu">gg_annotation_raster</span>(gg,gimg_rast)</span>
-<span id="cb244-3"><a href="spatial-multi-modal-analysis.html#cb244-3" tabindex="-1"></a>pl <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">geom_smooth</span>() <span class="sc">+</span> </span>
-<span id="cb244-4"><a href="spatial-multi-modal-analysis.html#cb244-4" tabindex="-1"></a>     ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> xen_cell_df, ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x_centroid , <span class="at">y =</span> y_centroid),<span class="at">size =</span> <span class="fl">1e-150</span>,,<span class="at">color =</span> <span class="st">&#39;orange&#39;</span>) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">theme_classic</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb386"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb386-1"><a href="spatial-multi-modal-analysis.html#cb386-1" tabindex="-1"></a>gg <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">ggplot</span>()</span>
+<span id="cb386-2"><a href="spatial-multi-modal-analysis.html#cb386-2" tabindex="-1"></a>pl <span class="ot">&lt;-</span> GiottoVisuals<span class="sc">::</span><span class="fu">gg_annotation_raster</span>(gg,gimg_rast)</span>
+<span id="cb386-3"><a href="spatial-multi-modal-analysis.html#cb386-3" tabindex="-1"></a>pl <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">geom_smooth</span>() <span class="sc">+</span> </span>
+<span id="cb386-4"><a href="spatial-multi-modal-analysis.html#cb386-4" tabindex="-1"></a>     ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> xen_cell_df, ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x_centroid , <span class="at">y =</span> y_centroid),<span class="at">size =</span> <span class="fl">1e-150</span>,,<span class="at">color =</span> <span class="st">&#39;orange&#39;</span>) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">theme_classic</span>()</span></code></pre></div>
 <p><img src="img/03_session2/HE_register_3.png" width="80%" style="display: block; margin: auto;" /></p>
 <div id="add-registered-image-information-and-compare-rna-vs-protein-expression" class="section level4 hasAnchor" number="13.6.4.1">
 <h4><span class="header-section-number">13.6.4.1</span> Add registered image information and compare RNA vs protein expression<a href="spatial-multi-modal-analysis.html#add-registered-image-information-and-compare-rna-vs-protein-expression" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>With the strategy described above, affine transformed image can be saved and used for quantitive analysis. Here, we can use the same strategy as dealing with spatial proteomics data for IF</p>
-<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="spatial-multi-modal-analysis.html#cb245-1" tabindex="-1"></a>CD20_gimg <span class="ot">&lt;-</span> <span class="fu">createGiottoLargeImage</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/CD20_registered.tiff&#39;</span>), <span class="at">use_rast_ext =</span> T,<span class="at">name =</span> <span class="st">&#39;CD20&#39;</span>)</span>
-<span id="cb245-2"><a href="spatial-multi-modal-analysis.html#cb245-2" tabindex="-1"></a>HER2_gimg <span class="ot">&lt;-</span> <span class="fu">createGiottoLargeImage</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/HER2_registered.tiff&#39;</span>), <span class="at">use_rast_ext =</span> T,<span class="at">name =</span> <span class="st">&#39;HER2&#39;</span>)</span>
-<span id="cb245-3"><a href="spatial-multi-modal-analysis.html#cb245-3" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">addGiottoLargeImage</span>(<span class="at">gobject =</span> Xen_obj,</span>
-<span id="cb245-4"><a href="spatial-multi-modal-analysis.html#cb245-4" tabindex="-1"></a>                               <span class="at">largeImages =</span> <span class="fu">list</span>(<span class="st">&#39;CD20&#39;</span> <span class="ot">=</span> CD20_gimg,<span class="st">&#39;HER2&#39;</span> <span class="ot">=</span> HER2_gimg))</span></code></pre></div>
+<div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb387-1"><a href="spatial-multi-modal-analysis.html#cb387-1" tabindex="-1"></a>CD20_gimg <span class="ot">&lt;-</span> <span class="fu">createGiottoLargeImage</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/CD20_registered.tiff&#39;</span>), <span class="at">use_rast_ext =</span> T,<span class="at">name =</span> <span class="st">&#39;CD20&#39;</span>)</span>
+<span id="cb387-2"><a href="spatial-multi-modal-analysis.html#cb387-2" tabindex="-1"></a>HER2_gimg <span class="ot">&lt;-</span> <span class="fu">createGiottoLargeImage</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/HER2_registered.tiff&#39;</span>), <span class="at">use_rast_ext =</span> T,<span class="at">name =</span> <span class="st">&#39;HER2&#39;</span>)</span>
+<span id="cb387-3"><a href="spatial-multi-modal-analysis.html#cb387-3" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">addGiottoLargeImage</span>(<span class="at">gobject =</span> Xen_obj,</span>
+<span id="cb387-4"><a href="spatial-multi-modal-analysis.html#cb387-4" tabindex="-1"></a>                               <span class="at">largeImages =</span> <span class="fu">list</span>(<span class="st">&#39;CD20&#39;</span> <span class="ot">=</span> CD20_gimg,<span class="st">&#39;HER2&#39;</span> <span class="ot">=</span> HER2_gimg))</span></code></pre></div>
 <p>Get the cell polygons, as Xenium and IF are both subcellular resolution</p>
-<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="spatial-multi-modal-analysis.html#cb246-1" tabindex="-1"></a>cellpoly_dt <span class="ot">&lt;-</span> data.table<span class="sc">::</span><span class="fu">fread</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;cell_boundaries.csv.gz&#39;</span>))</span>
-<span id="cb246-2"><a href="spatial-multi-modal-analysis.html#cb246-2" tabindex="-1"></a><span class="fu">colnames</span>(cellpoly_dt) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;poly_ID&#39;</span>,<span class="st">&#39;x&#39;</span>,<span class="st">&#39;y&#39;</span>)</span>
-<span id="cb246-3"><a href="spatial-multi-modal-analysis.html#cb246-3" tabindex="-1"></a>cellpoly <span class="ot">&lt;-</span> <span class="fu">createGiottoPolygonsFromDfr</span>(cellpoly_dt)</span>
-<span id="cb246-4"><a href="spatial-multi-modal-analysis.html#cb246-4" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">addGiottoPolygons</span>(Xen_obj,<span class="at">gpolygons =</span> <span class="fu">list</span>(<span class="st">&#39;cell&#39;</span> <span class="ot">=</span> cellpoly))</span></code></pre></div>
+<div class="sourceCode" id="cb388"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb388-1"><a href="spatial-multi-modal-analysis.html#cb388-1" tabindex="-1"></a>cellpoly_dt <span class="ot">&lt;-</span> data.table<span class="sc">::</span><span class="fu">fread</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/cell_boundaries.csv.gz&#39;</span>))</span>
+<span id="cb388-2"><a href="spatial-multi-modal-analysis.html#cb388-2" tabindex="-1"></a><span class="fu">colnames</span>(cellpoly_dt) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;poly_ID&#39;</span>,<span class="st">&#39;x&#39;</span>,<span class="st">&#39;y&#39;</span>)</span>
+<span id="cb388-3"><a href="spatial-multi-modal-analysis.html#cb388-3" tabindex="-1"></a>cellpoly <span class="ot">&lt;-</span> <span class="fu">createGiottoPolygonsFromDfr</span>(cellpoly_dt)</span>
+<span id="cb388-4"><a href="spatial-multi-modal-analysis.html#cb388-4" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">addGiottoPolygons</span>(Xen_obj,<span class="at">gpolygons =</span> <span class="fu">list</span>(<span class="st">&#39;cell&#39;</span> <span class="ot">=</span> cellpoly))</span></code></pre></div>
 <p>Compute the gene expression matrix by overlay the cell polygons and giotto points.</p>
-<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="spatial-multi-modal-analysis.html#cb247-1" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">calculateOverlap</span>(Xen_obj,</span>
-<span id="cb247-2"><a href="spatial-multi-modal-analysis.html#cb247-2" tabindex="-1"></a>                           <span class="at">feat_info =</span> <span class="st">&#39;rna&#39;</span>,</span>
-<span id="cb247-3"><a href="spatial-multi-modal-analysis.html#cb247-3" tabindex="-1"></a>                           <span class="at">spatial_info =</span> <span class="st">&#39;cell&#39;</span>)</span>
-<span id="cb247-4"><a href="spatial-multi-modal-analysis.html#cb247-4" tabindex="-1"></a></span>
-<span id="cb247-5"><a href="spatial-multi-modal-analysis.html#cb247-5" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">overlapToMatrix</span>(<span class="at">x =</span> Xen_obj,</span>
-<span id="cb247-6"><a href="spatial-multi-modal-analysis.html#cb247-6" tabindex="-1"></a>                          <span class="at">type =</span> <span class="st">&quot;point&quot;</span>, </span>
-<span id="cb247-7"><a href="spatial-multi-modal-analysis.html#cb247-7" tabindex="-1"></a>                          <span class="at">poly_info =</span> <span class="st">&quot;cell&quot;</span>, </span>
-<span id="cb247-8"><a href="spatial-multi-modal-analysis.html#cb247-8" tabindex="-1"></a>                          <span class="at">feat_info =</span> <span class="st">&quot;rna&quot;</span>,</span>
-<span id="cb247-9"><a href="spatial-multi-modal-analysis.html#cb247-9" tabindex="-1"></a>                          <span class="at">aggr_function =</span> <span class="st">&quot;sum&quot;</span>)</span>
-<span id="cb247-10"><a href="spatial-multi-modal-analysis.html#cb247-10" tabindex="-1"></a>tmp_exprs <span class="ot">&lt;-</span> <span class="fu">getExpression</span>(Xen_obj,</span>
-<span id="cb247-11"><a href="spatial-multi-modal-analysis.html#cb247-11" tabindex="-1"></a>                       <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
-<span id="cb247-12"><a href="spatial-multi-modal-analysis.html#cb247-12" tabindex="-1"></a>                       <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
-<span id="cb247-13"><a href="spatial-multi-modal-analysis.html#cb247-13" tabindex="-1"></a>                       <span class="at">output =</span> <span class="st">&#39;matrix&#39;</span>)</span>
-<span id="cb247-14"><a href="spatial-multi-modal-analysis.html#cb247-14" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">setExpression</span>(Xen_obj,</span>
-<span id="cb247-15"><a href="spatial-multi-modal-analysis.html#cb247-15" tabindex="-1"></a>                         <span class="at">x =</span> <span class="fu">createExprObj</span>(<span class="fu">log</span>(tmp_exprs<span class="sc">+</span><span class="dv">1</span>)),</span>
-<span id="cb247-16"><a href="spatial-multi-modal-analysis.html#cb247-16" tabindex="-1"></a>                         <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
-<span id="cb247-17"><a href="spatial-multi-modal-analysis.html#cb247-17" tabindex="-1"></a>                         <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
-<span id="cb247-18"><a href="spatial-multi-modal-analysis.html#cb247-18" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&#39;plot&#39;</span>)</span>
-<span id="cb247-19"><a href="spatial-multi-modal-analysis.html#cb247-19" tabindex="-1"></a><span class="fu">spatFeatPlot2D</span>(Xen_obj,</span>
-<span id="cb247-20"><a href="spatial-multi-modal-analysis.html#cb247-20" tabindex="-1"></a>               <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
-<span id="cb247-21"><a href="spatial-multi-modal-analysis.html#cb247-21" tabindex="-1"></a>               <span class="at">expression_values =</span> <span class="st">&#39;plot&#39;</span>,</span>
-<span id="cb247-22"><a href="spatial-multi-modal-analysis.html#cb247-22" tabindex="-1"></a>               <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
-<span id="cb247-23"><a href="spatial-multi-modal-analysis.html#cb247-23" tabindex="-1"></a>               <span class="at">feats =</span> <span class="st">&#39;ERBB2&#39;</span>,</span>
-<span id="cb247-24"><a href="spatial-multi-modal-analysis.html#cb247-24" tabindex="-1"></a>               <span class="at">point_size =</span> <span class="fl">0.05</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb389-1"><a href="spatial-multi-modal-analysis.html#cb389-1" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">calculateOverlap</span>(Xen_obj,</span>
+<span id="cb389-2"><a href="spatial-multi-modal-analysis.html#cb389-2" tabindex="-1"></a>                           <span class="at">feat_info =</span> <span class="st">&#39;rna&#39;</span>,</span>
+<span id="cb389-3"><a href="spatial-multi-modal-analysis.html#cb389-3" tabindex="-1"></a>                           <span class="at">spatial_info =</span> <span class="st">&#39;cell&#39;</span>)</span>
+<span id="cb389-4"><a href="spatial-multi-modal-analysis.html#cb389-4" tabindex="-1"></a></span>
+<span id="cb389-5"><a href="spatial-multi-modal-analysis.html#cb389-5" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">overlapToMatrix</span>(<span class="at">x =</span> Xen_obj,</span>
+<span id="cb389-6"><a href="spatial-multi-modal-analysis.html#cb389-6" tabindex="-1"></a>                          <span class="at">type =</span> <span class="st">&quot;point&quot;</span>, </span>
+<span id="cb389-7"><a href="spatial-multi-modal-analysis.html#cb389-7" tabindex="-1"></a>                          <span class="at">poly_info =</span> <span class="st">&quot;cell&quot;</span>, </span>
+<span id="cb389-8"><a href="spatial-multi-modal-analysis.html#cb389-8" tabindex="-1"></a>                          <span class="at">feat_info =</span> <span class="st">&quot;rna&quot;</span>,</span>
+<span id="cb389-9"><a href="spatial-multi-modal-analysis.html#cb389-9" tabindex="-1"></a>                          <span class="at">aggr_function =</span> <span class="st">&quot;sum&quot;</span>)</span>
+<span id="cb389-10"><a href="spatial-multi-modal-analysis.html#cb389-10" tabindex="-1"></a>tmp_exprs <span class="ot">&lt;-</span> <span class="fu">getExpression</span>(Xen_obj,</span>
+<span id="cb389-11"><a href="spatial-multi-modal-analysis.html#cb389-11" tabindex="-1"></a>                       <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
+<span id="cb389-12"><a href="spatial-multi-modal-analysis.html#cb389-12" tabindex="-1"></a>                       <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
+<span id="cb389-13"><a href="spatial-multi-modal-analysis.html#cb389-13" tabindex="-1"></a>                       <span class="at">output =</span> <span class="st">&#39;matrix&#39;</span>)</span>
+<span id="cb389-14"><a href="spatial-multi-modal-analysis.html#cb389-14" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">setExpression</span>(Xen_obj,</span>
+<span id="cb389-15"><a href="spatial-multi-modal-analysis.html#cb389-15" tabindex="-1"></a>                         <span class="at">x =</span> <span class="fu">createExprObj</span>(<span class="fu">log</span>(tmp_exprs<span class="sc">+</span><span class="dv">1</span>)),</span>
+<span id="cb389-16"><a href="spatial-multi-modal-analysis.html#cb389-16" tabindex="-1"></a>                         <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
+<span id="cb389-17"><a href="spatial-multi-modal-analysis.html#cb389-17" tabindex="-1"></a>                         <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
+<span id="cb389-18"><a href="spatial-multi-modal-analysis.html#cb389-18" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&#39;plot&#39;</span>)</span>
+<span id="cb389-19"><a href="spatial-multi-modal-analysis.html#cb389-19" tabindex="-1"></a><span class="fu">spatFeatPlot2D</span>(Xen_obj,</span>
+<span id="cb389-20"><a href="spatial-multi-modal-analysis.html#cb389-20" tabindex="-1"></a>               <span class="at">feat_type =</span> <span class="st">&#39;rna&#39;</span>,</span>
+<span id="cb389-21"><a href="spatial-multi-modal-analysis.html#cb389-21" tabindex="-1"></a>               <span class="at">expression_values =</span> <span class="st">&#39;plot&#39;</span>,</span>
+<span id="cb389-22"><a href="spatial-multi-modal-analysis.html#cb389-22" tabindex="-1"></a>               <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
+<span id="cb389-23"><a href="spatial-multi-modal-analysis.html#cb389-23" tabindex="-1"></a>               <span class="at">feats =</span> <span class="st">&#39;ERBB2&#39;</span>,</span>
+<span id="cb389-24"><a href="spatial-multi-modal-analysis.html#cb389-24" tabindex="-1"></a>               <span class="at">point_size =</span> <span class="fl">0.05</span>)</span></code></pre></div>
 <p><img src="img/03_session2/ERBB2_spatplot.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Now we overlay the HER2 expression from the raster image with the cell polygons.</p>
-<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="spatial-multi-modal-analysis.html#cb248-1" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">calculateOverlap</span>(Xen_obj,</span>
-<span id="cb248-2"><a href="spatial-multi-modal-analysis.html#cb248-2" tabindex="-1"></a>                            <span class="at">spatial_info =</span> <span class="st">&#39;cell&#39;</span>,</span>
-<span id="cb248-3"><a href="spatial-multi-modal-analysis.html#cb248-3" tabindex="-1"></a>                            <span class="at">image_names =</span> <span class="fu">c</span>(<span class="st">&#39;HER2&#39;</span>,<span class="st">&#39;CD20&#39;</span>))</span>
-<span id="cb248-4"><a href="spatial-multi-modal-analysis.html#cb248-4" tabindex="-1"></a></span>
-<span id="cb248-5"><a href="spatial-multi-modal-analysis.html#cb248-5" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">overlapToMatrix</span>(<span class="at">x =</span> Xen_obj,</span>
-<span id="cb248-6"><a href="spatial-multi-modal-analysis.html#cb248-6" tabindex="-1"></a>                          <span class="at">type =</span> <span class="st">&quot;intensity&quot;</span>, </span>
-<span id="cb248-7"><a href="spatial-multi-modal-analysis.html#cb248-7" tabindex="-1"></a>                          <span class="at">poly_info =</span> <span class="st">&quot;cell&quot;</span>, </span>
-<span id="cb248-8"><a href="spatial-multi-modal-analysis.html#cb248-8" tabindex="-1"></a>                          <span class="at">feat_info =</span> <span class="st">&quot;protein&quot;</span>,</span>
-<span id="cb248-9"><a href="spatial-multi-modal-analysis.html#cb248-9" tabindex="-1"></a>                          <span class="at">aggr_function =</span> <span class="st">&quot;sum&quot;</span>)</span>
-<span id="cb248-10"><a href="spatial-multi-modal-analysis.html#cb248-10" tabindex="-1"></a></span>
-<span id="cb248-11"><a href="spatial-multi-modal-analysis.html#cb248-11" tabindex="-1"></a>tmp_exprs <span class="ot">&lt;-</span> <span class="fu">getExpression</span>(Xen_obj,</span>
-<span id="cb248-12"><a href="spatial-multi-modal-analysis.html#cb248-12" tabindex="-1"></a>                       <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
-<span id="cb248-13"><a href="spatial-multi-modal-analysis.html#cb248-13" tabindex="-1"></a>                       <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
-<span id="cb248-14"><a href="spatial-multi-modal-analysis.html#cb248-14" tabindex="-1"></a>                       <span class="at">output =</span> <span class="st">&#39;matrix&#39;</span>)</span>
-<span id="cb248-15"><a href="spatial-multi-modal-analysis.html#cb248-15" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">setExpression</span>(Xen_obj,</span>
-<span id="cb248-16"><a href="spatial-multi-modal-analysis.html#cb248-16" tabindex="-1"></a>                         <span class="at">x =</span> <span class="fu">createExprObj</span>(<span class="fu">log</span>(tmp_exprs<span class="sc">+</span><span class="dv">1</span>)),</span>
-<span id="cb248-17"><a href="spatial-multi-modal-analysis.html#cb248-17" tabindex="-1"></a>                         <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
-<span id="cb248-18"><a href="spatial-multi-modal-analysis.html#cb248-18" tabindex="-1"></a>                         <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
-<span id="cb248-19"><a href="spatial-multi-modal-analysis.html#cb248-19" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&#39;plot&#39;</span>)</span>
-<span id="cb248-20"><a href="spatial-multi-modal-analysis.html#cb248-20" tabindex="-1"></a><span class="fu">spatFeatPlot2D</span>(Xen_obj,</span>
-<span id="cb248-21"><a href="spatial-multi-modal-analysis.html#cb248-21" tabindex="-1"></a>               <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
-<span id="cb248-22"><a href="spatial-multi-modal-analysis.html#cb248-22" tabindex="-1"></a>               <span class="at">expression_values =</span> <span class="st">&#39;plot&#39;</span>,</span>
-<span id="cb248-23"><a href="spatial-multi-modal-analysis.html#cb248-23" tabindex="-1"></a>               <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
-<span id="cb248-24"><a href="spatial-multi-modal-analysis.html#cb248-24" tabindex="-1"></a>               <span class="at">feats =</span> <span class="st">&#39;HER2&#39;</span>,</span>
-<span id="cb248-25"><a href="spatial-multi-modal-analysis.html#cb248-25" tabindex="-1"></a>               <span class="at">point_size =</span> <span class="fl">0.05</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb390"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb390-1"><a href="spatial-multi-modal-analysis.html#cb390-1" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">calculateOverlap</span>(Xen_obj,</span>
+<span id="cb390-2"><a href="spatial-multi-modal-analysis.html#cb390-2" tabindex="-1"></a>                            <span class="at">spatial_info =</span> <span class="st">&#39;cell&#39;</span>,</span>
+<span id="cb390-3"><a href="spatial-multi-modal-analysis.html#cb390-3" tabindex="-1"></a>                            <span class="at">image_names =</span> <span class="fu">c</span>(<span class="st">&#39;HER2&#39;</span>,<span class="st">&#39;CD20&#39;</span>))</span>
+<span id="cb390-4"><a href="spatial-multi-modal-analysis.html#cb390-4" tabindex="-1"></a></span>
+<span id="cb390-5"><a href="spatial-multi-modal-analysis.html#cb390-5" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">overlapToMatrix</span>(<span class="at">x =</span> Xen_obj,</span>
+<span id="cb390-6"><a href="spatial-multi-modal-analysis.html#cb390-6" tabindex="-1"></a>                          <span class="at">type =</span> <span class="st">&quot;intensity&quot;</span>, </span>
+<span id="cb390-7"><a href="spatial-multi-modal-analysis.html#cb390-7" tabindex="-1"></a>                          <span class="at">poly_info =</span> <span class="st">&quot;cell&quot;</span>, </span>
+<span id="cb390-8"><a href="spatial-multi-modal-analysis.html#cb390-8" tabindex="-1"></a>                          <span class="at">feat_info =</span> <span class="st">&quot;protein&quot;</span>,</span>
+<span id="cb390-9"><a href="spatial-multi-modal-analysis.html#cb390-9" tabindex="-1"></a>                          <span class="at">aggr_function =</span> <span class="st">&quot;sum&quot;</span>)</span>
+<span id="cb390-10"><a href="spatial-multi-modal-analysis.html#cb390-10" tabindex="-1"></a></span>
+<span id="cb390-11"><a href="spatial-multi-modal-analysis.html#cb390-11" tabindex="-1"></a>tmp_exprs <span class="ot">&lt;-</span> <span class="fu">getExpression</span>(Xen_obj,</span>
+<span id="cb390-12"><a href="spatial-multi-modal-analysis.html#cb390-12" tabindex="-1"></a>                       <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
+<span id="cb390-13"><a href="spatial-multi-modal-analysis.html#cb390-13" tabindex="-1"></a>                       <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
+<span id="cb390-14"><a href="spatial-multi-modal-analysis.html#cb390-14" tabindex="-1"></a>                       <span class="at">output =</span> <span class="st">&#39;matrix&#39;</span>)</span>
+<span id="cb390-15"><a href="spatial-multi-modal-analysis.html#cb390-15" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">setExpression</span>(Xen_obj,</span>
+<span id="cb390-16"><a href="spatial-multi-modal-analysis.html#cb390-16" tabindex="-1"></a>                         <span class="at">x =</span> <span class="fu">createExprObj</span>(<span class="fu">log</span>(tmp_exprs<span class="sc">+</span><span class="dv">1</span>)),</span>
+<span id="cb390-17"><a href="spatial-multi-modal-analysis.html#cb390-17" tabindex="-1"></a>                         <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
+<span id="cb390-18"><a href="spatial-multi-modal-analysis.html#cb390-18" tabindex="-1"></a>                         <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
+<span id="cb390-19"><a href="spatial-multi-modal-analysis.html#cb390-19" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&#39;plot&#39;</span>)</span>
+<span id="cb390-20"><a href="spatial-multi-modal-analysis.html#cb390-20" tabindex="-1"></a><span class="fu">spatFeatPlot2D</span>(Xen_obj,</span>
+<span id="cb390-21"><a href="spatial-multi-modal-analysis.html#cb390-21" tabindex="-1"></a>               <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
+<span id="cb390-22"><a href="spatial-multi-modal-analysis.html#cb390-22" tabindex="-1"></a>               <span class="at">expression_values =</span> <span class="st">&#39;plot&#39;</span>,</span>
+<span id="cb390-23"><a href="spatial-multi-modal-analysis.html#cb390-23" tabindex="-1"></a>               <span class="at">spat_unit =</span> <span class="st">&#39;cell&#39;</span>,</span>
+<span id="cb390-24"><a href="spatial-multi-modal-analysis.html#cb390-24" tabindex="-1"></a>               <span class="at">feats =</span> <span class="st">&#39;HER2&#39;</span>,</span>
+<span id="cb390-25"><a href="spatial-multi-modal-analysis.html#cb390-25" tabindex="-1"></a>               <span class="at">point_size =</span> <span class="fl">0.05</span>)</span></code></pre></div>
 <p><img src="img/03_session2/HER2_spatplot.png" width="80%" style="display: block; margin: auto;" />
 We can also overlay the protein expression to Visium spots</p>
-<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="spatial-multi-modal-analysis.html#cb249-1" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">calculateOverlap</span>(Xen_obj,</span>
-<span id="cb249-2"><a href="spatial-multi-modal-analysis.html#cb249-2" tabindex="-1"></a>                            <span class="at">spatial_info =</span> <span class="st">&#39;visium&#39;</span>,</span>
-<span id="cb249-3"><a href="spatial-multi-modal-analysis.html#cb249-3" tabindex="-1"></a>                            <span class="at">image_names =</span> <span class="fu">c</span>(<span class="st">&#39;HER2&#39;</span>,<span class="st">&#39;CD20&#39;</span>))</span>
-<span id="cb249-4"><a href="spatial-multi-modal-analysis.html#cb249-4" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">overlapToMatrix</span>(<span class="at">x =</span> Xen_obj,</span>
-<span id="cb249-5"><a href="spatial-multi-modal-analysis.html#cb249-5" tabindex="-1"></a>                          <span class="at">type =</span> <span class="st">&quot;intensity&quot;</span>, </span>
-<span id="cb249-6"><a href="spatial-multi-modal-analysis.html#cb249-6" tabindex="-1"></a>                          <span class="at">poly_info =</span> <span class="st">&quot;visium&quot;</span>, </span>
-<span id="cb249-7"><a href="spatial-multi-modal-analysis.html#cb249-7" tabindex="-1"></a>                          <span class="at">feat_info =</span> <span class="st">&quot;protein&quot;</span>,</span>
-<span id="cb249-8"><a href="spatial-multi-modal-analysis.html#cb249-8" tabindex="-1"></a>                          <span class="at">aggr_function =</span> <span class="st">&quot;sum&quot;</span>)</span>
-<span id="cb249-9"><a href="spatial-multi-modal-analysis.html#cb249-9" tabindex="-1"></a></span>
-<span id="cb249-10"><a href="spatial-multi-modal-analysis.html#cb249-10" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">filterGiotto</span>(Xen_obj,</span>
-<span id="cb249-11"><a href="spatial-multi-modal-analysis.html#cb249-11" tabindex="-1"></a>                        <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
-<span id="cb249-12"><a href="spatial-multi-modal-analysis.html#cb249-12" tabindex="-1"></a>                        <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
-<span id="cb249-13"><a href="spatial-multi-modal-analysis.html#cb249-13" tabindex="-1"></a>                        <span class="at">expression_threshold =</span> <span class="dv">1</span>, </span>
-<span id="cb249-14"><a href="spatial-multi-modal-analysis.html#cb249-14" tabindex="-1"></a>                        <span class="at">feat_det_in_min_cells =</span> <span class="dv">0</span>,</span>
-<span id="cb249-15"><a href="spatial-multi-modal-analysis.html#cb249-15" tabindex="-1"></a>                        <span class="at">min_det_feats_per_cell =</span> <span class="dv">1</span>)</span>
-<span id="cb249-16"><a href="spatial-multi-modal-analysis.html#cb249-16" tabindex="-1"></a></span>
-<span id="cb249-17"><a href="spatial-multi-modal-analysis.html#cb249-17" tabindex="-1"></a>tmp_exprs <span class="ot">&lt;-</span> <span class="fu">getExpression</span>(Xen_obj,</span>
-<span id="cb249-18"><a href="spatial-multi-modal-analysis.html#cb249-18" tabindex="-1"></a>                       <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
-<span id="cb249-19"><a href="spatial-multi-modal-analysis.html#cb249-19" tabindex="-1"></a>                       <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
-<span id="cb249-20"><a href="spatial-multi-modal-analysis.html#cb249-20" tabindex="-1"></a>                       <span class="at">output =</span> <span class="st">&#39;matrix&#39;</span>)</span>
-<span id="cb249-21"><a href="spatial-multi-modal-analysis.html#cb249-21" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">setExpression</span>(Xen_obj,</span>
-<span id="cb249-22"><a href="spatial-multi-modal-analysis.html#cb249-22" tabindex="-1"></a>                         <span class="at">x =</span> <span class="fu">createExprObj</span>(<span class="fu">log</span>(tmp_exprs<span class="sc">+</span><span class="dv">1</span>)),</span>
-<span id="cb249-23"><a href="spatial-multi-modal-analysis.html#cb249-23" tabindex="-1"></a>                         <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
-<span id="cb249-24"><a href="spatial-multi-modal-analysis.html#cb249-24" tabindex="-1"></a>                         <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
-<span id="cb249-25"><a href="spatial-multi-modal-analysis.html#cb249-25" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&#39;plot&#39;</span>)</span>
-<span id="cb249-26"><a href="spatial-multi-modal-analysis.html#cb249-26" tabindex="-1"></a><span class="fu">spatFeatPlot2D</span>(Xen_obj,</span>
-<span id="cb249-27"><a href="spatial-multi-modal-analysis.html#cb249-27" tabindex="-1"></a>               <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
-<span id="cb249-28"><a href="spatial-multi-modal-analysis.html#cb249-28" tabindex="-1"></a>               <span class="at">expression_values =</span> <span class="st">&#39;plot&#39;</span>,</span>
-<span id="cb249-29"><a href="spatial-multi-modal-analysis.html#cb249-29" tabindex="-1"></a>               <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
-<span id="cb249-30"><a href="spatial-multi-modal-analysis.html#cb249-30" tabindex="-1"></a>               <span class="at">feats =</span> <span class="st">&#39;HER2&#39;</span>,</span>
-<span id="cb249-31"><a href="spatial-multi-modal-analysis.html#cb249-31" tabindex="-1"></a>               <span class="at">point_size =</span> <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb391"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb391-1"><a href="spatial-multi-modal-analysis.html#cb391-1" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">calculateOverlap</span>(Xen_obj,</span>
+<span id="cb391-2"><a href="spatial-multi-modal-analysis.html#cb391-2" tabindex="-1"></a>                            <span class="at">spatial_info =</span> <span class="st">&#39;visium&#39;</span>,</span>
+<span id="cb391-3"><a href="spatial-multi-modal-analysis.html#cb391-3" tabindex="-1"></a>                            <span class="at">image_names =</span> <span class="fu">c</span>(<span class="st">&#39;HER2&#39;</span>,<span class="st">&#39;CD20&#39;</span>))</span>
+<span id="cb391-4"><a href="spatial-multi-modal-analysis.html#cb391-4" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">overlapToMatrix</span>(<span class="at">x =</span> Xen_obj,</span>
+<span id="cb391-5"><a href="spatial-multi-modal-analysis.html#cb391-5" tabindex="-1"></a>                          <span class="at">type =</span> <span class="st">&quot;intensity&quot;</span>, </span>
+<span id="cb391-6"><a href="spatial-multi-modal-analysis.html#cb391-6" tabindex="-1"></a>                          <span class="at">poly_info =</span> <span class="st">&quot;visium&quot;</span>, </span>
+<span id="cb391-7"><a href="spatial-multi-modal-analysis.html#cb391-7" tabindex="-1"></a>                          <span class="at">feat_info =</span> <span class="st">&quot;protein&quot;</span>,</span>
+<span id="cb391-8"><a href="spatial-multi-modal-analysis.html#cb391-8" tabindex="-1"></a>                          <span class="at">aggr_function =</span> <span class="st">&quot;sum&quot;</span>)</span>
+<span id="cb391-9"><a href="spatial-multi-modal-analysis.html#cb391-9" tabindex="-1"></a></span>
+<span id="cb391-10"><a href="spatial-multi-modal-analysis.html#cb391-10" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">filterGiotto</span>(Xen_obj,</span>
+<span id="cb391-11"><a href="spatial-multi-modal-analysis.html#cb391-11" tabindex="-1"></a>                        <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
+<span id="cb391-12"><a href="spatial-multi-modal-analysis.html#cb391-12" tabindex="-1"></a>                        <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
+<span id="cb391-13"><a href="spatial-multi-modal-analysis.html#cb391-13" tabindex="-1"></a>                        <span class="at">expression_threshold =</span> <span class="dv">1</span>, </span>
+<span id="cb391-14"><a href="spatial-multi-modal-analysis.html#cb391-14" tabindex="-1"></a>                        <span class="at">feat_det_in_min_cells =</span> <span class="dv">0</span>,</span>
+<span id="cb391-15"><a href="spatial-multi-modal-analysis.html#cb391-15" tabindex="-1"></a>                        <span class="at">min_det_feats_per_cell =</span> <span class="dv">1</span>)</span>
+<span id="cb391-16"><a href="spatial-multi-modal-analysis.html#cb391-16" tabindex="-1"></a></span>
+<span id="cb391-17"><a href="spatial-multi-modal-analysis.html#cb391-17" tabindex="-1"></a>tmp_exprs <span class="ot">&lt;-</span> <span class="fu">getExpression</span>(Xen_obj,</span>
+<span id="cb391-18"><a href="spatial-multi-modal-analysis.html#cb391-18" tabindex="-1"></a>                       <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
+<span id="cb391-19"><a href="spatial-multi-modal-analysis.html#cb391-19" tabindex="-1"></a>                       <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
+<span id="cb391-20"><a href="spatial-multi-modal-analysis.html#cb391-20" tabindex="-1"></a>                       <span class="at">output =</span> <span class="st">&#39;matrix&#39;</span>)</span>
+<span id="cb391-21"><a href="spatial-multi-modal-analysis.html#cb391-21" tabindex="-1"></a>Xen_obj <span class="ot">&lt;-</span> <span class="fu">setExpression</span>(Xen_obj,</span>
+<span id="cb391-22"><a href="spatial-multi-modal-analysis.html#cb391-22" tabindex="-1"></a>                         <span class="at">x =</span> <span class="fu">createExprObj</span>(<span class="fu">log</span>(tmp_exprs<span class="sc">+</span><span class="dv">1</span>)),</span>
+<span id="cb391-23"><a href="spatial-multi-modal-analysis.html#cb391-23" tabindex="-1"></a>                         <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
+<span id="cb391-24"><a href="spatial-multi-modal-analysis.html#cb391-24" tabindex="-1"></a>                         <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
+<span id="cb391-25"><a href="spatial-multi-modal-analysis.html#cb391-25" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&#39;plot&#39;</span>)</span>
+<span id="cb391-26"><a href="spatial-multi-modal-analysis.html#cb391-26" tabindex="-1"></a><span class="fu">spatFeatPlot2D</span>(Xen_obj,</span>
+<span id="cb391-27"><a href="spatial-multi-modal-analysis.html#cb391-27" tabindex="-1"></a>               <span class="at">feat_type =</span> <span class="st">&#39;protein&#39;</span>,</span>
+<span id="cb391-28"><a href="spatial-multi-modal-analysis.html#cb391-28" tabindex="-1"></a>               <span class="at">expression_values =</span> <span class="st">&#39;plot&#39;</span>,</span>
+<span id="cb391-29"><a href="spatial-multi-modal-analysis.html#cb391-29" tabindex="-1"></a>               <span class="at">spat_unit =</span> <span class="st">&#39;visium&#39;</span>,</span>
+<span id="cb391-30"><a href="spatial-multi-modal-analysis.html#cb391-30" tabindex="-1"></a>               <span class="at">feats =</span> <span class="st">&#39;HER2&#39;</span>,</span>
+<span id="cb391-31"><a href="spatial-multi-modal-analysis.html#cb391-31" tabindex="-1"></a>               <span class="at">point_size =</span> <span class="dv">2</span>)</span></code></pre></div>
 <p><img src="img/03_session2/HER2_visium.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
@@ -949,29 +1009,28 @@ We can also overlay the protein expression to Visium spots</p>
 <h3><span class="header-section-number">13.6.5</span> Automatic alignment via SIFT feature descriptor matching and affine transformation<a href="spatial-multi-modal-analysis.html#automatic-alignment-via-sift-feature-descriptor-matching-and-affine-transformation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Pin landmarks or use compounded affine transforms to register image usually provides initial registration results. However, recording landmarks or manually combine transformations require a lot of manual effort. It will require too much effort when having a large amount of images to register. As long as accurate landmarks are provided, registration will be easy to automatically perform. Here we provide a wrapper function of Scale invariant feature transform(SIFT). SIFT will first identify the extreme points in different scale spaces from paired images, then use a brutal force way to match the points. The matched points can then be used to estimate the transform and warp the image. The major drawback is once the dimension of the image become bigger, the computing time will increase exponentially.</p>
 <p>Here, we provide an example of two compressed images to show the automatic alignment pipeline.</p>
-<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="spatial-multi-modal-analysis.html#cb250-1" tabindex="-1"></a>HE <span class="ot">&lt;-</span> <span class="fu">createGiottoLargeImage</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;mini_HE.png&#39;</span>),<span class="at">negative_y =</span> F)</span>
-<span id="cb250-2"><a href="spatial-multi-modal-analysis.html#cb250-2" tabindex="-1"></a><span class="fu">plot</span>(HE)</span></code></pre></div>
+<div class="sourceCode" id="cb392"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb392-1"><a href="spatial-multi-modal-analysis.html#cb392-1" tabindex="-1"></a>HE <span class="ot">&lt;-</span> <span class="fu">createGiottoLargeImage</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/mini_HE.png&#39;</span>),<span class="at">negative_y =</span> F)</span>
+<span id="cb392-2"><a href="spatial-multi-modal-analysis.html#cb392-2" tabindex="-1"></a><span class="fu">plot</span>(HE)</span></code></pre></div>
 <p><img src="img/03_session2/mini_HE.png" width="80%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="spatial-multi-modal-analysis.html#cb251-1" tabindex="-1"></a>IF <span class="ot">&lt;-</span> <span class="fu">createGiottoLargeImage</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;mini_IF.tif&#39;</span>),<span class="at">negative_y =</span> F,<span class="at">flip_horizontal =</span> T)</span>
-<span id="cb251-2"><a href="spatial-multi-modal-analysis.html#cb251-2" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">plotRGB</span>(IF<span class="sc">@</span>raster_object,<span class="at">r=</span><span class="dv">1</span>, <span class="at">g=</span><span class="dv">2</span>, <span class="at">b=</span><span class="dv">3</span>,, <span class="at">stretch=</span><span class="st">&quot;lin&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb393"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb393-1"><a href="spatial-multi-modal-analysis.html#cb393-1" tabindex="-1"></a>IF <span class="ot">&lt;-</span> <span class="fu">createGiottoLargeImage</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/mini_IF.tif&#39;</span>),<span class="at">negative_y =</span> F,<span class="at">flip_horizontal =</span> T)</span>
+<span id="cb393-2"><a href="spatial-multi-modal-analysis.html#cb393-2" tabindex="-1"></a>terra<span class="sc">::</span><span class="fu">plotRGB</span>(IF<span class="sc">@</span>raster_object,<span class="at">r=</span><span class="dv">1</span>, <span class="at">g=</span><span class="dv">2</span>, <span class="at">b=</span><span class="dv">3</span>,, <span class="at">stretch=</span><span class="st">&quot;lin&quot;</span>)</span></code></pre></div>
 <p><img src="img/03_session2/mini_IF.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Now, we can use the automated transformation pipeline. Note that we will start with a path to the images, run the preprocessImageToMatrix() first to meet the requirement of estimateAutomatedImageRegistrationWithSIFT() function. The images will be preprocessed to gray scale. And for that purpose, we use the DAPI channel from the miniIF, and set invert = T for mini HE as HE image so that grayscle HE will have higher value for high intensity pixels. The function will output an estimation of the transform.</p>
-<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="spatial-multi-modal-analysis.html#cb252-1" tabindex="-1"></a>estimation <span class="ot">&lt;-</span> <span class="fu">estimateAutomatedImageRegistrationWithSIFT</span>(<span class="at">x =</span> <span class="fu">preprocessImageToMatrix</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;mini_IF.tif&#39;</span>),</span>
-<span id="cb252-2"><a href="spatial-multi-modal-analysis.html#cb252-2" tabindex="-1"></a>                                                                                     <span class="at">flip_horizontal =</span> T,</span>
-<span id="cb252-3"><a href="spatial-multi-modal-analysis.html#cb252-3" tabindex="-1"></a>                                                                                     <span class="at">use_single_channel =</span> T,</span>
-<span id="cb252-4"><a href="spatial-multi-modal-analysis.html#cb252-4" tabindex="-1"></a>                                                                                     <span class="at">single_channel_number =</span> <span class="dv">3</span>),</span>
-<span id="cb252-5"><a href="spatial-multi-modal-analysis.html#cb252-5" tabindex="-1"></a>                                                         <span class="at">y =</span> <span class="fu">preprocessImageToMatrix</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;mini_HE.png&#39;</span>),</span>
-<span id="cb252-6"><a href="spatial-multi-modal-analysis.html#cb252-6" tabindex="-1"></a>                                                                                     <span class="at">invert =</span> T),</span>
-<span id="cb252-7"><a href="spatial-multi-modal-analysis.html#cb252-7" tabindex="-1"></a>                                                         <span class="at">plot_match =</span> T,</span>
-<span id="cb252-8"><a href="spatial-multi-modal-analysis.html#cb252-8" tabindex="-1"></a>                                                         <span class="at">max_ratio =</span> <span class="fl">0.5</span>,<span class="at">estimate_fun =</span> <span class="st">&#39;Projective&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb394-1"><a href="spatial-multi-modal-analysis.html#cb394-1" tabindex="-1"></a>estimation <span class="ot">&lt;-</span> <span class="fu">estimateAutomatedImageRegistrationWithSIFT</span>(<span class="at">x =</span> <span class="fu">preprocessImageToMatrix</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/mini_IF.tif&#39;</span>),</span>
+<span id="cb394-2"><a href="spatial-multi-modal-analysis.html#cb394-2" tabindex="-1"></a>                                                                                     <span class="at">flip_horizontal =</span> T,</span>
+<span id="cb394-3"><a href="spatial-multi-modal-analysis.html#cb394-3" tabindex="-1"></a>                                                                                     <span class="at">use_single_channel =</span> T,</span>
+<span id="cb394-4"><a href="spatial-multi-modal-analysis.html#cb394-4" tabindex="-1"></a>                                                                                     <span class="at">single_channel_number =</span> <span class="dv">3</span>),</span>
+<span id="cb394-5"><a href="spatial-multi-modal-analysis.html#cb394-5" tabindex="-1"></a>                                                         <span class="at">y =</span> <span class="fu">preprocessImageToMatrix</span>(<span class="fu">paste0</span>(Xenium_dir,<span class="st">&#39;/mini_HE.png&#39;</span>),</span>
+<span id="cb394-6"><a href="spatial-multi-modal-analysis.html#cb394-6" tabindex="-1"></a>                                                                                     <span class="at">invert =</span> T),</span>
+<span id="cb394-7"><a href="spatial-multi-modal-analysis.html#cb394-7" tabindex="-1"></a>                                                         <span class="at">plot_match =</span> T,</span>
+<span id="cb394-8"><a href="spatial-multi-modal-analysis.html#cb394-8" tabindex="-1"></a>                                                         <span class="at">max_ratio =</span> <span class="fl">0.5</span>,<span class="at">estimate_fun =</span> <span class="st">&#39;Projective&#39;</span>)</span></code></pre></div>
 <p><img src="img/03_session2/SIFT_descriptor_match.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Use the estimation, we can quickly visualize the transformation</p>
-<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="spatial-multi-modal-analysis.html#cb253-1" tabindex="-1"></a>mtx <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(estimation<span class="sc">$</span>params)</span>
-<span id="cb253-2"><a href="spatial-multi-modal-analysis.html#cb253-2" tabindex="-1"></a>transformed <span class="ot">&lt;-</span> <span class="fu">affine</span>(IF, mtx)</span>
-<span id="cb253-3"><a href="spatial-multi-modal-analysis.html#cb253-3" tabindex="-1"></a>To_see_overlay <span class="ot">&lt;-</span> transformed<span class="sc">@</span>funs<span class="sc">$</span><span class="fu">realize_magick</span>(<span class="at">size =</span> <span class="fl">2e6</span>)</span>
-<span id="cb253-4"><a href="spatial-multi-modal-analysis.html#cb253-4" tabindex="-1"></a><span class="fu">plot</span>(HE)</span>
-<span id="cb253-5"><a href="spatial-multi-modal-analysis.html#cb253-5" tabindex="-1"></a><span class="fu">plot</span>(To_see_overlay<span class="sc">@</span>raster_object[[<span class="dv">2</span>]], <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">alpha=</span><span class="fl">0.5</span>)</span>
-<span id="cb253-6"><a href="spatial-multi-modal-analysis.html#cb253-6" tabindex="-1"></a>SIFT_registration_overlay</span></code></pre></div>
+<div class="sourceCode" id="cb395"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb395-1"><a href="spatial-multi-modal-analysis.html#cb395-1" tabindex="-1"></a>mtx <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(estimation<span class="sc">$</span>params)</span>
+<span id="cb395-2"><a href="spatial-multi-modal-analysis.html#cb395-2" tabindex="-1"></a>transformed <span class="ot">&lt;-</span> <span class="fu">affine</span>(IF, mtx)</span>
+<span id="cb395-3"><a href="spatial-multi-modal-analysis.html#cb395-3" tabindex="-1"></a>To_see_overlay <span class="ot">&lt;-</span> transformed<span class="sc">@</span>funs<span class="sc">$</span><span class="fu">realize_magick</span>(<span class="at">size =</span> <span class="fl">2e6</span>)</span>
+<span id="cb395-4"><a href="spatial-multi-modal-analysis.html#cb395-4" tabindex="-1"></a><span class="fu">plot</span>(HE)</span>
+<span id="cb395-5"><a href="spatial-multi-modal-analysis.html#cb395-5" tabindex="-1"></a><span class="fu">plot</span>(To_see_overlay<span class="sc">@</span>raster_object[[<span class="dv">2</span>]], <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">alpha=</span><span class="fl">0.5</span>)</span></code></pre></div>
 <p><img src="img/03_session2/SIFT_registration_overlay.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="final-notes" class="section level3 hasAnchor" number="13.6.6">
