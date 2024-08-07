@@ -599,10 +599,10 @@ method for constructing spatially continuous trajectories. ONTraC differs from e
 <div class="sourceCode" id="cb449"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb449-1"><a href="interoperability-with-isolated-tools.html#cb449-1" tabindex="-1"></a><span class="fu">options</span>(<span class="at">timeout=</span><span class="cn">Inf</span>) <span class="co"># In case of network interrupt</span></span>
 <span id="cb449-2"><a href="interoperability-with-isolated-tools.html#cb449-2" tabindex="-1"></a></span>
 <span id="cb449-3"><a href="interoperability-with-isolated-tools.html#cb449-3" tabindex="-1"></a>data_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">&quot;data&quot;</span>,<span class="st">&quot;03_session5&quot;</span>)</span>
-<span id="cb449-4"><a href="interoperability-with-isolated-tools.html#cb449-4" tabindex="-1"></a><span class="fu">dir.create</span>(data_path)</span>
+<span id="cb449-4"><a href="interoperability-with-isolated-tools.html#cb449-4" tabindex="-1"></a><span class="fu">dir.create</span>(data_path, <span class="at">recursive=</span>T)</span>
 <span id="cb449-5"><a href="interoperability-with-isolated-tools.html#cb449-5" tabindex="-1"></a></span>
 <span id="cb449-6"><a href="interoperability-with-isolated-tools.html#cb449-6" tabindex="-1"></a>results_folder <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">&quot;results&quot;</span>,<span class="st">&quot;03_session5&quot;</span>)</span>
-<span id="cb449-7"><a href="interoperability-with-isolated-tools.html#cb449-7" tabindex="-1"></a><span class="fu">dir.create</span>(results_folder)</span></code></pre></div>
+<span id="cb449-7"><a href="interoperability-with-isolated-tools.html#cb449-7" tabindex="-1"></a><span class="fu">dir.create</span>(results_folder, <span class="at">recursive=</span>T)</span></code></pre></div>
 </div>
 <div id="dataset-1" class="section level3 hasAnchor" number="16.1.4">
 <h3><span class="header-section-number">16.1.4</span> Dataset<a href="interoperability-with-isolated-tools.html#dataset-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
