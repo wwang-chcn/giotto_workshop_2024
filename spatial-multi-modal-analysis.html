@@ -556,6 +556,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="18" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html"><i class="fa fa-check"></i><b>18</b> Contributing to Giotto</a>
 <ul>
 <li class="chapter" data-level="18.1" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html#contribution-guideline"><i class="fa fa-check"></i><b>18.1</b> Contribution guideline</a></li>
+<li class="chapter" data-level="18.2" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html#pull-request-process"><i class="fa fa-check"></i><b>18.2</b> Pull request process</a></li>
+<li class="chapter" data-level="18.3" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html#coding-style"><i class="fa fa-check"></i><b>18.3</b> Coding Style</a></li>
+<li class="chapter" data-level="18.4" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html#stat-functions"><i class="fa fa-check"></i><b>18.4</b> Stat functions</a></li>
+<li class="chapter" data-level="18.5" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html#auxiliary-functions"><i class="fa fa-check"></i><b>18.5</b> Auxiliary functions</a></li>
+<li class="chapter" data-level="18.6" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html#package-imports"><i class="fa fa-check"></i><b>18.6</b> Package Imports</a></li>
+<li class="chapter" data-level="18.7" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html#getters-and-setters"><i class="fa fa-check"></i><b>18.7</b> Getters and Setters</a></li>
+<li class="chapter" data-level="18.8" data-path="contributing-to-giotto.html"><a href="contributing-to-giotto.html#python-code"><i class="fa fa-check"></i><b>18.8</b> Python code</a></li>
 </ul></li>
 </ul>
 
@@ -639,33 +646,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="examples-of-the-simple-transforms-with-a-giottopolygon" class="section level2 hasAnchor" number="13.3">
 <h2><span class="header-section-number">13.3</span> Examples of the simple transforms with a giottoPolygon<a href="spatial-multi-modal-analysis.html#examples-of-the-simple-transforms-with-a-giottopolygon" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="spatial-multi-modal-analysis.html#cb363-1" tabindex="-1"></a>rain <span class="ot">&lt;-</span> <span class="fu">rainbow</span>(<span class="fu">nrow</span>(gpoly))</span>
-<span id="cb363-2"><a href="spatial-multi-modal-analysis.html#cb363-2" tabindex="-1"></a></span>
-<span id="cb363-3"><a href="spatial-multi-modal-analysis.html#cb363-3" tabindex="-1"></a>line_width <span class="ot">&lt;-</span> <span class="fl">0.3</span></span>
-<span id="cb363-4"><a href="spatial-multi-modal-analysis.html#cb363-4" tabindex="-1"></a></span>
-<span id="cb363-5"><a href="spatial-multi-modal-analysis.html#cb363-5" tabindex="-1"></a><span class="co"># par to setup the grid plotting layout</span></span>
-<span id="cb363-6"><a href="spatial-multi-modal-analysis.html#cb363-6" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">no.readonly =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb363-7"><a href="spatial-multi-modal-analysis.html#cb363-7" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">3</span>))</span>
-<span id="cb363-8"><a href="spatial-multi-modal-analysis.html#cb363-8" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> </span>
-<span id="cb363-9"><a href="spatial-multi-modal-analysis.html#cb363-9" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;no transform&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb363-10"><a href="spatial-multi-modal-analysis.html#cb363-10" tabindex="-1"></a></span>
-<span id="cb363-11"><a href="spatial-multi-modal-analysis.html#cb363-11" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">spatShift</span>(<span class="at">dx =</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb363-12"><a href="spatial-multi-modal-analysis.html#cb363-12" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;spatShift(dx = 1000)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb363-13"><a href="spatial-multi-modal-analysis.html#cb363-13" tabindex="-1"></a></span>
-<span id="cb363-14"><a href="spatial-multi-modal-analysis.html#cb363-14" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">spin</span>(<span class="dv">45</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb363-15"><a href="spatial-multi-modal-analysis.html#cb363-15" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;spin(45)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb363-16"><a href="spatial-multi-modal-analysis.html#cb363-16" tabindex="-1"></a></span>
-<span id="cb363-17"><a href="spatial-multi-modal-analysis.html#cb363-17" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">rescale</span>(<span class="at">fx =</span> <span class="dv">10</span>, <span class="at">fy =</span> <span class="dv">6</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb363-18"><a href="spatial-multi-modal-analysis.html#cb363-18" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;rescale(fx = 10, fy = 6)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb363-19"><a href="spatial-multi-modal-analysis.html#cb363-19" tabindex="-1"></a></span>
-<span id="cb363-20"><a href="spatial-multi-modal-analysis.html#cb363-20" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">flip</span>(<span class="at">direction =</span> <span class="st">&quot;vertical&quot;</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb363-21"><a href="spatial-multi-modal-analysis.html#cb363-21" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;flip()&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb363-22"><a href="spatial-multi-modal-analysis.html#cb363-22" tabindex="-1"></a></span>
-<span id="cb363-23"><a href="spatial-multi-modal-analysis.html#cb363-23" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">t</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb363-24"><a href="spatial-multi-modal-analysis.html#cb363-24" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;t()&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb363-25"><a href="spatial-multi-modal-analysis.html#cb363-25" tabindex="-1"></a></span>
-<span id="cb363-26"><a href="spatial-multi-modal-analysis.html#cb363-26" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">shear</span>(<span class="at">fx =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb363-27"><a href="spatial-multi-modal-analysis.html#cb363-27" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;shear(fx = 0.5)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
-<span id="cb363-28"><a href="spatial-multi-modal-analysis.html#cb363-28" tabindex="-1"></a><span class="fu">par</span>(p)</span></code></pre></div>
+<span id="cb363-2"><a href="spatial-multi-modal-analysis.html#cb363-2" tabindex="-1"></a>line_width <span class="ot">&lt;-</span> <span class="fl">0.3</span></span>
+<span id="cb363-3"><a href="spatial-multi-modal-analysis.html#cb363-3" tabindex="-1"></a></span>
+<span id="cb363-4"><a href="spatial-multi-modal-analysis.html#cb363-4" tabindex="-1"></a><span class="co"># par to setup the grid plotting layout</span></span>
+<span id="cb363-5"><a href="spatial-multi-modal-analysis.html#cb363-5" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">no.readonly =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb363-6"><a href="spatial-multi-modal-analysis.html#cb363-6" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">3</span>))</span>
+<span id="cb363-7"><a href="spatial-multi-modal-analysis.html#cb363-7" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> </span>
+<span id="cb363-8"><a href="spatial-multi-modal-analysis.html#cb363-8" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;no transform&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-9"><a href="spatial-multi-modal-analysis.html#cb363-9" tabindex="-1"></a></span>
+<span id="cb363-10"><a href="spatial-multi-modal-analysis.html#cb363-10" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">spatShift</span>(<span class="at">dx =</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb363-11"><a href="spatial-multi-modal-analysis.html#cb363-11" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;spatShift(dx = 1000)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-12"><a href="spatial-multi-modal-analysis.html#cb363-12" tabindex="-1"></a></span>
+<span id="cb363-13"><a href="spatial-multi-modal-analysis.html#cb363-13" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">spin</span>(<span class="dv">45</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb363-14"><a href="spatial-multi-modal-analysis.html#cb363-14" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;spin(45)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-15"><a href="spatial-multi-modal-analysis.html#cb363-15" tabindex="-1"></a></span>
+<span id="cb363-16"><a href="spatial-multi-modal-analysis.html#cb363-16" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">rescale</span>(<span class="at">fx =</span> <span class="dv">10</span>, <span class="at">fy =</span> <span class="dv">6</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb363-17"><a href="spatial-multi-modal-analysis.html#cb363-17" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;rescale(fx = 10, fy = 6)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-18"><a href="spatial-multi-modal-analysis.html#cb363-18" tabindex="-1"></a></span>
+<span id="cb363-19"><a href="spatial-multi-modal-analysis.html#cb363-19" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">flip</span>(<span class="at">direction =</span> <span class="st">&quot;vertical&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb363-20"><a href="spatial-multi-modal-analysis.html#cb363-20" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;flip()&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-21"><a href="spatial-multi-modal-analysis.html#cb363-21" tabindex="-1"></a></span>
+<span id="cb363-22"><a href="spatial-multi-modal-analysis.html#cb363-22" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">t</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb363-23"><a href="spatial-multi-modal-analysis.html#cb363-23" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;t()&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-24"><a href="spatial-multi-modal-analysis.html#cb363-24" tabindex="-1"></a></span>
+<span id="cb363-25"><a href="spatial-multi-modal-analysis.html#cb363-25" tabindex="-1"></a>gpoly <span class="sc">|&gt;</span> <span class="fu">shear</span>(<span class="at">fx =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb363-26"><a href="spatial-multi-modal-analysis.html#cb363-26" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">main =</span> <span class="st">&quot;shear(fx = 0.5)&quot;</span>, <span class="at">col =</span> rain, <span class="at">lwd =</span> line_width)</span>
+<span id="cb363-27"><a href="spatial-multi-modal-analysis.html#cb363-27" tabindex="-1"></a><span class="fu">par</span>(p)</span></code></pre></div>
 <p><img src="img/03_session2/transforms.png" /><!-- --></p>
 </div>
 <div id="affine-transforms" class="section level2 hasAnchor" number="13.4">
@@ -673,6 +679,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The above transforms are all simple to understand in how they work, but you can imagine that performing them in sequence on your dataset can be computationally expensive.</p>
 <p>Luckily, the above operations are all affine transformation, and they can be condensed into a single step. Affine transforms where the x and y values undergo a linear transform. These transforms in 2D, can all be represented as a 2x2 matrix or 2x3 if the xy translation values are included.</p>
 <p><img src="img/03_session2/matrix.png" /><!-- --></p>
+<p><img src="img/03_session2/wiki_affine.png" /><!-- --></p>
 <p>To perform the linear transform, the xy coordinates just need to be matrix multiplied by the 2x2 affine matrix. The resulting values should then be added to the translate values.</p>
 <p><img src="img/03_session2/apply_matrix.png" /><!-- --></p>
 <p>Due to the nature of matrix multiplication, you can simply multiply the affine matrices with each other and when the xy coordinates are multiplied by the resulting matrix, it performs both linear transforms in the same step.</p>
